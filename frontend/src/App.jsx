@@ -1,48 +1,25 @@
-import './App.css'; 
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import Longform from './pages/longform';
+import MulChoice from './pages/mulchoice';
+import './App.css'; // Optional, for custom styles
 
 function App() {
-  console.log('App component rendered'); 
+  const location = useLocation();
 
-  const [question, setQuestion] = useState(null);
+  return (
+    <div className="app-container">
+      <div className="content">
+        <Routes location={location}>
+          <Route path="/longform" element={<Longform />} />
+          <Route path="/multiple-choice" element={<MulChoice />} />
+        </Routes>
+      </div>
 
-  useEffect(() => {
-    axios.get('http://localhost:3001/questions')
-      .then(res => {
-        const questions = res.data;
-        if (questions.length > 0) {
-          const randomIndex = Math.floor(Math.random() * questions.length);
-          setQuestion(questions[randomIndex]);
-        }
-      })
-      .catch(err => console.error('Error fetching questions:', err));
-  }, []);
-
-  if (!question) return <div>Loading...</div>;
-
-  let options = [];
-try {
-  if (question.options) {
-    options = typeof question.options === 'string'
-      ? JSON.parse(question.options)
-      : question.options;
-  } else {
-    options = [];
-  }
-} catch {
-  options = [];
-}
-
-console.log('question:', question);
-
-return (
-  <div className="Container">
-    <h1>Random Question</h1>
-    <div className="Question">
-      <p>{question.question}</p>
+      <nav className="tab-bar">
+        <Link to="/longform" className={location.pathname === 'longform' ? 'active' : ''}>Longform</Link>
+        <Link to="/multiple-choice" className={location.pathname === '/multiple-choice' ? 'active' : ''}>Multiple Choice</Link>
+      </nav>
     </div>
-  </div>
-);
+  );
 }
 export default App;
