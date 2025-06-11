@@ -1,0 +1,8 @@
+longform icon
+<a href="https://www.flaticon.com/free-icons/textbox" title="textbox icons">Textbox icons created by rcherem - Flaticon</a>
+
+multiple choice icon
+<a href="https://www.flaticon.com/free-icons/multiple-choice" title="multiple choice icons">Multiple choice icons created by Timothy Miller - Flaticon</a>
+
+hamburger menu
+<a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by feen - Flaticon</a>
