@@ -6,3 +6,9 @@ multiple choice icon
 
 hamburger menu
 <a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by feen - Flaticon</a>
+
+tick
+<a href="https://www.flaticon.com/free-icons/tick" title="tick icons">Tick icons created by Pixel perfect - Flaticon</a>
+
+arrow
+<a href="https://www.flaticon.com/free-icons/up-arrow" title="up arrow icons">Up arrow icons created by Roundicons - Flaticon</a>
