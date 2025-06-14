@@ -5,23 +5,26 @@ import longformIcon from '/assets/longform.svg';
 import multiplechoiceIcon from '/assets/multiplechoice.svg';
 import hamburgerIcon from '/assets/hamburger.svg';
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 
 function App() {
-
+  const navigate = useNavigate();
   const [active, setActive] = useState(0);
 
   return (
     <div>
       <Routes>
         <Route path="/longform" element={<Longform />} />
-        <Route path="/mulchoice" element={<MulChoice />} />
+        <Route path="/multiple-choice" element={<MulChoice />} />
       </Routes>
 
       <nav className='navbar'>
         <div
-        className={`icon-wrapper ${active === "multiplechoice" ? "active" : ""}`}
-        onClick={() => setActive("multiplechoice")}
+        className={`icon-wrapper ${active === "multiple-choice" ? "active" : ""}`}
+        onClick={() => {
+          setActive("multiple-choice");
+          navigate('/multiple-choice');
+        }}
         >
           <img src={multiplechoiceIcon} alt="multiplechoiceIcon" />
         </div> 
@@ -31,7 +34,10 @@ function App() {
         </div>
         <div
         className={`icon-wrapper ${active === "longform" ? "active" : ""}`}
-        onClick={() => setActive("longform")}
+        onClick={() => {
+          setActive("longform")
+          navigate('longform')
+        }}
         >
           <img src={longformIcon} alt="longformIcon" />
         </div>

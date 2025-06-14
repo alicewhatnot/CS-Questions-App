@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.Container {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.Header {
+  margin: 1rem;
+}
+
+.Header h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 0.2rem;
+}
+
+.Header hr {
+    width: 50%;
+    transform: translateX(-50%);
+    height: 0.125rem;
+    background-color: #c94277;
+    border-radius: 0.125rem;
+    border: none;
+    margin-top: 0;
+}
+
+.Header h2 {
+    margin-top: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+.Question p {
+    font-weight: 200;
+    font-size: 1rem;
+    margin: 1rem;
+    margin-top: 0; 
+    margin-bottom: 0.3rem;
+    width: calc(100% - 3.02rem) !important;
+    border: 0.01rem solid black;
+    padding: 0.5rem;
+}
+
+.ResponseEntry {
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin: 1rem;
+    margin-top: 0;
+    width: calc(100% - 3.02rem) !important;
+    height: 50vh !important;
+    border: 0.01rem solid black;
+    padding: 0.5rem;
+    resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.SubmitContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.Submit {
+    margin: 1rem;
+    margin-top: 0.25rem;
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    border: none;
+    align-self: flex-end;
+    background-color: #c94277;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.Submit:hover {
+    transform: scale(1.05);
+}

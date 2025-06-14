@@ -1,4 +1,5 @@
 import '../App.css'; 
+import './longform.css'; 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -45,9 +46,21 @@ console.log('question:', question);
 
 return (
   <div className="Container">
-    <h1>Random Question</h1>
-    <div className="Question">
-      <p>{question.question}</p>
+    <div className='Header'>
+      <h1>{question.topic}</h1>
+      <hr></hr>
+      <h2>{question.subtopic}</h2>
+    </div>
+    <div className='QuestionContainer'>
+      <div className="Question">
+        <p>{question.question}</p>
+      </div>
+      <div className='Response'>
+        <textarea className='ResponseEntry' placeholder='Type your answer here ...'/> 
+      </div>
+    </div>
+    <div className='SubmitContainer'>
+      <button className='Submit'>Submit</button>
     </div>
   </div>
 );
