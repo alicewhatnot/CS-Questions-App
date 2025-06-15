@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 .Container {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: "Raleway", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .Header {
@@ -9,8 +13,9 @@
 }
 
 .Header h1 {
+    margin-top: 0;
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: 0.2rem;
 }
 
@@ -22,17 +27,26 @@
     border-radius: 0.125rem;
     border: none;
     margin-top: 0;
+    
 }
 
 .Header h2 {
     margin-top: 0.2rem;
     font-size: 1.5rem;
-    font-weight: 200;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    margin-bottom: 0rem;
+    margin-left: 0.1rem;
+
+}
+
+.QuestionContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 
 .Question p {
-    font-weight: 200;
+    font-weight: 500;
     font-size: 1rem;
     margin: 1rem;
     margin-top: 0; 
@@ -42,16 +56,26 @@
     padding: 0.5rem;
 }
 
+.Response {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
 .ResponseEntry {
-    font-weight: 100;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
     font-size: 0.8rem;
+    flex: 1 1 auto;
+    width: calc(100% - 1.95rem) !important;
+    height: calc(100% - 1.95rem);
     margin: 1rem;
     margin-top: 0;
-    width: calc(100% - 3.02rem) !important;
-    height: 50vh !important;
     border: 0.01rem solid black;
     padding: 0.5rem;
     resize: none;
+    box-sizing: border-box;
 }
 
 textarea:focus {
@@ -61,9 +85,12 @@ textarea:focus {
 .SubmitContainer {
     display: flex;
     flex-direction: column;
+    margin-bottom: 4.5rem;
 }
 
 .Submit {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
     margin: 1rem;
     margin-top: 0.25rem;
     width: 5rem;

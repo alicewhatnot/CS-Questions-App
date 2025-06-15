@@ -47,7 +47,7 @@ return (
   <div className="Container">
     <h1>Random Question</h1>
     <div className="Question">
-      <p>{question.question}</p>
+      <p>test</p>
     </div>
   </div>
 );
