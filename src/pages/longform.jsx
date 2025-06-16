@@ -1,68 +1,88 @@
 import '../App.css'; 
 import './longform.css'; 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 
 function Longform() {
-  console.log('App component rendered'); 
-// Sets up questions array
   const [question, setQuestion] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [ShowMS, setShowMS] = useState(false);
+  const textareaRef = useRef(null);
 
   useEffect(() => {
-    //Fetch questions
-  async function fetchQuestions() {
-    try {
-      //recieves database from backend, query for longform
-      const res = await axios.get('http://localhost:3001/questions?type=longform');
-      const questions = res.data;
-      // Choose a random question
-      if (questions.length > 0) {
-        const randomIndex = Math.floor(Math.random() * questions.length);
-        setQuestion(questions[randomIndex]);
+    async function fetchQuestions() {
+      try {
+        const res = await axios.get('http://localhost:3001/questions?type=longform');
+        const questions = res.data;
+        if (questions.length > 0) {
+          const randomIndex = Math.floor(Math.random() * questions.length);
+          setQuestion(questions[randomIndex]);
+        }
+      } catch (err) {
+        console.error('Error fetching questions:', err);
       }
-    } catch (err) {
-      console.error('Error fetching questions:', err);
     }
-  }
-  fetchQuestions();
-}, []);
+    fetchQuestions();
+  }, []);
+
+  const handleSubmit = () => {
+    setSubmitted(true);
+    setShowMS(true);
+    if (textareaRef.current) {
+      textareaRef.current.style.flex = 'none';
+      textareaRef.current.style.height = 'auto';
+      textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
+    }
+  };
 
   if (!question) return <div>Loading...</div>;
 
   let options = [];
-try {
-  if (question.options) {
-    options = typeof question.options === 'string'
-      ? JSON.parse(question.options)
-      : question.options;
-  } else {
+  try {
+    if (question.options) {
+      options = typeof question.options === 'string'
+        ? JSON.parse(question.options)
+        : question.options;
+    } else {
+      options = [];
+    }
+  } catch {
     options = [];
   }
-} catch {
-  options = [];
+
+  return (
+    <div className="Container">
+      <div className='Header'>
+        <h1>{question.topic}</h1>
+        <hr />
+        <h2>{question.subtopic}</h2>
+      </div>
+      <div className='QuestionContainer'ref={textareaRef}>
+        <div className="Question">
+          <p>{question.question} [{question.marks}]</p>
+        </div>
+        <div className='Response' >
+          <textarea
+            className={`ResponseEntry${submitted ? ' shrink' : ''}`}
+            placeholder='Type your answer here ...'
+          /> 
+        </div>
+      </div>
+      {ShowMS && (
+        <div className="MSContainer">
+          <h3>Did you say...</h3>
+          <div className={question.mark_scheme}>
+            {<h3>{question.mark_scheme}</h3>}    
+          </div>
+        </div>
+      )}
+      <div className='SubmitContainer'>
+        <button className='Submit' onClick={handleSubmit}>
+          {submitted ? "Next" : "Submit"}
+        </button>    
+      </div>
+    </div>
+  );
 }
 
-console.log('question:', question);
-
-return (
-  <div className="Container">
-    <div className='Header'>
-      <h1>{question.topic}</h1>
-      <hr></hr>
-      <h2>{question.subtopic}</h2>
-    </div>
-    <div className='QuestionContainer'>
-      <div className="Question">
-        <p>{question.question}</p>
-      </div>
-      <div className='Response'>
-        <textarea className='ResponseEntry' placeholder='Type your answer here ...'/> 
-      </div>
-    </div>
-    <div className='SubmitContainer'>
-      <button className='Submit'>Submit</button>
-    </div>
-  </div>
-);
-}
 export default Longform;

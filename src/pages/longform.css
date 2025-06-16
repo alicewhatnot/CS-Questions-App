@@ -68,15 +68,20 @@
     font-weight: 500;
     font-size: 0.8rem;
     flex: 1 1 auto;
-    width: calc(100% - 1.95rem) !important;
-    height: calc(100% - 1.95rem);
+    width: calc(100% - 1.95rem);
     margin: 1rem;
     margin-top: 0;
     border: 0.01rem solid black;
     padding: 0.5rem;
     resize: none;
     box-sizing: border-box;
+    transition: height 0.2s;
 }
+
+.ResponseEntry.shrink {
+    height: auto;
+    min-height: 0rem; /* or whatever minimum you want */
+    flex: none;   }
 
 textarea:focus {
   outline: none;
