@@ -7,7 +7,6 @@ import multiplechoiceIcon from '/assets/multiplechoice.svg';
 import hamburgerIcon from '/assets/hamburger.svg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import LiquidGlass from 'liquid-glass-react';
 
 function App() {
   const navigate = useNavigate();

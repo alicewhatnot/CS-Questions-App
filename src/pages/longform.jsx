@@ -2,10 +2,13 @@ import '../App.css';
 import './longform.css'; 
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
+import tick from '/assets/tick.svg';
+
 
 function Longform() {
   const [question, setQuestion] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [ticked, setTicked] = useState([])
   const [ShowMS, setShowMS] = useState(false);
   const textareaRef = useRef(null);
 
@@ -50,6 +53,18 @@ function Longform() {
     options = [];
   }
 
+  var mark_scheme_array = question.mark_scheme;
+  mark_scheme_array = JSON.parse(mark_scheme_array);
+
+
+  const handleMarkGiven = (idx) => {
+    setTicked((prev) =>
+    prev.includes(idx)
+      ? prev.filter(i => i !== idx)
+      : [...prev, idx]
+    );
+  };
+
   return (
     <div className="Container">
       <div className='Header'>
@@ -71,8 +86,14 @@ function Longform() {
       {ShowMS && (
         <div className="MSContainer">
           <h3>Did you say...</h3>
-          <div className={question.mark_scheme}>
-            {<h3>{question.mark_scheme}</h3>}    
+          <div className="MarkScheme">
+            {mark_scheme_array.map((mark_point, idx) => 
+              { return <div className='MarkingPoint'>{mark_point}
+              <button className='TickBox' onClick={() => handleMarkGiven(idx)}>
+                <img src={tick} alt="tickIcon" className={ticked.includes(idx) ? "Ticked" : ""}/>
+              </button>
+            </div>})}  
+            <div className='MarksAchieved'>Marks Achieved: {Math.min(ticked.length, question.marks)}/{question.marks}</div>  
           </div>
         </div>
       )}
