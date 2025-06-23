@@ -160,6 +160,12 @@ textarea:focus {
     scale: 1.5;
 }
 
+.MarkingPoint.Ticked {
+    border: 0.15rem solid #00b179;
+    align-items: center;
+    padding: 0.41rem;
+}
+
 .MarksAchieved {
     font-weight: 500;
     font-size: 0.8rem;

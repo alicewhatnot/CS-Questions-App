@@ -88,11 +88,16 @@ function Longform() {
           <h3>Did you say...</h3>
           <div className="MarkScheme">
             {mark_scheme_array.map((mark_point, idx) => 
-              { return <div className='MarkingPoint'>{mark_point}
-              <button className='TickBox' onClick={() => handleMarkGiven(idx)}>
-                <img src={tick} alt="tickIcon" className={ticked.includes(idx) ? "Ticked" : ""}/>
-              </button>
-            </div>})}  
+              <div className={`MarkingPoint${ticked.includes(idx) ? ' Ticked' : ''}`} key={idx}>
+                {mark_point}
+                <button
+                  className={`TickBox${ticked.includes(idx) ? ' Ticked' : ''}`}
+                  onClick={() => handleMarkGiven(idx)}
+                >
+                  <img src={tick} alt="tickIcon" className={ticked.includes(idx) ? "Ticked" : ""}/>
+                </button>
+              </div>
+            )}
             <div className='MarksAchieved'>Marks Achieved: {Math.min(ticked.length, question.marks)}/{question.marks}</div>  
           </div>
         </div>
