@@ -13,6 +13,7 @@ function Longform() {
   const textareaRef = useRef(null);
   const containerRef = useRef(null);
 
+
   // Fetch a random question
   const fetchQuestion = async () => {
     try {
@@ -39,14 +40,10 @@ function Longform() {
     setQuestionStage("typingAnswer");
     setShowMS(false);
     setTicked([]);
-    if (textareaRef.current) {
-      textareaRef.current.value = "";
-      textareaRef.current.style.flex = '1 1 auto';
-      textareaRef.current.style.height = 'auto';
-    }
-    // Example: you can also manipulate the container if needed
     if (containerRef.current) {
-      // containerRef.current.style.background = "#fff"; // Example
+      textareaRef.current.value = "";
+      containerRef.current.style.flex = '1 1 auto';
+      containerRef.current.style.height = 'auto';
     }
     await fetchQuestion();
   };
@@ -58,10 +55,10 @@ function Longform() {
         setQuestionStage("markingAnswer");
         setSubmitted(true);
         setShowMS(true);
-        // Shrink textarea to fit content
-        textareaRef.current.style.flex = 'none';
-        textareaRef.current.style.height = 'auto';
-        textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
+
+        containerRef.current.style.flex = 'none';
+        containerRef.current.style.height = 'auto';
+        containerRef.current.style.height = containerRef.current.scrollHeight + 'px';
       }
     } else {
       handleNextQuestion();
@@ -105,7 +102,6 @@ function Longform() {
             ref={textareaRef}
             className={`ResponseEntry${submitted ? ' shrink' : ''}`}
             placeholder='Type your answer here ...'
-            disabled={submitted}
           />
         </div>
       </div>
