@@ -8,37 +8,59 @@ import tick from '/assets/tick.svg';
 function Longform() {
   const [question, setQuestion] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [servedIds, setServedIds] = useState([]);
   const [ticked, setTicked] = useState([])
   const [ShowMS, setShowMS] = useState(false);
   const textareaRef = useRef(null);
+  const answerBoxRef = useRef(null);
+  const [questionStage, setQuestionStage] = useState("typingAnswer");
+  const [totalQuestions, setTotalQuestions] = useState(0);
 
-  useEffect(() => {
-    async function fetchQuestions() {
+  const handleNextQuestion = () => {
+  if (servedIds.length >= totalQuestions && totalQuestions > 0) {
+    setServedIds([]);
+  }
+  fetchQuestion();
+};
+
+    const fetchQuestion = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/questions?type=longform');
-        const questions = res.data;
-        if (questions.length > 0) {
-          const randomIndex = Math.floor(Math.random() * questions.length);
-          setQuestion(questions[randomIndex]);
-        }
+        const res = await axios.get('http://localhost:3001/questions', {
+          params: {
+            type: 'longform',
+            servedIds: servedIds
+          }
+        });
+        setQuestion(res.data);
+        setServedIds(prev => [...prev, res.data.id]);
       } catch (err) {
         console.error('Error fetching questions:', err);
       }
     }
-    fetchQuestions();
+
+  useEffect(() => {
+    fetchQuestion();
   }, []);
 
   const handleSubmit = () => {
-    setSubmitted(true);
-    setShowMS(true);
-    if (textareaRef.current) {
-      textareaRef.current.style.flex = 'none';
-      textareaRef.current.style.height = 'auto';
-      textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
+    if (questionStage === "typingAnswer") {
+      if (answerBoxRef.current && answerBoxRef.current.value.trim() !== "") {
+        setQuestionStage("markingAnswer");
+        setSubmitted(true);
+        setShowMS(true);
+        if (textareaRef.current) {
+          textareaRef.current.style.flex = 'none';
+          textareaRef.current.style.height = 'auto';
+          textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
+        }
+      }
+    else {
+      handleNextQuestion()
+      }
     }
   };
 
-  if (!question) return <div>Loading...</div>;
+  if (!question) return <div></div>;
 
   let options = [];
   try {
@@ -53,6 +75,7 @@ function Longform() {
     options = [];
   }
 
+  console.log("Raw mark_scheme:", question.mark_scheme);
   var mark_scheme_array = question.mark_scheme;
   mark_scheme_array = JSON.parse(mark_scheme_array);
 
@@ -78,6 +101,7 @@ function Longform() {
         </div>
         <div className='Response' >
           <textarea
+            ref={answerBoxRef}
             className={`ResponseEntry${submitted ? ' shrink' : ''}`}
             placeholder='Type your answer here ...'
           /> 

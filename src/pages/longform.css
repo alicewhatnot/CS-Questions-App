@@ -136,6 +136,8 @@ textarea:focus {
 }
 
 .TickBox {
+    flex: 0 0 auto;      
+    align-self: center;
     border-radius: 0;
     border: 0.01rem solid black;
     background-color: white;
