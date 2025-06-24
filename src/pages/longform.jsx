@@ -1,208 +1,143 @@
-import '../App.css'; 
-import './longform.css'; 
+import '../App.css';
+import './longform.css';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import tick from '/assets/tick.svg';
 
-
 function Longform() {
   const [question, setQuestion] = useState(null);
   const [submitted, setSubmitted] = useState(false);
-<<<<<<< Updated upstream
-  const [servedIds, setServedIds] = useState([]);
-=======
   const [questionStage, setQuestionStage] = useState("typingAnswer");
->>>>>>> Stashed changes
-  const [ticked, setTicked] = useState([])
+  const [ticked, setTicked] = useState([]);
   const [ShowMS, setShowMS] = useState(false);
   const textareaRef = useRef(null);
-  const answerBoxRef = useRef(null);
-<<<<<<< Updated upstream
-  const [questionStage, setQuestionStage] = useState("typingAnswer");
-  const [totalQuestions, setTotalQuestions] = useState(0);
+  const containerRef = useRef(null);
 
-  const handleNextQuestion = () => {
-  if (servedIds.length >= totalQuestions && totalQuestions > 0) {
-    setServedIds([]);
-  }
-  fetchQuestion();
-};
-
-    const fetchQuestion = async () => {
-      try {
-        const res = await axios.get('http://localhost:3001/questions', {
-          params: {
-            type: 'longform',
-            servedIds: servedIds
-          }
-        });
-        setQuestion(res.data);
-        setServedIds(prev => [...prev, res.data.id]);
-      } catch (err) {
-        console.error('Error fetching questions:', err);
-      }
-    }
-
-=======
-
+  // Fetch a random question
   const fetchQuestion = async () => {
     try {
       const res = await axios.get('http://localhost:3001/questions?type=longform');
       const questions = res.data;
-      if (questions.length > 0) {
+      if (Array.isArray(questions) && questions.length > 0) {
         const randomIndex = Math.floor(Math.random() * questions.length);
         setQuestion(questions[randomIndex]);
+      } else if (questions && questions.id) {
+        setQuestion(questions); // In case backend returns a single object
       }
     } catch (err) {
       console.error('Error fetching questions:', err);
     }
-  }
+  };
 
->>>>>>> Stashed changes
   useEffect(() => {
     fetchQuestion();
   }, []);
 
-<<<<<<< Updated upstream
-=======
-    const handleNextQuestion = async () => {
+  // Reset everything and fetch a new question
+  const handleNextQuestion = async () => {
     setSubmitted(false);
     setQuestionStage("typingAnswer");
     setShowMS(false);
     setTicked([]);
-    if (answerBoxRef.current) {
-      answerBoxRef.current.value = "";
+    if (textareaRef.current) {
+      textareaRef.current.value = "";
+      textareaRef.current.style.flex = '1 1 auto';
+      textareaRef.current.style.height = 'auto';
+    }
+    // Example: you can also manipulate the container if needed
+    if (containerRef.current) {
+      // containerRef.current.style.background = "#fff"; // Example
     }
     await fetchQuestion();
-    if (textareaRef.current) {
-      textareaRef.current.style.flex = '1 1 auto';
-    }
   };
 
->>>>>>> Stashed changes
+  // Handle submit/next logic
   const handleSubmit = () => {
     if (questionStage === "typingAnswer") {
-      if (answerBoxRef.current && answerBoxRef.current.value.trim() !== "") {
+      if (textareaRef.current && textareaRef.current.value.trim() !== "") {
         setQuestionStage("markingAnswer");
         setSubmitted(true);
         setShowMS(true);
-        if (textareaRef.current) {
-          textareaRef.current.style.flex = 'none';
-          textareaRef.current.style.height = 'auto';
-          textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
-        }
+        // Shrink textarea to fit content
+        textareaRef.current.style.flex = 'none';
+        textareaRef.current.style.height = 'auto';
+        textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
       }
-<<<<<<< Updated upstream
-    else {
-      handleNextQuestion()
-      }
-=======
     } else {
       handleNextQuestion();
->>>>>>> Stashed changes
     }
   };
 
-  if (!question) return <div></div>;
-
-  let options = [];
-  try {
-    if (question.options) {
-      options = typeof question.options === 'string'
-        ? JSON.parse(question.options)
-        : question.options;
-    } else {
-      options = [];
-    }
-  } catch {
-    options = [];
-  }
-
-  console.log("Raw mark_scheme:", question.mark_scheme);
-  var mark_scheme_array = question.mark_scheme;
-  mark_scheme_array = JSON.parse(mark_scheme_array);
-
-
+  // Marking logic
   const handleMarkGiven = (idx) => {
     setTicked((prev) =>
-    prev.includes(idx)
-      ? prev.filter(i => i !== idx)
-      : [...prev, idx]
+      prev.includes(idx)
+        ? prev.filter(i => i !== idx)
+        : [...prev, idx]
     );
   };
 
+  if (!question) return <div>Loading...</div>;
+
+  // Parse mark scheme
+  let mark_scheme_array = [];
+  try {
+    mark_scheme_array = typeof question.mark_scheme === 'string'
+      ? JSON.parse(question.mark_scheme)
+      : question.mark_scheme || [];
+  } catch {
+    mark_scheme_array = [];
+  }
+
   return (
-      <div className="Container">
-        <div className='Header'>
-          <h1>{question.topic}</h1>
-          <hr />
-          <h2>{question.subtopic}</h2>
+    <div className="Container">
+      <div className='Header'>
+        <h1>{question.topic}</h1>
+        <hr />
+        <h2>{question.subtopic}</h2>
+      </div>
+      <div className='QuestionContainer' ref={containerRef}>
+        <div className="Question">
+          <p>{question.question} [{question.marks}]</p>
         </div>
-<<<<<<< Updated upstream
-        <div className='Response' >
+        <div className='Response'>
           <textarea
-            ref={answerBoxRef}
+            ref={textareaRef}
             className={`ResponseEntry${submitted ? ' shrink' : ''}`}
             placeholder='Type your answer here ...'
-          /> 
+            disabled={submitted}
+          />
         </div>
       </div>
       {ShowMS && (
         <div className="MSContainer">
           <h3>Did you say...</h3>
           <div className="MarkScheme">
-            {mark_scheme_array.map((mark_point, idx) => 
+            {mark_scheme_array.map((mark_point, idx) =>
               <div className={`MarkingPoint${ticked.includes(idx) ? ' Ticked' : ''}`} key={idx}>
                 {mark_point}
                 <button
                   className={`TickBox${ticked.includes(idx) ? ' Ticked' : ''}`}
                   onClick={() => handleMarkGiven(idx)}
+                  type="button"
                 >
-                  <img src={tick} alt="tickIcon" className={ticked.includes(idx) ? "Ticked" : ""}/>
+                  <img src={tick} alt="tickIcon" className={ticked.includes(idx) ? "Ticked" : ""} />
                 </button>
               </div>
             )}
-            <div className='MarksAchieved'>Marks Achieved: {Math.min(ticked.length, question.marks)}/{question.marks}</div>  
-=======
-        <div className='QuestionContainer'ref={textareaRef}>
-          <div className="Question">
-            <p>{question.question} [{question.marks}]</p>
-          </div>
-          <div className='Response' >
-            <textarea
-              ref={answerBoxRef}
-              className={`ResponseEntry${submitted ? ' shrink' : ''}`}
-              placeholder='Type your answer here ...'
-            /> 
->>>>>>> Stashed changes
-          </div>
-        </div>
-        {ShowMS && (
-          <div className="MSContainer">
-            <h3>Did you say...</h3>
-            <div className="MarkScheme">
-              {mark_scheme_array.map((mark_point, idx) => 
-                <div className={`MarkingPoint${ticked.includes(idx) ? ' Ticked' : ''}`} key={idx}>
-                  {mark_point}
-                  <button
-                    className={`TickBox${ticked.includes(idx) ? ' Ticked' : ''}`}
-                    onClick={() => handleMarkGiven(idx)}
-                  >
-                    <img src={tick} alt="tickIcon" className={ticked.includes(idx) ? "Ticked" : ""}/>
-                  </button>
-                </div>
-              )}
-              <div className='MarksAchieved'>Marks Achieved: {Math.min(ticked.length, question.marks)}/{question.marks}</div>  
+            <div className='MarksAchieved'>
+              Marks Achieved: {Math.min(ticked.length, question.marks)}/{question.marks}
             </div>
           </div>
-        )}
-        <div className='SubmitContainer'>
-          <button className='Submit' onClick={handleSubmit}>
-            {submitted ? "Next" : "Submit"}
-          </button>    
         </div>
+      )}
+      <div className='SubmitContainer'>
+        <button className='Submit' onClick={handleSubmit}>
+          {submitted ? "Next" : "Submit"}
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
 export default Longform;
