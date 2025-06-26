@@ -13,18 +13,13 @@ function Longform() {
   const textareaRef = useRef(null);
   const containerRef = useRef(null);
 
-
-  // Fetch a random question
   const fetchQuestion = async () => {
     try {
       const res = await axios.get('http://localhost:3001/questions?type=longform');
-      const questions = res.data;
-      if (Array.isArray(questions) && questions.length > 0) {
-        const randomIndex = Math.floor(Math.random() * questions.length);
-        setQuestion(questions[randomIndex]);
-      } else if (questions && questions.id) {
-        setQuestion(questions); // In case backend returns a single object
-      }
+      const question = res.data;
+     
+      setQuestion(question);
+      
     } catch (err) {
       console.error('Error fetching questions:', err);
     }
@@ -74,7 +69,7 @@ function Longform() {
     );
   };
 
-  if (!question) return <div>Loading...</div>;
+  if (!question) return <div></div>;
 
   // Parse mark scheme
   let mark_scheme_array = [];

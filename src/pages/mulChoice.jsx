@@ -1,55 +1,80 @@
-import '../App.css'; 
-import { useEffect, useState } from 'react';
+import '../App.css';
+import './mulChoice.css';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 
-function Longform() {
-  console.log('App component rendered'); 
-// Sets up questions array
+function MulChoice() {
   const [question, setQuestion] = useState(null);
 
-  useEffect(() => {
-    //Fetch questions
-  async function fetchQuestions() {
+  const fetchQuestion = async () => {
     try {
-      //recieves database from backend, query for longform
-      const res = await axios.get('http://localhost:3001/questions?type=longform');
-      const questions = res.data;
-      // Choose a random question
-      if (questions.length > 0) {
-        const randomIndex = Math.floor(Math.random() * questions.length);
-        setQuestion(questions[randomIndex]);
-      }
+      const res = await axios.get('http://localhost:3001/questions?type=mul_choice');
+      const question = res.data;
+      
+      setQuestion(question);
+      
     } catch (err) {
       console.error('Error fetching questions:', err);
     }
+  };
+
+  useEffect(() => {
+    fetchQuestion();
+  }, []);
+
+  if (!question) return <div></div>;
+
+  // Parse wrong answers
+  let choices = [];
+  try {
+    choices = typeof question.wrong_choices === 'string'
+      ? JSON.parse(question.wrong_choices)
+      : question.wrong_choices || [];
+  } catch {
+    choices = [];
   }
-  fetchQuestions();
-}, []);
+  choices.push(question.mark_scheme); 
 
-  if (!question) return <div>Loading...</div>;
+  // From stack overflow - Fisher–Yates (aka Knuth) Shuffle.
+  function shuffle(array) {
+    let currentIndex = array.length;
 
-  let options = [];
-try {
-  if (question.options) {
-    options = typeof question.options === 'string'
-      ? JSON.parse(question.options)
-      : question.options;
-  } else {
-    options = [];
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+
+      // Pick a remaining element...
+      let randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
   }
-} catch {
-  options = [];
-}
 
-console.log('question:', question);
+  shuffle(choices)
 
-return (
-  <div className="Container">
-    <h1>Random Question</h1>
-    <div className="Question">
-      <p>test</p>
+  
+  
+  return (
+    <div className='Container'>
+      <div className='Header'>
+        <h1>{question.topic}</h1>
+        <hr />
+        <h2>{question.subtopic}</h2>
+      </div>
+      <div className='QuestionContainer'>
+        <div className="Question">
+          <p>{question.question}</p>
+        </div>
+        {choices.map((choice, idx) =>
+          <div className="answerChoice" key={idx}>
+            {choice}
+          </div>
+        )}
+      </div>
     </div>
-  </div>
-);
-}
-export default Longform;
+  );
+};
+
+export default MulChoice;

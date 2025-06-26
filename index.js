@@ -11,22 +11,10 @@ app.use(express.json());
 app.get('/questions', (req, res) => {
     const { type } = req.query;
 
-    let servedIds = req.query.servedIds;
-    if (!servedIds) {
-        servedIds = [];
-    } else if (!Array.isArray(servedIds)) {
-        servedIds = [servedIds];
-    }
-    servedIds = servedIds.map(Number);
-
     let query = `SELECT * FROM questions`;
     let whereClauses = [];
     let params = [];
 
-    if (servedIds.length > 0) {
-    whereClauses.push(`id NOT IN (${servedIds.map(() => '?').join(',')})`);
-    params.push(...servedIds);
-    }
     if (type) {
     whereClauses.push(`question_type = ?`);
     params.push(type);
