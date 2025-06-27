@@ -5,6 +5,16 @@ import axios from 'axios';
 
 function MulChoice() {
   const [question, setQuestion] = useState(null);
+  const buttonRefs = useRef([]); 
+
+  function handleChoice(choice) {
+    // Find the index of the button with the matching text
+    const idx = choices.findIndex(c => c === choice);
+    if (idx !== -1 && buttonRefs.current[idx]) {
+      buttonRefs.current[idx].style.border = "0.15rem solid #00b179";
+      buttonRefs.current[idx].style.padding = "0.43rem";
+    }
+  }
 
   const fetchQuestion = async () => {
     try {
@@ -54,8 +64,35 @@ function MulChoice() {
 
   shuffle(choices)
 
-  
-  
+  var alreadyAnswered = false
+  function handleChoice(idx) {
+    if (alreadyAnswered === false) {
+      // Find the index of the button with the matching text
+      const correctIdx = choices.findIndex(c => c === question.mark_scheme);
+      if (correctIdx !== -1 && buttonRefs.current[correctIdx]) {
+        buttonRefs.current[correctIdx].style.border = "0.15rem solid #00b179";
+        buttonRefs.current[correctIdx].style.padding = "0.4rem 0.43rem";
+      }
+      if (idx != correctIdx) {
+        buttonRefs.current[idx].style.border = "0.15rem solid #c1272d";
+        buttonRefs.current[idx].style.padding = "0.4rem 0.43rem";  
+      }
+    }
+    alreadyAnswered = true
+  }
+
+  function handleNext() {
+  alreadyAnswered = false
+  // Reset button styles
+  buttonRefs.current.forEach(btn => {
+    if (btn) {
+      btn.style.border = "";
+      btn.style.padding = "";
+    }
+  });
+  fetchQuestion();
+}
+
   return (
     <div className='Container'>
       <div className='Header'>
@@ -68,10 +105,18 @@ function MulChoice() {
           <p>{question.question}</p>
         </div>
         {choices.map((choice, idx) =>
-          <div className="answerChoice" key={idx}>
+          <button className="answerChoice" 
+          key={idx} 
+          onClick={() => handleChoice(idx)}
+          ref={el => buttonRefs.current[idx] = el}
+          >
             {choice}
-          </div>
+          </button>
         )}
+      </div>
+      <div className='SubmitContainer'>
+        <button className='Submit'onClick={handleNext}>Next 
+        </button>
       </div>
     </div>
   );

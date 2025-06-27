@@ -41,6 +41,7 @@ function Longform() {
       containerRef.current.style.height = 'auto';
     }
     await fetchQuestion();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Handle submit/next logic
@@ -50,6 +51,9 @@ function Longform() {
         setQuestionStage("markingAnswer");
         setSubmitted(true);
         setShowMS(true);
+        if (textareaRef.current) {
+          textareaRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
 
         containerRef.current.style.flex = 'none';
         containerRef.current.style.height = 'auto';

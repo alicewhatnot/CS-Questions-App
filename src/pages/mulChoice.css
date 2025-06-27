@@ -50,8 +50,52 @@
     font-size: 1rem;
     margin: 1rem;
     margin-top: 0; 
-    margin-bottom: 0.3rem;
+    margin-bottom: 1rem;
     width: calc(100% - 3.02rem) !important;
     border: 0.01rem solid black;
     padding: 0.5rem;
+}
+
+.answerChoice {
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 1rem;
+    margin-top: 0; 
+    margin-bottom: 0.3rem;
+    width: calc(100% - 1.98rem);
+    border: 0.01rem solid black;
+    background-color: #e6e6e6;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answerChoice:hover {
+    scale: 1.01;
+}
+
+.Submit {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    margin: 1rem;
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    border: none;
+    align-self: flex-end;
+    background-color: #c94277;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.Submit:hover {
+    transform: scale(1.05);
+}
+
+.dark-mode .answerChoice {
+    background-color: #220d48;
+    border-color: white;
+    color: white;
 }

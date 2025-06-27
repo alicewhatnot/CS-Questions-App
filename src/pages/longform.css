@@ -175,3 +175,31 @@ textarea:focus {
     margin-left: 1.5rem;
     margin-bottom: 0.3rem;
 }
+
+.dark-mode .Question p{
+    border-color: #e6e6e6;
+}
+
+.dark-mode .ResponseEntry{
+    border-color: #e6e6e6;
+    background-color: #180a33;
+    color: white;
+}
+
+.dark-mode .MarkingPoint{
+    border-color: #e6e6e6;
+    background-color: #180a33;
+}
+
+.dark-mode .MarkingPoint.Ticked{
+    border-color: #00b179;
+    background-color: #180a33;
+}
+
+.dark-mode .TickBox{
+    border-color: #e6e6e6;
+}
+
+.dark-mode .ResponseEntry img{
+    filter: invert();
+}
