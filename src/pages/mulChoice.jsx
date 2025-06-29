@@ -29,10 +29,20 @@ function MulChoice() {
 
   const fetchQuestion = async () => {
     try {
-      const res = await axios.get('http://192.168.0.40:3001/questions?type=mul_choice');
+      const stored = localStorage.getItem('askedQuestionIds');
+      let askedIds = stored ? JSON.parse(stored) : [];
+
+      const res = await axios.post(
+        'http://192.168.0.40:3001/questions?type=longform',
+        { excludeIds: askedIds }
+      );
       const question = res.data;
       setQuestion(question);
 
+      if (question.id && !askedIds.includes(question.id)) {
+        askedIds.push(question.id);
+        localStorage.setItem('askedQuestionIds', JSON.stringify(askedIds));
+      }
       // Parse and combine choices
       let newChoices = [];
       try {
@@ -44,8 +54,8 @@ function MulChoice() {
       }
       newChoices.push(question.mark_scheme);
 
-      shuffle(newChoices); // <-- Only shuffle here
-      setChoices(newChoices); // <-- Save shuffled choices in state
+      shuffle(newChoices);
+      setChoices(newChoices); 
 
     } catch (err) {
       console.error('Error fetching questions:', err);
@@ -60,7 +70,6 @@ function MulChoice() {
 
   function handleChoice(idx) {
   if (!alreadyAnswered.current) {
-    // Find the index of the button with the matching text
     const correctIdx = choices.findIndex(c => c === question.mark_scheme);
     if (correctIdx !== -1 && buttonRefs.current[correctIdx]) {
       buttonRefs.current[correctIdx].style.border = "0.15rem solid #00b179";
@@ -78,7 +87,6 @@ function MulChoice() {
   function handleNext() {
   alreadyAnswered.current = false;
   setHasAnswered(false);
-  // Reset button styles
   buttonRefs.current.forEach(btn => {
     if (btn) {
       btn.style.border = "";

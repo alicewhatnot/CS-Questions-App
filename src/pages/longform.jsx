@@ -15,11 +15,20 @@ function Longform() {
 
   const fetchQuestion = async () => {
     try {
-      const res = await axios.get('http://192.168.0.40:3001/questions?type=longform');
+      const stored = localStorage.getItem('askedQuestionIds');
+      let askedIds = stored ? JSON.parse(stored) : [];
+
+      const res = await axios.post(
+        'http://192.168.0.40:3001/questions?type=longform',
+        { excludeIds: askedIds }
+      );
       const question = res.data;
-     
       setQuestion(question);
-      
+
+      if (question.id && !askedIds.includes(question.id)) {
+        askedIds.push(question.id);
+        localStorage.setItem('askedQuestionIds', JSON.stringify(askedIds));
+      }
     } catch (err) {
       console.error('Error fetching questions:', err);
     }
@@ -72,7 +81,7 @@ function Longform() {
     );
   };
 
-  if (!question) return <div></div>;
+  if (!question) return <div>aaaaaaaa</div>;
 
   // Parse mark scheme
   let mark_scheme_array = [];
