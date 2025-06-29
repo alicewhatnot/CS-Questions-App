@@ -57,8 +57,7 @@ function Longform() {
 
         containerRef.current.style.flex = 'none';
         containerRef.current.style.height = 'auto';
-        containerRef.current.style.height = containerRef.current.scrollHeight + 'px';
-      }
+        containerRef.current.style.height = containerRef.current.scrollHeight + 'px';      }
     } else {
       handleNextQuestion();
     }
@@ -122,13 +121,18 @@ function Longform() {
                 </div>
               </div>
             )}
-            <div className='MarksAchieved'>
-              Marks Achieved: {Math.min(ticked.length, question.marks)}/{question.marks}
-            </div>
           </div>
         </div>
       )}
       <div className='SubmitContainer'>
+        {submitted && (
+          <div className='MarksAchieved'>
+            Marks Achieved: {Math.min(ticked.length, question.marks)}/{question.marks}
+          </div>
+        )}
+        {!submitted && (
+          <div></div>
+        )}
         <button className='Submit' onClick={handleSubmit}>
           {submitted ? "Next" : "Submit"}
         </button>
