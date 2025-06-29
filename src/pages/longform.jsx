@@ -15,7 +15,7 @@ function Longform() {
 
   const fetchQuestion = async () => {
     try {
-      const res = await axios.get('http://localhost:3001/questions?type=longform');
+      const res = await axios.get('http://192.168.0.40:3001/questions?type=longform');
       const question = res.data;
      
       setQuestion(question);
@@ -109,15 +109,17 @@ function Longform() {
           <h3>Did you say...</h3>
           <div className="MarkScheme">
             {mark_scheme_array.map((mark_point, idx) =>
-              <div className={`MarkingPoint${ticked.includes(idx) ? ' Ticked' : ''}`} key={idx}>
+              <div className={`MarkingPoint${ticked.includes(idx) ? ' Ticked' : ''}`} 
+              key={idx}
+              onClick={() => handleMarkGiven(idx)}>
                 {mark_point}
-                <button
+                <div
                   className={`TickBox${ticked.includes(idx) ? ' Ticked' : ''}`}
-                  onClick={() => handleMarkGiven(idx)}
+                  
                   type="button"
                 >
                   <img src={tick} alt="tickIcon" className={ticked.includes(idx) ? "Ticked" : ""} />
-                </button>
+                </div>
               </div>
             )}
             <div className='MarksAchieved'>

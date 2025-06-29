@@ -6,44 +6,9 @@ import axios from 'axios';
 function MulChoice() {
   const [question, setQuestion] = useState(null);
   const buttonRefs = useRef([]); 
-
-  function handleChoice(choice) {
-    // Find the index of the button with the matching text
-    const idx = choices.findIndex(c => c === choice);
-    if (idx !== -1 && buttonRefs.current[idx]) {
-      buttonRefs.current[idx].style.border = "0.15rem solid #00b179";
-      buttonRefs.current[idx].style.padding = "0.43rem";
-    }
-  }
-
-  const fetchQuestion = async () => {
-    try {
-      const res = await axios.get('http://localhost:3001/questions?type=mul_choice');
-      const question = res.data;
-      
-      setQuestion(question);
-      
-    } catch (err) {
-      console.error('Error fetching questions:', err);
-    }
-  };
-
-  useEffect(() => {
-    fetchQuestion();
-  }, []);
-
-  if (!question) return <div></div>;
-
-  // Parse wrong answers
-  let choices = [];
-  try {
-    choices = typeof question.wrong_choices === 'string'
-      ? JSON.parse(question.wrong_choices)
-      : question.wrong_choices || [];
-  } catch {
-    choices = [];
-  }
-  choices.push(question.mark_scheme); 
+  const [choices, setChoices] = useState([]); 
+  const alreadyAnswered = useRef(false);
+  const [hasAnswered, setHasAnswered] = useState(false);
 
   // From stack overflow - Fisher–Yates (aka Knuth) Shuffle.
   function shuffle(array) {
@@ -62,27 +27,57 @@ function MulChoice() {
     }
   }
 
-  shuffle(choices)
+  const fetchQuestion = async () => {
+    try {
+      const res = await axios.get('http://192.168.0.40:3001/questions?type=mul_choice');
+      const question = res.data;
+      setQuestion(question);
 
-  var alreadyAnswered = false
-  function handleChoice(idx) {
-    if (alreadyAnswered === false) {
-      // Find the index of the button with the matching text
-      const correctIdx = choices.findIndex(c => c === question.mark_scheme);
-      if (correctIdx !== -1 && buttonRefs.current[correctIdx]) {
-        buttonRefs.current[correctIdx].style.border = "0.15rem solid #00b179";
-        buttonRefs.current[correctIdx].style.padding = "0.4rem 0.43rem";
+      // Parse and combine choices
+      let newChoices = [];
+      try {
+        newChoices = typeof question.wrong_choices === 'string'
+          ? JSON.parse(question.wrong_choices)
+          : question.wrong_choices || [];
+      } catch {
+        newChoices = [];
       }
-      if (idx != correctIdx) {
-        buttonRefs.current[idx].style.border = "0.15rem solid #c1272d";
-        buttonRefs.current[idx].style.padding = "0.4rem 0.43rem";  
-      }
+      newChoices.push(question.mark_scheme);
+
+      shuffle(newChoices); // <-- Only shuffle here
+      setChoices(newChoices); // <-- Save shuffled choices in state
+
+    } catch (err) {
+      console.error('Error fetching questions:', err);
     }
-    alreadyAnswered = true
+  };
+
+  useEffect(() => {
+    fetchQuestion();
+  }, []);
+
+  if (!question) return <div></div>;
+
+  function handleChoice(idx) {
+  if (!alreadyAnswered.current) {
+    // Find the index of the button with the matching text
+    const correctIdx = choices.findIndex(c => c === question.mark_scheme);
+    if (correctIdx !== -1 && buttonRefs.current[correctIdx]) {
+      buttonRefs.current[correctIdx].style.border = "0.15rem solid #00b179";
+      buttonRefs.current[correctIdx].style.padding = "0.4rem 0.43rem";
+    }
+    if (idx !== correctIdx && buttonRefs.current[idx]) {
+      buttonRefs.current[idx].style.border = "0.15rem solid #c1272d";
+      buttonRefs.current[idx].style.padding = "0.4rem 0.43rem";
+    }
+    alreadyAnswered.current = true;
+    setHasAnswered(true);
   }
+}
 
   function handleNext() {
-  alreadyAnswered = false
+  alreadyAnswered.current = false;
+  setHasAnswered(false);
   // Reset button styles
   buttonRefs.current.forEach(btn => {
     if (btn) {
@@ -115,7 +110,7 @@ function MulChoice() {
         )}
       </div>
       <div className='SubmitContainer'>
-        <button className='Submit'onClick={handleNext}>Next 
+        <button className='Submit'onClick={handleNext} disabled={!hasAnswered}>Next 
         </button>
       </div>
     </div>

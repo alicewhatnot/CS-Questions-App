@@ -8,6 +8,7 @@ import hamburgerIcon from '/assets/hamburger.svg';
 import expandedIcon from '/assets/arrow.svg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function App() {
   const navigate = useNavigate();
@@ -24,16 +25,12 @@ function App() {
       </Routes>
       
       <nav className='navbar'>
-        <div
-        className={`icon-wrapper ${active === "multiple-choice" ? "active" : ""}`}
-        onClick={() => {
-          setActive("multiple-choice");
-          navigate('/multiple-choice');
-        }}
+        <NavLink
+          to="/multiple-choice"
+          className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
         >
-          <img src={multiplechoiceIcon} alt="multiplechoiceIcon" />
-        </div> 
-
+          <img src={multiplechoiceIcon} alt="longformIcon" />
+        </NavLink>
         <div className="burgermenu">
           <img
             src={showPopup ? expandedIcon : hamburgerIcon}
@@ -49,16 +46,12 @@ function App() {
             </div>
           )}
         </div>
-
-        <div
-        className={`icon-wrapper ${active === "longform" ? "active" : ""}`}
-        onClick={() => {
-          setActive("longform")
-          navigate('longform')
-        }}
+         <NavLink
+          to="/longform"
+          className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
         >
           <img src={longformIcon} alt="longformIcon" />
-        </div>
+        </NavLink>
       </nav>
 
       

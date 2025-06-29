@@ -5,7 +5,9 @@ import sqlite3 from "sqlite3";
 const app = express();
 const db = new sqlite3.Database('./questions.db');
 
-app.use(cors());
+app.use(cors({
+      origin: ['http://localhost:5173', 'http://192.168.0.40:5173'],
+}));
 app.use(express.json());
 
 app.get('/questions', (req, res) => {
