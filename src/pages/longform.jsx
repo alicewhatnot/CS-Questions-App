@@ -15,22 +15,27 @@ function Longform() {
 
   const fetchQuestion = async () => {
     try {
-      const stored = localStorage.getItem('askedQuestionIds');
-      let askedIds = stored ? JSON.parse(stored) : [];
+      const stored = localStorage.getItem('askedLongformIds');
+      let askedLongformIds = stored ? JSON.parse(stored) : [];
 
       const res = await axios.post(
         'http://192.168.0.40:3001/questions?type=longform',
-        { excludeIds: askedIds }
+        { excludeIds: askedLongformIds }
       );
       const question = res.data;
       setQuestion(question);
 
-      if (question.id && !askedIds.includes(question.id)) {
-        askedIds.push(question.id);
-        localStorage.setItem('askedQuestionIds', JSON.stringify(askedIds));
+      if (question.id && !askedLongformIds.includes(question.id)) {
+        askedLongformIds.push(question.id);
+        localStorage.setItem('askedLongformIds', JSON.stringify(askedLongformIds));
       }
     } catch (err) {
-      console.error('Error fetching questions:', err);
+      if (err.response && err.response.status === 404) {
+        localStorage.setItem('askedLongformIds', JSON.stringify([]));
+        fetchQuestion();
+      } else {
+        console.error('Error fetching questions:', err);
+      }
     }
   };
 
