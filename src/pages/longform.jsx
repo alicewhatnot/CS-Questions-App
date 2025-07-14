@@ -1,9 +1,12 @@
 import '../App.css';
 import './longform.css';
 import { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
 import tick from '/assets/tick.svg';
+
 import { Preferences } from '@capacitor/preferences';
+import { CapacitorSQLite, SQLiteConnection } from '@capacitor-community/sqlite';
+
+const sqlite = new SQLiteConnection(CapacitorSQLite); // Move outside component for reuse
 
 function Longform() {
   const [question, setQuestion] = useState(null);
@@ -16,15 +19,27 @@ function Longform() {
 
   const fetchQuestion = async () => {
     try {
-      const { value } = await Preferences.get({ key: 'askedLongformIds' });
-      const askedLongformIds = value ? JSON.parse(value) : []; 
-
-      const res = await axios.post(
-        'http://192.168.0.40:3001/questions?type=longform',
-        { excludeIds: askedLongformIds }
-      );
-      const question = res.data;
-      setQuestion(question);
+        const db = await sqlite.createConnection('questionsDB', false, 'no-encryption', 1);
+        await db.open();
+  
+        const { value } = await Preferences.get({ key: 'askedLongformIds' });
+        const askedLongformIds = value ? JSON.parse(value) : [];
+  
+        // Build WHERE clause
+        const where = askedLongformIds.length
+          ? `WHERE id NOT IN (${askedLongformIds.join(',')}) AND type='longform'`
+          : `WHERE type='longform'`;
+  
+        const res = await db.query(`SELECT * FROM questions ${where} LIMIT 1;`);
+        const question = res.values && res.values.length > 0 ? res.values[0] : null;
+        if (!question) {
+          // No more questions, reset askedLongformIds and try again
+          await Preferences.set({ key: 'askedLongformIds', value: JSON.stringify([]) });
+          await db.close();
+          fetchQuestion();
+          return;
+        }
+        setQuestion(question);
 
       if (question.id && !askedLongformIds.includes(question.id)) {
         askedLongformIds.push(question.id);
@@ -33,13 +48,10 @@ function Longform() {
           value: JSON.stringify(askedLongformIds),
         });
       }
+
+      await db.close();
     } catch (err) {
-      if (err.response && err.response.status === 404) {
-        await Preferences.set({ key: 'askedLongformIds', value: JSON.stringify([]) });
-        fetchQuestion();
-      } else {
-        console.error('Error fetching questions:', err);
-      }
+      console.error('Error fetching questions:', err);
     }
   };
 

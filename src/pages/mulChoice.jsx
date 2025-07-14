@@ -1,8 +1,11 @@
 import '../App.css';
 import './mulChoice.css';
 import { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
+
 import { Preferences } from '@capacitor/preferences';
+import { CapacitorSQLite, SQLiteConnection } from '@capacitor-community/sqlite';
+
+const sqlite = new SQLiteConnection(CapacitorSQLite); 
 
 function MulChoice() {
   const [question, setQuestion] = useState(null);
@@ -30,23 +33,28 @@ function MulChoice() {
 
   const fetchQuestion = async () => {
     try {
-      const { value } = await Preferences.get({ key: 'askedQuestions' });
-      const askedMulChoiceIds = value ? JSON.parse(value) : []; 
+      const db = await sqlite.createConnection('questionsDB', false, 'no-encryption', 1);
+      await db.open();
 
-      const res = await axios.post(
-        'http://192.168.0.40:3001/questions?type=mul_choice',
-        { excludeIds: askedMulChoiceIds }
-      );
-      const question = res.data;
+      const { value } = await Preferences.get({ key: 'askedMulChoiceIds' });
+      const askedMulChoiceIds = value ? JSON.parse(value) : [];
+
+      // Build WHERE clause
+      const where = askedMulChoiceIds.length
+        ? `WHERE id NOT IN (${askedMulChoiceIds.join(',')}) AND type='mul_choice'`
+        : `WHERE type='mul_choice'`;
+
+      const res = await db.query(`SELECT * FROM questions ${where} LIMIT 1;`);
+      const question = res.values && res.values.length > 0 ? res.values[0] : null;
+      if (!question) {
+        // No more questions, reset askedMulChoiceIds and try again
+        await Preferences.set({ key: 'askedMulChoiceIds', value: JSON.stringify([]) });
+        await db.close();
+        fetchQuestion();
+        return;
+      }
       setQuestion(question);
 
-      if (question.id && !askedMulChoiceIds.includes(question.id)) {
-        askedMulChoiceIds.push(question.id);
-        await Preferences.set({
-          key: 'askedMulChoiceIds',
-          value: JSON.stringify(askedMulChoiceIds),
-        });
-      }
       // Parse and combine choices
       let newChoices = [];
       try {
@@ -59,15 +67,20 @@ function MulChoice() {
       newChoices.push(question.mark_scheme);
 
       shuffle(newChoices);
-      setChoices(newChoices); 
+      setChoices(newChoices);
 
-    } catch (err) {
-      if (err.response && err.response.status === 404) {
-        await Preferences.set({ key: 'askedMulChoiceIds', value: JSON.stringify([]) });
-        fetchQuestion();
-      } else {
-        console.error('Error fetching questions:', err);
+      // Add this question's id to askedMulChoiceIds
+      if (question.id && !askedMulChoiceIds.includes(question.id)) {
+        askedMulChoiceIds.push(question.id);
+        await Preferences.set({
+          key: 'askedMulChoiceIds',
+          value: JSON.stringify(askedMulChoiceIds),
+        });
       }
+
+      await db.close();
+    } catch (err) {
+      console.error('Error fetching questions:', err);
     }
   };
 

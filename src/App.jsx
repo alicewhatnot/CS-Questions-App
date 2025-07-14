@@ -9,6 +9,7 @@ import expandedIcon from '/assets/arrow.svg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { CapacitorSQLite, SQLiteConnection } from '@capacitor-community/sqlite';
 
 function App() {
   const navigate = useNavigate();
@@ -16,6 +17,23 @@ function App() {
   const [showPopup, setShowPopup] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
+  const sqlite = new SQLiteConnection(CapacitorSQLite);
+
+  // On app start, copy the DB if it doesn't exist
+  const setupDatabase = async () => {
+    try {
+      await sqlite.checkConnectionsConsistency();
+      await sqlite.isConnection('questionsDB');
+    } catch {
+      // If not present, copy from assets
+      await sqlite.copyFromAssets();
+    }
+  };
+
+  useEffect(() => {
+    setupDatabase();
+  }, []);
+  
   return (
     <div className={darkMode ? "dark-mode" : ""}>      
       <Routes>
