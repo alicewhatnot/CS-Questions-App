@@ -3,6 +3,7 @@ import './longform.css';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import tick from '/assets/tick.svg';
+import { Preferences } from '@capacitor/preferences';
 
 function Longform() {
   const [question, setQuestion] = useState(null);
@@ -15,8 +16,8 @@ function Longform() {
 
   const fetchQuestion = async () => {
     try {
-      const stored = localStorage.getItem('askedLongformIds');
-      let askedLongformIds = stored ? JSON.parse(stored) : [];
+      const { value } = await Preferences.get({ key: 'askedLongformIds' });
+      const askedLongformIds = value ? JSON.parse(value) : []; 
 
       const res = await axios.post(
         'http://192.168.0.40:3001/questions?type=longform',
@@ -27,11 +28,14 @@ function Longform() {
 
       if (question.id && !askedLongformIds.includes(question.id)) {
         askedLongformIds.push(question.id);
-        localStorage.setItem('askedLongformIds', JSON.stringify(askedLongformIds));
+        await Preferences.set({
+          key: 'askedLongformIds',
+          value: JSON.stringify(askedLongformIds),
+        });
       }
     } catch (err) {
       if (err.response && err.response.status === 404) {
-        localStorage.setItem('askedLongformIds', JSON.stringify([]));
+        await Preferences.set({ key: 'askedLongformIds', value: JSON.stringify([]) });
         fetchQuestion();
       } else {
         console.error('Error fetching questions:', err);

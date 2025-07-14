@@ -2,6 +2,7 @@ import '../App.css';
 import './mulChoice.css';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
+import { Preferences } from '@capacitor/preferences';
 
 function MulChoice() {
   const [question, setQuestion] = useState(null);
@@ -29,8 +30,8 @@ function MulChoice() {
 
   const fetchQuestion = async () => {
     try {
-      const stored = localStorage.getItem('askedMulChoiceIds');
-      let askedMulChoiceIds = stored ? JSON.parse(stored) : [];
+      const { value } = await Preferences.get({ key: 'askedQuestions' });
+      const askedMulChoiceIds = value ? JSON.parse(value) : []; 
 
       const res = await axios.post(
         'http://192.168.0.40:3001/questions?type=mul_choice',
@@ -41,7 +42,10 @@ function MulChoice() {
 
       if (question.id && !askedMulChoiceIds.includes(question.id)) {
         askedMulChoiceIds.push(question.id);
-        localStorage.setItem('askedMulChoiceIds', JSON.stringify(askedMulChoiceIds));
+        await Preferences.set({
+          key: 'askedMulChoiceIds',
+          value: JSON.stringify(askedMulChoiceIds),
+        });
       }
       // Parse and combine choices
       let newChoices = [];
@@ -59,7 +63,7 @@ function MulChoice() {
 
     } catch (err) {
       if (err.response && err.response.status === 404) {
-        localStorage.setItem('askedMulChoiceIds', JSON.stringify([]));
+        await Preferences.set({ key: 'askedMulChoiceIds', value: JSON.stringify([]) });
         fetchQuestion();
       } else {
         console.error('Error fetching questions:', err);

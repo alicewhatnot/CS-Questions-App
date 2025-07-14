@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import sqlite3 from "sqlite3";
+import { Preferences } from '@capacitor/preferences';
 
 const app = express();
 const db = new sqlite3.Database('./questions.db');
