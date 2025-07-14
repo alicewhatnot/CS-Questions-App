@@ -3,10 +3,7 @@ import './mulChoice.css';
 import { useEffect, useState, useRef } from 'react';
 
 import { Preferences } from '@capacitor/preferences';
-import { CapacitorSQLite, SQLiteConnection } from '@capacitor-community/sqlite';
-
-const sqlite = new SQLiteConnection(CapacitorSQLite); // Persistent connection instance
-
+import { useDatabase } from '../databaseContext';
 
 function MulChoice() {
   const [question, setQuestion] = useState(null);
@@ -14,7 +11,7 @@ function MulChoice() {
   const [choices, setChoices] = useState([]); 
   const alreadyAnswered = useRef(false);
   const [hasAnswered, setHasAnswered] = useState(false);
-  const dbRef = useRef(null); // persistent db connection
+  const dbRef = useDatabase();
 
   // From stack overflow - Fisher–Yates (aka Knuth) Shuffle.
   function shuffle(array) {
@@ -36,6 +33,7 @@ function MulChoice() {
   const fetchQuestion = async () => {
     try {
       const db = dbRef.current;
+      if (!db) return; // Wait for DB to be ready
       const { value } = await Preferences.get({ key: 'askedMulChoiceIds' });
       const askedMulChoiceIds = value ? JSON.parse(value) : [];
 
@@ -83,38 +81,8 @@ function MulChoice() {
 
 
   useEffect(() => {
-    let isMounted = true;
-    const openDb = async () => {
-      try {
-        const isConn = await sqlite.isConnection('questionsDB');
-        let db;
-        if (!isConn.result) {
-          db = await sqlite.createConnection('questionsDB', false, 'no-encryption', 1);
-          await db.open();
-        } else {
-          db = await sqlite.retrieveConnection('questionsDB');
-        }
-        dbRef.current = db;
-        if (isMounted) await fetchQuestion();
-      } catch (err) {
-        console.error('Error opening DB:', err);
-      }
-    };
-    openDb();
-    return () => {
-      isMounted = false;
-      // Close connection on unmount
-      (async () => {
-        try {
-          if (dbRef.current) {
-            await dbRef.current.close();
-            await sqlite.closeConnection('questionsDB');
-          }
-        } catch (err) {
-          // ignore
-        }
-      })();
-    };
+    fetchQuestion();
+    // eslint-disable-next-line
   }, []);
 
   if (!question) return <div></div>;

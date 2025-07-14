@@ -4,11 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import tick from '/assets/tick.svg';
 
 import { Preferences } from '@capacitor/preferences';
-import { CapacitorSQLite, SQLiteConnection } from '@capacitor-community/sqlite';
-
-
-const sqlite = new SQLiteConnection(CapacitorSQLite); // Persistent connection instance
-
+import { useDatabase } from '../databaseContext';
 
 function Longform() {
   const [question, setQuestion] = useState(null);
@@ -18,11 +14,12 @@ function Longform() {
   const [ShowMS, setShowMS] = useState(false);
   const textareaRef = useRef(null);
   const containerRef = useRef(null);
-  const dbRef = useRef(null); // persistent db connection
+  const dbRef = useDatabase();
 
   const fetchQuestion = async () => {
     try {
       const db = dbRef.current;
+      if (!db) return; // Wait for DB to be ready
       const { value } = await Preferences.get({ key: 'askedLongformIds' });
       const askedLongformIds = value ? JSON.parse(value) : [];
 
@@ -55,38 +52,8 @@ function Longform() {
 
 
   useEffect(() => {
-    let isMounted = true;
-    const openDb = async () => {
-      try {
-        const isConn = await sqlite.isConnection('questionsDB');
-        let db;
-        if (!isConn.result) {
-          db = await sqlite.createConnection('questionsDB', false, 'no-encryption', 1);
-          await db.open();
-        } else {
-          db = await sqlite.retrieveConnection('questionsDB');
-        }
-        dbRef.current = db;
-        if (isMounted) await fetchQuestion();
-      } catch (err) {
-        console.error('Error opening DB:', err);
-      }
-    };
-    openDb();
-    return () => {
-      isMounted = false;
-      // Close connection on unmount
-      (async () => {
-        try {
-          if (dbRef.current) {
-            await dbRef.current.close();
-            await sqlite.closeConnection('questionsDB');
-          }
-        } catch (err) {
-          // ignore
-        }
-      })();
-    };
+    fetchQuestion();
+    // eslint-disable-next-line
   }, []);
 
   // Reset everything and fetch a new question
