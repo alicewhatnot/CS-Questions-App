@@ -4,7 +4,7 @@ import MulChoice from './pages/mulChoice.jsx';
 import Home from './pages/Home.jsx'; 
 import longformIcon from '/assets/longform.svg';
 import multiplechoiceIcon from '/assets/multiplechoice.svg';
-import filterIcon from '/assets/filterIcon.svg';
+import filterIcon from '/assets/filter.svg';
 import hamburgerIcon from '/assets/hamburger.svg';
 import expandedIcon from '/assets/arrow.svg';
 import { useEffect, useState, useRef } from 'react';
