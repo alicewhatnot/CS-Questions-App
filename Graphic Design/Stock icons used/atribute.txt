@@ -14,4 +14,4 @@ arrow
 <a href="https://www.flaticon.com/free-icons/up-arrow" title="up arrow icons">Up arrow icons created by Roundicons - Flaticon</a>
 
 filter
-<a href="https://www.flaticon.com/free-icons/filter" title="filter icons">Filter icons created by Syahrul Hidayatullah - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/filter" title="filter icons">Filter icons created by Arkinasi - Flaticon</a>
