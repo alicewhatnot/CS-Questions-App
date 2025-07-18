@@ -4,6 +4,7 @@ import MulChoice from './pages/mulChoice.jsx';
 import Home from './pages/Home.jsx'; 
 import longformIcon from '/assets/longform.svg';
 import multiplechoiceIcon from '/assets/multiplechoice.svg';
+import filterIcon from '/assets/filterIcon.svg';
 import hamburgerIcon from '/assets/hamburger.svg';
 import expandedIcon from '/assets/arrow.svg';
 import { useEffect, useState, useRef } from 'react';
@@ -49,6 +50,12 @@ function App() {
               </div>
             )}
           </div>
+          <NavLink
+            to="/filters"
+            className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
+          >
+            <img src={filterIcon} alt="filterIcon" />
+          </NavLink>
            <NavLink
             to="/longform"
             className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
