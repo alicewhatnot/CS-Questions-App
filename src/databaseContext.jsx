@@ -1,45 +1,59 @@
-import React, { createContext, useContext, useEffect, useRef } from 'react';
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
+import { Capacitor } from '@capacitor/core';
 import { CapacitorSQLite, SQLiteConnection } from '@capacitor-community/sqlite';
 
 const DatabaseContext = createContext(null);
 
 export function DatabaseProvider({ children }) {
-  const sqlite = useRef(new SQLiteConnection(CapacitorSQLite));
   const dbRef = useRef(null);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
-    const openDb = async () => {
-      try {
-        const isConn = await sqlite.current.isConnection('questionsDB');
-        let db;
-        if (!isConn.result) {
-          db = await sqlite.current.createConnection('questionsDB', false, 'no-encryption', 1);
-          await db.open();
-        } else {
-          db = await sqlite.current.retrieveConnection('questionsDB');
+
+    async function setup() {
+      let sqlite;
+      let sqliteConnection;
+
+      if (Capacitor.getPlatform() === 'web') {
+        if ('defineCustomElements' in CapacitorSQLite) {
+          await CapacitorSQLite.defineCustomElements(window);
         }
-        dbRef.current = db;
-      } catch (err) {
-        console.error('Error opening DB:', err);
+        sqlite = CapacitorSQLite;
+        await sqlite.initWebStore();
+      } else {
+        sqlite = CapacitorSQLite;
       }
-    };
-    openDb();
+
+      sqliteConnection = new SQLiteConnection(sqlite);
+
+      const db = await sqliteConnection.createConnection('questionsDB', false, 'no-encryption', 1);
+      await db.open();
+
+      if (isMounted) {
+        dbRef.current = db;
+        setIsReady(true);
+      }
+    }
+
+    setup();
+
     return () => {
       isMounted = false;
       (async () => {
         try {
           if (dbRef.current) {
             await dbRef.current.close();
-            await sqlite.current.closeConnection('questionsDB');
           }
-        } catch {}
+        } catch (e) {
+          console.warn('DB close error', e);
+        }
       })();
     };
   }, []);
 
   return (
-    <DatabaseContext.Provider value={dbRef}>
+    <DatabaseContext.Provider value={{ dbRef, isReady }}>
       {children}
     </DatabaseContext.Provider>
   );

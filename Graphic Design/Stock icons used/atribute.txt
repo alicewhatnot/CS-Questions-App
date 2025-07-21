@@ -15,3 +15,6 @@ arrow
 
 filter
 <a href="https://www.flaticon.com/free-icons/filter" title="filter icons">Filter icons created by Arkinasi - Flaticon</a>
+
+stats
+<a href="https://www.flaticon.com/free-icons/stats" title="stats icons">Stats icons created by Freepik - Flaticon</a>

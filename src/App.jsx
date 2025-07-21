@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx';
 import longformIcon from '/assets/longform.svg';
 import multiplechoiceIcon from '/assets/multiplechoice.svg';
 import filterIcon from '/assets/filter.svg';
+import statsIcon from '/assets/stats.svg';
 import hamburgerIcon from '/assets/hamburger.svg';
 import expandedIcon from '/assets/arrow.svg';
 import { useEffect, useState, useRef } from 'react';
@@ -12,6 +13,22 @@ import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 import { DatabaseProvider } from './databaseContext';
+import { Capacitor } from '@capacitor/core';
+
+if (Capacitor.getPlatform() === 'web') {
+  import('@capacitor-community/sqlite')
+    .then(module => {
+      const { defineCustomElements } = module;
+      if (typeof defineCustomElements === 'function') {
+        defineCustomElements(window);
+      } else {
+        console.warn('defineCustomElements is not exported; falling back.');
+      }
+    })
+    .catch(err => {
+      console.error('Failed to load sqlite web component:', err);
+    });
+}
 
 function App() {
   const navigate = useNavigate();
@@ -35,6 +52,14 @@ function App() {
           >
             <img src={multiplechoiceIcon} alt="longformIcon" />
           </NavLink>
+
+          <NavLink
+            to="/stats"
+            className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
+          >
+            <img src={statsIcon} alt="statsIcon" />
+          </NavLink>
+
           <div className="burgermenu">
             <img
               src={showPopup ? expandedIcon : hamburgerIcon}
@@ -50,12 +75,14 @@ function App() {
               </div>
             )}
           </div>
+
           <NavLink
             to="/filters"
             className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
           >
             <img src={filterIcon} alt="filterIcon" />
           </NavLink>
+
            <NavLink
             to="/longform"
             className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}

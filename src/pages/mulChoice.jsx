@@ -11,7 +11,7 @@ function MulChoice() {
   const [choices, setChoices] = useState([]); 
   const alreadyAnswered = useRef(false);
   const [hasAnswered, setHasAnswered] = useState(false);
-  const dbRef = useDatabase();
+  const { dbRef, isReady } = useDatabase();
 
   // From stack overflow - Fisher–Yates (aka Knuth) Shuffle.
   function shuffle(array) {
@@ -79,11 +79,10 @@ function MulChoice() {
     }
   };
 
-
   useEffect(() => {
+    if (!isReady) return;
     fetchQuestion();
-    // eslint-disable-next-line
-  }, []);
+  }, [isReady]);
 
   if (!question) return <div></div>;
 

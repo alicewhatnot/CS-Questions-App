@@ -1,7 +1,7 @@
 import '../App.css';
 import './longform.css';
-import { useEffect, useState, useRef } from 'react';
 import tick from '/assets/tick.svg';
+import { useEffect, useState, useRef } from 'react';
 
 import { Preferences } from '@capacitor/preferences';
 import { useDatabase } from '../databaseContext';
@@ -14,12 +14,20 @@ function Longform() {
   const [ShowMS, setShowMS] = useState(false);
   const textareaRef = useRef(null);
   const containerRef = useRef(null);
-  const dbRef = useDatabase();
+  const { dbRef, isReady } = useDatabase();
+
+  const waitForDatabase = async (retries = 10, delay = 300) => {
+    for (let i = 0; i < retries; i++) {
+      if (dbRef.current) return dbRef.current;
+      await new Promise((resolve) => setTimeout(resolve, delay));
+    }
+    throw new Error('Database not available after waiting.');
+  };
 
   const fetchQuestion = async () => {
     try {
-      const db = dbRef.current;
-      if (!db) return; // Wait for DB to be ready
+      const db = await waitForDatabase();
+
       const { value } = await Preferences.get({ key: 'askedLongformIds' });
       const askedLongformIds = value ? JSON.parse(value) : [];
 
@@ -52,9 +60,9 @@ function Longform() {
 
 
   useEffect(() => {
+    if (!isReady) return;
     fetchQuestion();
-    // eslint-disable-next-line
-  }, []);
+  }, [isReady]);
 
   // Reset everything and fetch a new question
   const handleNextQuestion = async () => {
@@ -99,7 +107,7 @@ function Longform() {
     );
   };
 
-  if (!question) return <div>aaaaaaaa</div>;
+  if (!question) return <div>No Question</div>;
 
   // Parse mark scheme
   let mark_scheme_array = [];

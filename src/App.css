@@ -40,6 +40,10 @@
     height: 100%;
 }
 
+.navbar img:hover{
+    transform: scale(1.1);
+}
+
 .icon-wrapper {
     position: relative;
     height: 3rem;
