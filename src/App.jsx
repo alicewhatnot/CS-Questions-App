@@ -10,8 +10,8 @@ import expandedIcon from '/assets/arrow.svg';
 import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-import { DatabaseProvider } from './databaseContext';
 
+import { DatabaseProvider } from './databaseContext';
 
 function App() {
   const navigate = useNavigate();
