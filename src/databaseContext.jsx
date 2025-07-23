@@ -11,22 +11,18 @@ export function DatabaseProvider({ children }) {
   useEffect(() => {
     let isMounted = true;
 
-  async function setup() {
-    let sqlite;
-    let sqliteConnection;
+    async function setup() {
+      let sqlite = CapacitorSQLite;
+      let sqliteConnection = new SQLiteConnection(sqlite);
 
-    if (Capacitor.getPlatform() === 'web') {
-      if ('defineCustomElements' in CapacitorSQLite) {
-        await CapacitorSQLite.defineCustomElements(window);
-      }
-      sqlite = CapacitorSQLite;
-      await sqlite.initWebStore();
-    } else {
-      sqlite = CapacitorSQLite;
-      sqliteConnection = new SQLiteConnection(sqlite);
-
-      if (Capacitor.getPlatform() === 'ios') {
+      if (Capacitor.getPlatform() === 'web') {
+        if ('defineCustomElements' in CapacitorSQLite) {
+          await CapacitorSQLite.defineCustomElements(window);
+        }
+        await sqlite.initWebStore();
+      } else if (Capacitor.getPlatform() === 'ios') {
         try {
+          console.log("Attempting DB copy from assets...");
           await sqlite.copyFromAssets();
           console.log('Imported preloaded DB');
         } catch (e) {
@@ -34,39 +30,38 @@ export function DatabaseProvider({ children }) {
           console.warn('! Failed to import preloaded DB:', e);
         }
       }
-    }
 
-    if (!sqliteConnection) {
-      sqliteConnection = new SQLiteConnection(sqlite);
-    }
-
-    if (sqliteConnection.isConnection('questions')) {
-      await sqliteConnection.closeConnection('questions');
-    }
-
-    const db = await sqliteConnection.createConnection('questions', false, 'no-encryption', 1);
-    await db.open();
-
-    if (isMounted) {
-      dbRef.current = db;
-      setIsReady(true);
-    }
-  }
-
-  setup();
-
-  return () => {
-    isMounted = false;
-    (async () => {
       try {
-        if (dbRef.current) {
-          await dbRef.current.close();
+        if (sqliteConnection.isConnection('questions')) {
+          await sqliteConnection.closeConnection('questions');
         }
-      } catch (e) {
-        console.warn('DB close error', e);
+
+        const db = await sqliteConnection.createConnection('questions', false, 'no-encryption', 1);
+        await db.open();
+
+        if (isMounted) {
+          dbRef.current = db;
+          setIsReady(true);
+        }
+      } catch (err) {
+        console.error("Error during DB setup:", err);
       }
-    })();
-  };
+    }
+
+    setup();
+
+    return () => {
+      isMounted = false;
+      (async () => {
+        try {
+          if (dbRef.current) {
+            await dbRef.current.close();
+          }
+        } catch (e) {
+          console.warn('DB close error', e);
+        }
+      })();
+    };
   }, []);
 
   return (
