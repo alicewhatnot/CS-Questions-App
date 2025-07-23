@@ -11,57 +11,62 @@ export function DatabaseProvider({ children }) {
   useEffect(() => {
     let isMounted = true;
 
-    async function setup() {
-      let sqlite;
-      let sqliteConnection;
+  async function setup() {
+    let sqlite;
+    let sqliteConnection;
 
-      if (Capacitor.getPlatform() === 'web') {
-        if ('defineCustomElements' in CapacitorSQLite) {
-          await CapacitorSQLite.defineCustomElements(window);
-        }
-        sqlite = CapacitorSQLite;
-        await sqlite.initWebStore();
-      } else {
-        sqlite = CapacitorSQLite;
+    if (Capacitor.getPlatform() === 'web') {
+      if ('defineCustomElements' in CapacitorSQLite) {
+        await CapacitorSQLite.defineCustomElements(window);
       }
-
+      sqlite = CapacitorSQLite;
+      await sqlite.initWebStore();
+    } else {
+      sqlite = CapacitorSQLite;
       sqliteConnection = new SQLiteConnection(sqlite);
 
-      if (Capacitor.getPlatform() !== 'web') {
+      if (Capacitor.getPlatform() === 'ios') {
         try {
-          await sqliteConnection.importPreloadedDatabase({
-            dbName: 'questions',
-            asset: true, // VERY important: tells it to load from the app bundle
-          });
+          await sqlite.copyFromAssets();
           console.log('Imported preloaded DB');
         } catch (e) {
-          console.warn('Failed to import preloaded DB:', e);
+          console.log('! Bundle URL:', window.location.href);
+          console.warn('! Failed to import preloaded DB:', e);
         }
-      }
-
-      const db = await sqliteConnection.createConnection('questions', false, 'no-encryption', 1);
-      await db.open();
-
-      if (isMounted) {
-        dbRef.current = db;
-        setIsReady(true);
       }
     }
 
-    setup();
+    if (!sqliteConnection) {
+      sqliteConnection = new SQLiteConnection(sqlite);
+    }
 
-    return () => {
-      isMounted = false;
-      (async () => {
-        try {
-          if (dbRef.current) {
-            await dbRef.current.close();
-          }
-        } catch (e) {
-          console.warn('DB close error', e);
+    if (sqliteConnection.isConnection('questions')) {
+      await sqliteConnection.closeConnection('questions');
+    }
+
+    const db = await sqliteConnection.createConnection('questions', false, 'no-encryption', 1);
+    await db.open();
+
+    if (isMounted) {
+      dbRef.current = db;
+      setIsReady(true);
+    }
+  }
+
+  setup();
+
+  return () => {
+    isMounted = false;
+    (async () => {
+      try {
+        if (dbRef.current) {
+          await dbRef.current.close();
         }
-      })();
-    };
+      } catch (e) {
+        console.warn('DB close error', e);
+      }
+    })();
+  };
   }, []);
 
   return (
