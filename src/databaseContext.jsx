@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { Capacitor } from '@capacitor/core';
 import { CapacitorSQLite, SQLiteConnection } from '@capacitor-community/sqlite';
-import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
 const DatabaseContext = createContext(null);
 
@@ -17,8 +16,8 @@ export function DatabaseProvider({ children }) {
       let sqliteConnection = new SQLiteConnection(sqlite);
 
       if (Capacitor.getPlatform() === 'web') {
-        defineCustomElements(window);
-        await CapacitorSQLite.initWebStore();
+        defineCustomElements(window);          
+        await sqlite.initWebStore();
       } else if (Capacitor.getPlatform() === 'ios') {
         try {
           console.log("Attempting DB copy from assets...");
