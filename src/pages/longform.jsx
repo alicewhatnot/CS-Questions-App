@@ -33,8 +33,8 @@ function Longform() {
 
       // Build WHERE clause
       const where = askedLongformIds.length
-        ? `WHERE id NOT IN (${askedLongformIds.join(',')}) AND type='longform'`
-        : `WHERE type='longform'`;
+        ? `WHERE id NOT IN (${askedLongformIds.join(',')}) AND question_type='longform'`
+        : `WHERE question_type='longform'`;
 
       const res = await db.query(`SELECT * FROM questions ${where} LIMIT 1;`);
       const question = res.values && res.values.length > 0 ? res.values[0] : null;

@@ -25,6 +25,7 @@ export function DatabaseProvider({ children }) {
           console.log("Attempting DB copy from assets...");
           await sqlite.copyFromAssets();
           console.log('Imported preloaded DB');
+
         } catch (e) {
           console.log('! Bundle URL:', window.location.href);
           console.warn('! Failed to import preloaded DB:', e);
@@ -38,6 +39,14 @@ export function DatabaseProvider({ children }) {
 
         const db = await sqliteConnection.createConnection('questions', false, 'no-encryption', 1);
         await db.open();
+
+        // ✅ Check tables
+        const tables = await db.query("SELECT name FROM sqlite_master WHERE type='table';");
+        console.log("Tables in DB:", tables.values);
+
+        // ✅ Check schema of specific table (replace with your actual table name!)
+        const schema = await db.query("PRAGMA table_info(questions);");
+        console.log("Schema of 'questions':", schema.values);
 
         if (isMounted) {
           dbRef.current = db;

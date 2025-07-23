@@ -39,8 +39,8 @@ function MulChoice() {
 
       // Build WHERE clause
       const where = askedMulChoiceIds.length
-        ? `WHERE id NOT IN (${askedMulChoiceIds.join(',')}) AND type='mul_choice'`
-        : `WHERE type='mul_choice'`;
+        ? `WHERE id NOT IN (${askedMulChoiceIds.join(',')}) AND question_type='mul_choice'`
+        : `WHERE question_type='mul_choice'`;
 
       const res = await db.query(`SELECT * FROM questions ${where} LIMIT 1;`);
       const question = res.values && res.values.length > 0 ? res.values[0] : null;
