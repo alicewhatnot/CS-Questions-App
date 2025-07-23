@@ -39,7 +39,7 @@ export function DatabaseProvider({ children }) {
         }
       }
 
-      const db = await sqliteConnection.createConnection('questionsDB', false, 'no-encryption', 1);
+      const db = await sqliteConnection.createConnection('questions', false, 'no-encryption', 1);
       await db.open();
 
       if (isMounted) {
