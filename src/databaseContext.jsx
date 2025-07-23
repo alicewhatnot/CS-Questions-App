@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { Capacitor } from '@capacitor/core';
 import { CapacitorSQLite, SQLiteConnection } from '@capacitor-community/sqlite';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
 const DatabaseContext = createContext(null);
 
@@ -16,10 +17,8 @@ export function DatabaseProvider({ children }) {
       let sqliteConnection = new SQLiteConnection(sqlite);
 
       if (Capacitor.getPlatform() === 'web') {
-        if ('defineCustomElements' in CapacitorSQLite) {
-          await CapacitorSQLite.defineCustomElements(window);
-        }
-        await sqlite.initWebStore();
+        defineCustomElements(window);
+        await CapacitorSQLite.initWebStore();
       } else if (Capacitor.getPlatform() === 'ios') {
         try {
           console.log("Attempting DB copy from assets...");
@@ -39,14 +38,6 @@ export function DatabaseProvider({ children }) {
 
         const db = await sqliteConnection.createConnection('questions', false, 'no-encryption', 1);
         await db.open();
-
-        // ✅ Check tables
-        const tables = await db.query("SELECT name FROM sqlite_master WHERE type='table';");
-        console.log("Tables in DB:", tables.values);
-
-        // ✅ Check schema of specific table (replace with your actual table name!)
-        const schema = await db.query("PRAGMA table_info(questions);");
-        console.log("Schema of 'questions':", schema.values);
 
         if (isMounted) {
           dbRef.current = db;
