@@ -30,7 +30,7 @@ export function DatabaseProvider({ children }) {
       if (Capacitor.getPlatform() !== 'web') {
         try {
           await sqliteConnection.importPreloadedDatabase({
-            dbName: 'questionsDB',
+            dbName: 'questions',
             asset: true, // VERY important: tells it to load from the app bundle
           });
           console.log('Imported preloaded DB');
