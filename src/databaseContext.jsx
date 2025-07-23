@@ -27,6 +27,18 @@ export function DatabaseProvider({ children }) {
 
       sqliteConnection = new SQLiteConnection(sqlite);
 
+      if (Capacitor.getPlatform() !== 'web') {
+        try {
+          await sqliteConnection.importPreloadedDatabase({
+            dbName: 'questionsDB',
+            asset: true, // VERY important: tells it to load from the app bundle
+          });
+          console.log('Imported preloaded DB');
+        } catch (e) {
+          console.warn('Failed to import preloaded DB:', e);
+        }
+      }
+
       const db = await sqliteConnection.createConnection('questionsDB', false, 'no-encryption', 1);
       await db.open();
 
