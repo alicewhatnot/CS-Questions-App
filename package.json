@@ -21,11 +21,15 @@
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "ios": "^0.0.1",
+    "jeep-sqlite": "^2.8.0",
     "liquid-glass-react": "^1.1.1",
+    "localforage": "^1.10.0",
     "native": "^0.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2",
+    "sql-wasm": "^1.1.4",
+    "sql.js": "^1.13.0",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {

@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { Capacitor } from '@capacitor/core';
-import { CapacitorSQLite, SQLiteConnection } from '@capacitor-community/sqlite';
+import { CapacitorSQLite, SQLiteConnection,  } from '@capacitor-community/sqlite';
+import { defineCustomElements } from 'jeep-sqlite/loader';
 
 const DatabaseContext = createContext(null);
 
@@ -16,6 +17,7 @@ export function DatabaseProvider({ children }) {
       let sqliteConnection = new SQLiteConnection(sqlite);
 
       if (Capacitor.getPlatform() === 'web') {
+        window.SQLWASM_PATH = '/assets/sql-wasm.wasm';
         defineCustomElements(window);          
         await sqlite.initWebStore();
       } else if (Capacitor.getPlatform() === 'ios') {
@@ -31,7 +33,8 @@ export function DatabaseProvider({ children }) {
       }
 
       try {
-        if (sqliteConnection.isConnection('questions')) {
+       const connExists = await sqliteConnection.isConnection('questions');
+        if (connExists.result) {
           await sqliteConnection.closeConnection('questions');
         }
 
