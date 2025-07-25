@@ -84,7 +84,7 @@ function MulChoice() {
     fetchQuestion();
   }, [isReady]);
 
-  if (!question) return <div></div>;
+  if (!question) return <div>AAAAAAH</div>;
 
   function handleChoice(idx) {
   if (!alreadyAnswered.current) {

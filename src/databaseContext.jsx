@@ -18,7 +18,7 @@ export function DatabaseProvider({ children }) {
 
       if (Capacitor.getPlatform() === 'web') {
         window.SQLWASM_PATH = '/assets/sql-wasm.wasm';
-        defineCustomElements(window);          
+        await defineCustomElements(window);
         await sqlite.initWebStore();
       } else if (Capacitor.getPlatform() === 'ios') {
         try {
