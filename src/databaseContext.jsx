@@ -20,14 +20,13 @@ export function DatabaseProvider({ children }) {
         window.SQLWASM_PATH = '/assets/sql-wasm.wasm';
         await defineCustomElements(window);
         await sqlite.initWebStore();
+
       } else if (Capacitor.getPlatform() === 'ios') {
         try {
           console.log("Attempting DB copy from assets...");
           await sqlite.copyFromAssets();
           console.log('Imported preloaded DB');
-
         } catch (e) {
-          console.log('! Bundle URL:', window.location.href);
           console.warn('! Failed to import preloaded DB:', e);
         }
       }
@@ -40,6 +39,37 @@ export function DatabaseProvider({ children }) {
 
         const db = await sqliteConnection.createConnection('questions', false, 'no-encryption', 1);
         await db.open();
+
+         if (Capacitor.getPlatform() === 'web') {
+          // Fetch the JSON export of your DB
+          const response = await fetch('/assets/databases/questions.json');
+          const jsonDB = await response.json();
+          console.log('JSON data loaded:', jsonDB);
+
+          // Create tables if they don't exist
+          await db.execute(`
+          CREATE TABLE IF NOT EXISTS questions (
+              id INTEGER PRIMARY KEY NOT NULL,
+              question TEXT NOT NULL,
+              marks INTEGER,
+              mark_scheme TEXT,
+              topic TEXT,
+              subtopic TEXT,
+              question_type TEXT,
+              wrong_choices TEXT
+            );
+          `);
+
+          for (const row of jsonDB.questions) {
+            const { id, question, marks, mark_scheme, topic, subtopic, question_type, wrong_choices } = row;
+            await db.run(
+              `INSERT OR REPLACE INTO questions (id, question, marks, mark_scheme, topic, subtopic, question_type, wrong_choices) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+              [id, question, marks, mark_scheme, topic, subtopic, question_type, wrong_choices]
+            );
+          }
+
+          console.log('Database JSON imported successfully on web');
+        }
 
         if (isMounted) {
           dbRef.current = db;

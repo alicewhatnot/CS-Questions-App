@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "export-db-json": "node export-db-json.js"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "^7.0.1",
@@ -17,6 +18,7 @@
     "@capacitor/filesystem": "^7.1.2",
     "@capacitor/ios": "^7.4.2",
     "@capacitor/preferences": "^7.0.1",
+    "better-sqlite3": "^12.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "ios": "^0.0.1",
