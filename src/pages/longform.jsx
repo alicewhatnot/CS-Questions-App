@@ -15,6 +15,7 @@ function Longform() {
   const textareaRef = useRef(null);
   const containerRef = useRef(null);
   const { dbRef, isReady } = useDatabase();
+  const { selectedTopics } = useFilter();
 
   const waitForDatabase = async (retries = 10, delay = 300) => {
     for (let i = 0; i < retries; i++) {
@@ -32,9 +33,15 @@ function Longform() {
       const askedLongformIds = value ? JSON.parse(value) : [];
 
       // Build WHERE clause
-      const where = askedLongformIds.length
+      let where = askedLongformIds.length
         ? `WHERE id NOT IN (${askedLongformIds.join(',')}) AND question_type='longform'`
         : `WHERE question_type='longform'`;
+
+      // Adds topic filter if relevant
+      if (selectedTopics && selectedTopics.length > 0) {
+        const topicList = selectedTopics.map(t => `'${t}'`).join(',');
+        where += ` AND topic IN (${topicList})`;
+      }
 
       const res = await db.query(`SELECT * FROM questions ${where} LIMIT 1;`);
       const question = res.values && res.values.length > 0 ? res.values[0] : null;

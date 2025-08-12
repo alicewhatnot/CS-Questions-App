@@ -12,6 +12,7 @@ function MulChoice() {
   const alreadyAnswered = useRef(false);
   const [hasAnswered, setHasAnswered] = useState(false);
   const { dbRef, isReady } = useDatabase();
+  const { selectedTopics } = useFilter();
 
   // From stack overflow - Fisher–Yates (aka Knuth) Shuffle.
   function shuffle(array) {
@@ -38,9 +39,15 @@ function MulChoice() {
       const askedMulChoiceIds = value ? JSON.parse(value) : [];
 
       // Build WHERE clause
-      const where = askedMulChoiceIds.length
+      let where = askedMulChoiceIds.length
         ? `WHERE id NOT IN (${askedMulChoiceIds.join(',')}) AND question_type='mul_choice'`
         : `WHERE question_type='mul_choice'`;
+
+      // Adds topic filter if relevant
+      if (selectedTopics && selectedTopics.length > 0) {
+        const topicList = selectedTopics.map(t => `'${t}'`).join(',');
+        where += ` AND topic IN (${topicList})`;
+      }
 
       const res = await db.query(`SELECT * FROM questions ${where} LIMIT 1;`);
       const question = res.values && res.values.length > 0 ? res.values[0] : null;
