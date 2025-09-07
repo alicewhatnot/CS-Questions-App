@@ -5,7 +5,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
 }
 
 .Header {
@@ -27,7 +26,6 @@
     border-radius: 0.125rem;
     border: none;
     margin-top: 0;
-    
 }
 
 .Header h2 {

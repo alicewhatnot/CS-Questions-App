@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from 'react';
 
 import { Preferences } from '@capacitor/preferences';
 import { useDatabase } from '../databaseContext';
+import { useFilter } from '../filterContext';
 
 function Longform() {
   const [question, setQuestion] = useState(null);
@@ -48,7 +49,7 @@ function Longform() {
       if (!question) {
         // No more questions, reset askedLongformIds and try again
         await Preferences.set({ key: 'askedLongformIds', value: JSON.stringify([]) });
-        fetchQuestion();
+        await fetchQuestion();
         return;
       }
       setQuestion(question);

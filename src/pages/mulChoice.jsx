@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 
 import { Preferences } from '@capacitor/preferences';
 import { useDatabase } from '../databaseContext';
+import { useFilter } from '../filterContext';
 
 function MulChoice() {
   const [question, setQuestion] = useState(null);
@@ -54,7 +55,7 @@ function MulChoice() {
       if (!question) {
         // No more questions, reset askedMulChoiceIds and try again
         await Preferences.set({ key: 'askedMulChoiceIds', value: JSON.stringify([]) });
-        fetchQuestion();
+        await fetchQuestion();
         return;
       }
       setQuestion(question);

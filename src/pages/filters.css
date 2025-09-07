@@ -1,0 +1,42 @@
+.FilterContainer {
+    font-family: "Raleway", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.Header h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.Header hr {
+    width: 50%;
+    transform: translateX(-50%);
+    height: 0.125rem;
+    background-color: #c94277;
+    border-radius: 0.125rem;
+    border: none;
+    margin-top: 0;
+}
+
+.selectAllTopics {
+    margin: 0rem 0rem 0rem 1rem; 
+    font-weight: 600;
+}
+
+.TopicSelect {
+    display: block;
+    margin: 1rem 1rem 0.5rem 1rem; 
+    padding: 0.2rem 0 0.2rem 0 ;
+    border: 1px solid #000000;   
+    border-radius: 1px;
+    font-weight: 500;
+}
+
+.SubtopicOption {
+    display: block;
+    margin-left: 1rem;
+}

@@ -15,7 +15,7 @@
       "question": "Which of the following is a characteristic of a parameter passed by value?",
       "marks": 1,
       "mark_scheme": "A copy of the data is passed to the subroutine",
-      "topic": "Fundamentals of programming",
+      "topic": "Parameters",
       "subtopic": "Parameters — passing by value and reference",
       "question_type": "mul_choice",
       "wrong_choices": "[\"The subroutine can modify the original variable\", \"The address of the data is passed to the subroutine\", \"The data is always stored in global memory\"]"
@@ -25,7 +25,7 @@
       "question": "What is the output of the expression 5 DIV 2 in most high-level languages?",
       "marks": 1,
       "mark_scheme": "2",
-      "topic": "Fundamentals of programming",
+      "topic": "Arithmetic",
       "subtopic": "Arithmetic operations — integer division",
       "question_type": "mul_choice",
       "wrong_choices": "[\"2.5\", \"3\", \"1\"]"
@@ -35,7 +35,7 @@
       "question": "What is the meaning of the term “concatenation” in programming?",
       "marks": 1,
       "mark_scheme": "Joining two strings together",
-      "topic": "Fundamentals of programming",
+      "topic": "Strings",
       "subtopic": "String handling",
       "question_type": "mul_choice",
       "wrong_choices": "[\"Breaking a string into individual characters\", \"Reversing the order of characters in a string\", \"Converting a string to uppercase\"]"
@@ -45,7 +45,7 @@
       "question": "Which statement about recursion is true?",
       "marks": 1,
       "mark_scheme": "A recursive subroutine calls itself",
-      "topic": "Fundamentals of programming",
+      "topic": "Algorithms",
       "subtopic": "Recursion",
       "question_type": "mul_choice",
       "wrong_choices": "[\"A recursive subroutine can only call other subroutines\", \"A recursive subroutine cannot contain parameters\", \"Recursion is faster than iteration in all cases\"]"
@@ -55,7 +55,7 @@
       "question": "What is the effect of declaring a variable as local in a subroutine?",
       "marks": 1,
       "mark_scheme": "It can only be accessed within that subroutine",
-      "topic": "Fundamentals of programming",
+      "topic": "Scope",
       "subtopic": "Scope of variables",
       "question_type": "mul_choice",
       "wrong_choices": "[\"It can be accessed from anywhere in the program\", \"It shares memory with a global variable of the same name\", \"It persists after the subroutine finishes\"]"
@@ -65,7 +65,7 @@
       "question": "Which data type would be most suitable to represent True or False values?",
       "marks": 1,
       "mark_scheme": "Boolean",
-      "topic": "Fundamentals of programming",
+      "topic": "Data Types",
       "subtopic": "Data types",
       "question_type": "mul_choice",
       "wrong_choices": "[\"Integer\", \"String\", \"Real\"]"
@@ -75,7 +75,7 @@
       "question": "Which of these control structures is used for selection?",
       "marks": 1,
       "mark_scheme": "IF...THEN...ELSE",
-      "topic": "Fundamentals of programming",
+      "topic": "Control",
       "subtopic": "Control structures",
       "question_type": "mul_choice",
       "wrong_choices": "[\"FOR loop\", \"WHILE loop\", \"REPEAT...UNTIL\"]"
@@ -85,7 +85,7 @@
       "question": "What does the term “iteration” refer to in programming?",
       "marks": 1,
       "mark_scheme": "The repeated execution of a block of code",
-      "topic": "Fundamentals of programming",
+      "topic": "Iteration",
       "subtopic": "Iteration",
       "question_type": "mul_choice",
       "wrong_choices": "[\"The breaking down of code into smaller modules\", \"The declaration of variables\", \"The conditional branching of code\"]"

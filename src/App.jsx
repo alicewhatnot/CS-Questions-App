@@ -40,62 +40,60 @@ function App() {
 
   return (
     <FilterProvider>
-      <DatabaseProvider>
-        <div className={darkMode ? "dark-mode" : ""}>      
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/longform" element={<Longform />} />
-            <Route path="/multiple-choice" element={<MulChoice />} />
-            <Route path="/filters" element={<Filters />} /> 
-          </Routes>
-          
-          <nav className='navbar'>
-            <NavLink
-              to="/multiple-choice"
-              className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
-            >
-              <img src={multiplechoiceIcon} alt="longformIcon" />
-            </NavLink>
+      <div className={darkMode ? "dark-mode" : ""}>      
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/longform" element={<Longform />} />
+          <Route path="/multiple-choice" element={<MulChoice />} />
+          <Route path="/filters" element={<Filters />} /> 
+        </Routes>
+        
+        <nav className='navbar'>
+          <NavLink
+            to="/multiple-choice"
+            className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
+          >
+            <img src={multiplechoiceIcon} alt="longformIcon" />
+          </NavLink>
 
-            <NavLink
-              to="/stats"
-              className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
-            >
-              <img src={statsIcon} alt="statsIcon" />
-            </NavLink>
+          <NavLink
+            to="/stats"
+            className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
+          >
+            <img src={statsIcon} alt="statsIcon" />
+          </NavLink>
 
-            <div className="burgermenu">
-              <img
-                src={showPopup ? expandedIcon : hamburgerIcon}
-                alt={showPopup ? "expandedIcon" : "hamburgerIcon"}
-                onClick={() => setShowPopup(v => !v)}
-              />
-              {showPopup && (
-                <div className="popup-menu">
-                  <button className='ReturnHome' onClick={() => { setActive(""); navigate('/'); setShowPopup(false); }}>Home</button>
-                  <button className='DarkMode' onClick={() => setDarkMode(dm => !dm)}>
-                    {darkMode ? "Light Mode" : "Dark Mode"}
-                  </button>
-                </div>
-              )}
-            </div>
+          <div className="burgermenu">
+            <img
+              src={showPopup ? expandedIcon : hamburgerIcon}
+              alt={showPopup ? "expandedIcon" : "hamburgerIcon"}
+              onClick={() => setShowPopup(v => !v)}
+            />
+            {showPopup && (
+              <div className="popup-menu">
+                <button className='ReturnHome' onClick={() => { setActive(""); navigate('/'); setShowPopup(false); }}>Home</button>
+                <button className='DarkMode' onClick={() => setDarkMode(dm => !dm)}>
+                  {darkMode ? "Light Mode" : "Dark Mode"}
+                </button>
+              </div>
+            )}
+          </div>
 
-            <NavLink
-              to="/filters"
-              className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
-            >
-              <img src={filterIcon} alt="filterIcon" />
-            </NavLink>
+          <NavLink
+            to="/filters"
+            className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
+          >
+            <img src={filterIcon} alt="filterIcon" />
+          </NavLink>
 
-            <NavLink
-              to="/longform"
-              className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
-            >
-              <img src={longformIcon} alt="longformIcon" />
-            </NavLink>
-          </nav>
-        </div>
-      </DatabaseProvider>
+          <NavLink
+            to="/longform"
+            className={({ isActive }) => `icon-wrapper ${isActive ? 'active' : ''}`}
+          >
+            <img src={longformIcon} alt="longformIcon" />
+          </NavLink>
+        </nav>
+      </div>
     </FilterProvider>
   )
 }
