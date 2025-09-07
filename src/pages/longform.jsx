@@ -6,6 +6,7 @@ import { useEffect, useState, useRef } from 'react';
 import { Preferences } from '@capacitor/preferences';
 import { useDatabase } from '../databaseContext';
 import { useFilter } from '../filterContext';
+import { useStats } from '../statsContext';
 
 function Longform() {
   const [question, setQuestion] = useState(null);
@@ -17,7 +18,36 @@ function Longform() {
   const containerRef = useRef(null);
   const { dbRef, isReady } = useDatabase();
   const { selectedTopics } = useFilter();
+  const { sessionStats, setSessionStats } = useStats();
+  
+  const updateLongformStats = (marksAchieved) => {
+    if (!question) return;
+    const fullMarks = marksAchieved === question.marks;
 
+    // Update all-time stats
+    Preferences.get({ key: 'longformStats' }).then(({ value }) => {
+      let stats = value
+        ? JSON.parse(value)
+        : { totalAnswered: 0, totalFullMarks: 0, totalMarks: 0, totalPossibleMarks: 0 };
+      stats.totalAnswered += 1;
+      stats.totalMarks += marksAchieved;
+      stats.totalPossibleMarks += question.marks;
+      if (fullMarks) stats.totalFullMarks += 1;
+      Preferences.set({ key: 'longformStats', value: JSON.stringify(stats) });
+    });
+
+    // Update session stats
+    if (sessionStats) {
+      setSessionStats(prev => {
+        const newStats = { ...prev };
+        newStats.longform.totalAnswered += 1;
+        newStats.longform.totalMarks += marksAchieved;
+        newStats.longform.totalPossibleMarks += question.marks;
+        if (fullMarks) newStats.longform.totalFullMarks += 1;
+        return newStats;
+      });
+    }
+  };
   const waitForDatabase = async (retries = 10, delay = 300) => {
     for (let i = 0; i < retries; i++) {
       if (dbRef.current) return dbRef.current;
@@ -38,20 +68,17 @@ function Longform() {
         ? `WHERE id NOT IN (${askedLongformIds.join(',')}) AND question_type='longform'`
         : `WHERE question_type='longform'`;
 
-      // Adds topic filter if relevant
-      if (selectedTopics && selectedTopics.length > 0) {
-        const topicList = selectedTopics.map(t => `'${t}'`).join(',');
-        where += ` AND topic IN (${topicList})`;
-      }
+        if (selectedTopics && selectedTopics.length > 0) {
+          const conditions = selectedTopics.map(key => {
+            const [topic, subtopic] = key.split(':');
+            return `(topic='${topic}' AND subtopic='${subtopic}')`;
+          });
+          where += ` AND (${conditions.join(' OR ')})`;
+        }
 
       const res = await db.query(`SELECT * FROM questions ${where} LIMIT 1;`);
       const question = res.values && res.values.length > 0 ? res.values[0] : null;
-      if (!question) {
-        // No more questions, reset askedLongformIds and try again
-        await Preferences.set({ key: 'askedLongformIds', value: JSON.stringify([]) });
-        await fetchQuestion();
-        return;
-      }
+
       setQuestion(question);
 
       if (question.id && !askedLongformIds.includes(question.id)) {
@@ -97,11 +124,16 @@ function Longform() {
         if (textareaRef.current) {
           textareaRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         }
-
         containerRef.current.style.flex = 'none';
         containerRef.current.style.height = 'auto';
-        containerRef.current.style.height = containerRef.current.scrollHeight + 'px';      }
+        containerRef.current.style.height = containerRef.current.scrollHeight + 'px';
+
+        // Call stats update here
+        // Only call after marking is done, so move this to when user clicks "Next"
+      }
     } else {
+      // When user clicks "Next", update stats with marks achieved
+      updateLongformStats(Math.min(ticked.length, question.marks));
       handleNextQuestion();
     }
   };
@@ -115,7 +147,24 @@ function Longform() {
     );
   };
 
-  if (!question) return <div>No Question</div>;
+  if (!question) {
+    return (
+      <div className="Container">
+        <div className='Header'>
+          <p className='NoQuestionsText'>No longform questions match the current filters or all questions have been used.</p>
+        </div>
+        <button
+          className="ResetQuestions"
+          onClick={async () => {
+            await Preferences.set({ key: 'askedLongformIds', value: JSON.stringify([]) });
+            fetchQuestion();
+          }}
+        >
+          Reset Questions
+        </button>
+      </div>
+    );
+  }
 
   // Parse mark scheme
   let mark_scheme_array = [];

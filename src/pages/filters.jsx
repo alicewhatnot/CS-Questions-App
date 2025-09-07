@@ -112,14 +112,16 @@ function Filters() {
               {subtopics.map((sub, idx) => {
                 const key = makeKey(topic, sub);
                 return (
-                  <label key={idx} className="SubtopicOption">
+                    <label key={idx} className="SubtopicOption">
                     <input
                       type="checkbox"
                       checked={selectedTopics.includes(key)}
                       onChange={() => handleCheckboxChange(topic, sub)}
                     />
-                    {sub}
-                  </label>
+                    <span className="SubtopicText">
+                      {sub}
+                    </span>
+                  </label>                   
                 );
               })}
             </div>

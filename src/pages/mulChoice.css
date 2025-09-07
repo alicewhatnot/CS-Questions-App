@@ -93,6 +93,12 @@
     transform: scale(1.05);
 }
 
+.NoQuestionsText {
+    text-align: center;
+    margin: 10rem 5rem;
+    font-size: 1rem;
+}
+
 .dark-mode .answerChoice {
     background-color: #220d48;
     border-color: white;

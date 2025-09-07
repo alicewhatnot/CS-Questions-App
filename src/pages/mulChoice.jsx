@@ -1,86 +1,88 @@
-import '../App.css';
-import './mulChoice.css';
 import { useEffect, useState, useRef } from 'react';
-
 import { Preferences } from '@capacitor/preferences';
+import { useStats } from '../statsContext';
 import { useDatabase } from '../databaseContext';
 import { useFilter } from '../filterContext';
+import '../App.css';
+import './mulChoice.css';
 
 function MulChoice() {
   const [question, setQuestion] = useState(null);
-  const buttonRefs = useRef([]); 
-  const [choices, setChoices] = useState([]); 
-  const alreadyAnswered = useRef(false);
+  const [choices, setChoices] = useState([]);
   const [hasAnswered, setHasAnswered] = useState(false);
+  const [resetAttempted, setResetAttempted] = useState(false);
+  const buttonRefs = useRef([]);
+  const alreadyAnswered = useRef(false);
   const { dbRef, isReady } = useDatabase();
   const { selectedTopics } = useFilter();
+  const { sessionStats, setSessionStats } = useStats(); 
 
-  // From stack overflow - Fisher–Yates (aka Knuth) Shuffle.
   function shuffle(array) {
     let currentIndex = array.length;
-
-    // While there remain elements to shuffle...
-    while (currentIndex != 0) {
-
-      // Pick a remaining element...
+    while (currentIndex !== 0) {
       let randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
-
-      // And swap it with the current element.
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
   }
 
-  const fetchQuestion = async () => {
+  const fetchQuestion = async (reset = false) => {
     try {
       const db = dbRef.current;
-      if (!db) return; // Wait for DB to be ready
-      const { value } = await Preferences.get({ key: 'askedMulChoiceIds' });
-      const askedMulChoiceIds = value ? JSON.parse(value) : [];
+      if (!db) return;
+      let askedMulChoiceIds = [];
+      if (!reset) {
+        const { value } = await Preferences.get({ key: 'askedMulChoiceIds' });
+        askedMulChoiceIds = value ? JSON.parse(value) : [];
+      } else {
+        await Preferences.set({ key: 'askedMulChoiceIds', value: JSON.stringify([]) });
+      }
 
-      // Build WHERE clause
       let where = askedMulChoiceIds.length
         ? `WHERE id NOT IN (${askedMulChoiceIds.join(',')}) AND question_type='mul_choice'`
         : `WHERE question_type='mul_choice'`;
 
-      // Adds topic filter if relevant
       if (selectedTopics && selectedTopics.length > 0) {
-        const topicList = selectedTopics.map(t => `'${t}'`).join(',');
-        where += ` AND topic IN (${topicList})`;
+        const conditions = selectedTopics.map(key => {
+          const [topic, subtopic] = key.split(':');
+          return `(topic='${topic}' AND subtopic='${subtopic}')`;
+        });
+        where += ` AND (${conditions.join(' OR ')})`;
       }
 
       const res = await db.query(`SELECT * FROM questions ${where} LIMIT 1;`);
       const question = res.values && res.values.length > 0 ? res.values[0] : null;
-      if (!question) {
-        // No more questions, reset askedMulChoiceIds and try again
-        await Preferences.set({ key: 'askedMulChoiceIds', value: JSON.stringify([]) });
-        await fetchQuestion();
+
+      if (!question && !reset) {
+        setResetAttempted(true);
+        fetchQuestion(true); // Try once with reset
         return;
       }
+
       setQuestion(question);
 
-      // Parse and combine choices
-      let newChoices = [];
-      try {
-        newChoices = typeof question.wrong_choices === 'string'
-          ? JSON.parse(question.wrong_choices)
-          : question.wrong_choices || [];
-      } catch {
-        newChoices = [];
-      }
-      newChoices.push(question.mark_scheme);
+      if (question) {
+        let newChoices = [];
+        try {
+          newChoices = typeof question.wrong_choices === 'string'
+            ? JSON.parse(question.wrong_choices)
+            : question.wrong_choices || [];
+        } catch {
+          newChoices = [];
+        }
+        newChoices.push(question.mark_scheme);
+        shuffle(newChoices);
+        setChoices(newChoices);
 
-      shuffle(newChoices);
-      setChoices(newChoices);
-
-      // Add this question's id to askedMulChoiceIds
-      if (question.id && !askedMulChoiceIds.includes(question.id)) {
-        askedMulChoiceIds.push(question.id);
-        await Preferences.set({
-          key: 'askedMulChoiceIds',
-          value: JSON.stringify(askedMulChoiceIds),
-        });
+        // Add this question's id to askedMulChoiceIds
+        if (question.id && !askedMulChoiceIds.includes(question.id)) {
+          askedMulChoiceIds.push(question.id);
+          await Preferences.set({
+            key: 'askedMulChoiceIds',
+            value: JSON.stringify(askedMulChoiceIds),
+          });
+        }
       }
     } catch (err) {
       console.error('Error fetching questions:', err);
@@ -92,35 +94,64 @@ function MulChoice() {
     fetchQuestion();
   }, [isReady]);
 
-  if (!question) return <div>AAAAAAH</div>;
-
   function handleChoice(idx) {
-  if (!alreadyAnswered.current) {
-    const correctIdx = choices.findIndex(c => c === question.mark_scheme);
-    if (correctIdx !== -1 && buttonRefs.current[correctIdx]) {
-      buttonRefs.current[correctIdx].style.border = "0.15rem solid #00b179";
-      buttonRefs.current[correctIdx].style.padding = "0.4rem 0.43rem";
+    if (!alreadyAnswered.current) {
+        alreadyAnswered.current = true; 
+      const correct = choices[idx] === question.mark_scheme;
+      const correctIdx = choices.findIndex(c => c === question.mark_scheme);
+
+      // Update all-time stats
+      Preferences.get({ key: 'mulChoiceStats' }).then(({ value }) => {
+        let stats = value ? JSON.parse(value) : { totalAnswered: 0, totalCorrect: 0, perTopic: {} };
+        stats.totalAnswered += 1;
+        if (correct) stats.totalCorrect += 1;
+      });
+
+      // Update session stats
+      if (sessionStats) {
+        setSessionStats(prev => {
+          const newStats = { ...prev };
+          newStats.mulChoice.totalAnswered += 1;
+          if (correct) newStats.mulChoice.totalCorrect += 1;
+        });
+      }
+
+      if (correctIdx !== -1 && buttonRefs.current[correctIdx]) {
+        buttonRefs.current[correctIdx].style.border = "0.15rem solid #00b179";
+        buttonRefs.current[correctIdx].style.padding = "0.4rem 0.43rem";
+      }
+      if (idx !== correctIdx && buttonRefs.current[idx]) {
+        buttonRefs.current[idx].style.border = "0.15rem solid #c1272d";
+        buttonRefs.current[idx].style.padding = "0.4rem 0.43rem";
+      }
+      setHasAnswered(true);
     }
-    if (idx !== correctIdx && buttonRefs.current[idx]) {
-      buttonRefs.current[idx].style.border = "0.15rem solid #c1272d";
-      buttonRefs.current[idx].style.padding = "0.4rem 0.43rem";
-    }
-    alreadyAnswered.current = true;
-    setHasAnswered(true);
   }
-}
 
   function handleNext() {
-  alreadyAnswered.current = false;
-  setHasAnswered(false);
-  buttonRefs.current.forEach(btn => {
-    if (btn) {
-      btn.style.border = "";
-      btn.style.padding = "";
+    alreadyAnswered.current = false;
+    setHasAnswered(false);
+    buttonRefs.current.forEach(btn => {
+      if (btn) {
+        btn.style.border = "";
+        btn.style.padding = "";
+      }
+    });
+    fetchQuestion();
+  }
+
+  if (!question) {
+    if (resetAttempted) {
+      return (
+        <div className="Container">
+            <p className='NoQuestionsText'>
+              No multiple choice questions match the current filters.
+            </p>
+        </div>
+      );
     }
-  });
-  fetchQuestion();
-}
+    return null;
+  }
 
   return (
     <div className='Container'>
@@ -134,21 +165,20 @@ function MulChoice() {
           <p>{question.question}</p>
         </div>
         {choices.map((choice, idx) =>
-          <button className="answerChoice" 
-          key={idx} 
-          onClick={() => handleChoice(idx)}
-          ref={el => buttonRefs.current[idx] = el}
+          <button className="answerChoice"
+            key={idx}
+            onClick={() => handleChoice(idx)}
+            ref={el => buttonRefs.current[idx] = el}
           >
             {choice}
           </button>
         )}
       </div>
       <div className='SubmitContainer'>
-        <button className='Submit'onClick={handleNext} disabled={!hasAnswered}>Next 
-        </button>
+        <button className='Submit' onClick={handleNext} disabled={!hasAnswered}>Next</button>
       </div>
     </div>
   );
-};
+}
 
 export default MulChoice;

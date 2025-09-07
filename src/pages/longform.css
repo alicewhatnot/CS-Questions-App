@@ -116,6 +116,32 @@ textarea:focus {
     transform: scale(1.05);
 }
 
+.NoQuestionsText {
+    text-align: center;
+    margin: 8rem 2rem;
+    font-size: 1rem;
+}
+
+.ResetQuestions {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    margin: 2rem auto;   
+    margin-left: auto;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    border: none;
+    align-self: flex-end;
+    background-color: #c94277;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.ResetQuestions:hover {
+    transform: scale(1.05);
+}
+
 .MSContainer h3 {
     margin-left: 1rem;
     margin-bottom: 0.5rem;
