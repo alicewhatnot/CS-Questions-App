@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 .App {
     text-align: center;
     height: 100vh;
+    font-family: "Raleway", sans-serif;
 }
 
 .navbar {
@@ -16,20 +19,19 @@
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-around;
-    max-width: 16rem;
-
+    max-width: 24rem;
 }
 
 .navbar div {
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     padding: 0.5rem;
     border-radius: 50%;
     cursor: pointer;
     transition: transform .2s; 
 }
 
-.navbar div:hover{
+.icon-wrapper:hover {
     transform: scale(1.1);
 }
 
@@ -38,10 +40,14 @@
     height: 100%;
 }
 
+.navbar img:hover{
+    transform: scale(1.1);
+}
+
 .icon-wrapper {
     position: relative;
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     padding: 0.5rem;
     border-radius: 50%;
     cursor: pointer;
@@ -53,11 +59,69 @@
 .icon-wrapper.active::after {
     content: "";
     position: absolute;
-    bottom: 0.2rem;
+    bottom: 0.15rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 1.5rem;
+    width: 2rem;
     height: 0.25rem;
     background-color: #c94277;
     border-radius: 1rem;
 }
+.popup-menu {
+    border-radius: 1rem !important; 
+    width: 10rem !important;
+    height: 5rem !important; 
+    position: absolute;
+    bottom: 5rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 100;
+}
+
+.popup-menu button {
+    font-size: large;
+    font-weight: 500;
+    color: black;
+    border: none;
+    margin: 0.3rem;
+    background: none;
+}
+
+.popup-menu button:hover {
+    color: #c94277;
+    scale: 1.1;
+    background: none;
+}
+
+.dark-mode {
+  background: #180a33 !important;
+  color: #f2f2f2 !important;
+}
+
+.dark-mode .navbar img{
+  filter: invert();
+}
+
+.dark-mode .navbar {
+  background: #220d48 !important;
+}
+
+.dark-mode .popup-menu {
+  background: #220d48 !important;
+}
+
+.dark-mode .popup-menu button{
+  color: white !important;
+}
+
+.dark-mode .popup-menu button:hover{
+  color: #c94277 !important;
+}
+
+
