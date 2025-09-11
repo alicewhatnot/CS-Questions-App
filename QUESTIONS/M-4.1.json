@@ -1,0 +1,416 @@
+[
+  {
+    "question": "Which of the following is a composite data type?",
+    "marks": 1,
+    "mark_scheme": "Array",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Data types",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Integer", "Boolean", "Character"]
+  },
+  {
+    "question": "What data type would be most appropriate to store a True/False value?",
+    "marks": 1,
+    "mark_scheme": "Boolean",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Data types",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Integer", "String", "Character"]
+  },
+  {
+    "question": "Which data type is best for storing the price of an item such as 12.99?",
+    "marks": 1,
+    "mark_scheme": "Real/Float",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Data types",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Integer", "Boolean", "String"]
+  },
+  {
+    "question": "Which of the following is an example of a user-defined data type?",
+    "marks": 1,
+    "mark_scheme": "Record",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Data types",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Integer", "Boolean", "String"]
+  },
+  {
+    "question": "Which statement type allows a program to make choices based on conditions?",
+    "marks": 1,
+    "mark_scheme": "Selection",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming concepts",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Iteration", "Assignment", "Declaration"]
+  },
+  {
+    "question": "Which combining principle ensures code executes in a straight line unless directed otherwise?",
+    "marks": 1,
+    "mark_scheme": "Sequence",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming concepts",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Selection", "Iteration", "Recursion"]
+  },
+  {
+    "question": "What does the assignment statement x = 5 do?",
+    "marks": 1,
+    "mark_scheme": "Stores the value 5 in variable x",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming concepts",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Checks if x equals 5", "Creates a new constant x", "Divides x by 5"]
+  },
+  {
+    "question": "Which loop is guaranteed to execute at least once?",
+    "marks": 1,
+    "mark_scheme": "Do...while loop",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming concepts",
+    "question_type": "mul_choice",
+    "wrong_choices": ["For loop", "While loop", "Repeat until loop"]
+  },
+  {
+    "question": "What will be the result of integer division 17 DIV 5?",
+    "marks": 1,
+    "mark_scheme": "3",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Arithmetic operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["3.4", "2", "5"]
+  },
+  {
+    "question": "What does the MOD operator return?",
+    "marks": 1,
+    "mark_scheme": "The remainder of a division",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Arithmetic operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The quotient of a division", "The rounded result", "The reciprocal of a number"]
+  },
+  {
+    "question": "Which operator checks if two values are not equal?",
+    "marks": 1,
+    "mark_scheme": "!=",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Relational operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["=", "<>", "//"]
+  },
+  {
+    "question": "Which Boolean operator returns true only if both inputs are true?",
+    "marks": 1,
+    "mark_scheme": "AND",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Boolean operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["OR", "NOT", "XOR"]
+  },
+  {
+    "question": "Which Boolean operator inverts the value of its input?",
+    "marks": 1,
+    "mark_scheme": "NOT",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Boolean operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["AND", "OR", "XOR"]
+  },
+  {
+    "question": "What is an advantage of using named constants?",
+    "marks": 1,
+    "mark_scheme": "Code is easier to read and maintain",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Constants and variables",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Code runs faster", "It reduces memory usage", "It prevents logic errors"]
+  },
+  {
+    "question": "Which string operation returns the number of characters in a string?",
+    "marks": 1,
+    "mark_scheme": "Length",
+    "topic": "Fundamentals of programming",
+    "subtopic": "String-handling operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Substring", "Concatenation", "Position"]
+  },
+  {
+    "question": "Which string operation combines two strings into one?",
+    "marks": 1,
+    "mark_scheme": "Concatenation",
+    "topic": "Fundamentals of programming",
+    "subtopic": "String-handling operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Substring", "Length", "Position"]
+  },
+  {
+    "question": "Which function would you use to convert '123' into a numeric type?",
+    "marks": 1,
+    "mark_scheme": "String to integer",
+    "topic": "Fundamentals of programming",
+    "subtopic": "String-handling operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Integer to string", "Character code", "Float to string"]
+  },
+  {
+    "question": "What is the purpose of random number generation in programming?",
+    "marks": 1,
+    "mark_scheme": "To introduce unpredictability into a program",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Random number generation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["To speed up execution", "To increase accuracy", "To remove errors"]
+  },
+  {
+    "question": "Which programming feature is used to handle errors gracefully?",
+    "marks": 1,
+    "mark_scheme": "Exception handling",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Exception handling",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Recursion", "Selection", "Iteration"]
+  },
+  {
+    "question": "What is a subroutine?",
+    "marks": 1,
+    "mark_scheme": "A named block of code that can be executed when called",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Subroutines",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A variable type", "A programming loop", "A constant value"]
+  },
+  {
+    "question": "Why are subroutines used in programming?",
+    "marks": 1,
+    "mark_scheme": "They improve code reuse and readability",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Subroutines",
+    "question_type": "mul_choice",
+    "wrong_choices": ["They reduce CPU speed", "They prevent syntax errors", "They eliminate memory usage"]
+  },
+  {
+    "question": "Which of the following describes a parameter?",
+    "marks": 1,
+    "mark_scheme": "A value passed into a subroutine",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Parameters",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The return value of a function", "A global variable", "A compiler setting"]
+  },
+  {
+    "question": "Which keyword in most languages indicates that a function sends data back to the caller?",
+    "marks": 1,
+    "mark_scheme": "Return",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Returning values",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Call", "Yield", "Pass"]
+  },
+  {
+    "question": "Where are local variables stored while a subroutine is running?",
+    "marks": 1,
+    "mark_scheme": "In memory allocated only during the subroutine’s execution",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Local variables",
+    "question_type": "mul_choice",
+    "wrong_choices": ["In global storage", "In permanent memory", "In the CPU registers only"]
+  },
+  {
+    "question": "Which type of variable can be accessed by any part of the program?",
+    "marks": 1,
+    "mark_scheme": "Global variable",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Global variables",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Local variable", "Parameter", "Constant"]
+  },
+  {
+    "question": "What does a stack frame store during a subroutine call?",
+    "marks": 1,
+    "mark_scheme": "Return addresses, parameters, and local variables",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Stack frames",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Only constants", "Machine code instructions", "Global variables"]
+  },
+  {
+    "question": "Which feature allows a function to call itself?",
+    "marks": 1,
+    "mark_scheme": "Recursion",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Recursion",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Iteration", "Encapsulation", "Inheritance"]
+  },
+  {
+    "question": "What is required in a recursive function to prevent infinite calls?",
+    "marks": 1,
+    "mark_scheme": "A base case",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Recursion",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A global variable", "A parameter", "An exception handler"]
+  },
+  {
+    "question": "Which paradigm organizes code into classes and objects?",
+    "marks": 1,
+    "mark_scheme": "Object-oriented programming",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming paradigms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Procedural programming", "Functional programming", "Assembly programming"]
+  },
+  {
+    "question": "Which object-oriented principle involves bundling data and methods together?",
+    "marks": 1,
+    "mark_scheme": "Encapsulation",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Object-oriented programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Inheritance", "Polymorphism", "Abstraction"]
+  },
+  {
+    "question": "Which OOP concept allows one class to acquire the properties of another?",
+    "marks": 1,
+    "mark_scheme": "Inheritance",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Object-oriented programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Encapsulation", "Polymorphism", "Composition"]
+  },
+  {
+    "question": "Which OOP feature allows a method to take many forms depending on the object?",
+    "marks": 1,
+    "mark_scheme": "Polymorphism",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Object-oriented programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Encapsulation", "Inheritance", "Aggregation"]
+  },
+  {
+    "question": "In UML, which symbol represents composition?",
+    "marks": 1,
+    "mark_scheme": "A black diamond line",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Object-oriented programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A white diamond line", "A dotted line", "A triangle"]
+  },
+  {
+    "question": "What is the main advantage of structured programming?",
+    "marks": 1,
+    "mark_scheme": "Programs are easier to test, debug and maintain",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Structured programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Programs run faster", "Programs need no documentation", "Programs use less memory"]
+  },
+  {
+    "question": "What is the difference between definite and indefinite iteration?",
+    "marks": 1,
+    "mark_scheme": "Definite has a known number of repetitions, indefinite does not",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Iteration",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Definite uses recursion, indefinite uses loops", "Definite loops cannot use conditions", "Indefinite loops never terminate"]
+  },
+  {
+    "question": "What is the correct term for combining two characters together to make a string?",
+    "marks": 1,
+    "mark_scheme": "Concatenation",
+    "topic": "Fundamentals of programming",
+    "subtopic": "String-handling operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Subsetting", "Joining", "Addition"]
+  },
+  {
+    "question": "What is the output of 2^3 in most programming languages?",
+    "marks": 1,
+    "mark_scheme": "8",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Arithmetic operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["6", "9", "16"]
+  },
+  {
+    "question": "What does the OR Boolean operator return if one input is true and the other is false?",
+    "marks": 1,
+    "mark_scheme": "True",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Boolean operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["False", "Error", "Null"]
+  },
+  {
+    "question": "Which data type would be best for storing a student’s full name?",
+    "marks": 1,
+    "mark_scheme": "String",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Data types",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Integer", "Boolean", "Float"]
+  },
+  {
+    "question": "What is an attribute of a global variable?",
+    "marks": 1,
+    "mark_scheme": "It can be accessed from anywhere in the program",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Global variables",
+    "question_type": "mul_choice",
+    "wrong_choices": ["It is deleted after use", "It is only accessible within loops", "It is stored in stack frames"]
+  },
+  {
+    "question": "Which error type is best handled with exception handling?",
+    "marks": 1,
+    "mark_scheme": "Runtime error",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Exception handling",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Syntax error", "Logic error", "Compiler error"]
+  },
+  {
+    "question": "Which concept involves breaking a problem into sub-problems using functions?",
+    "marks": 1,
+    "mark_scheme": "Modular programming",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Procedural programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Recursion", "Iteration", "Object-oriented programming"]
+  },
+  {
+    "question": "Which keyword is commonly used to define a constant in programming?",
+    "marks": 1,
+    "mark_scheme": "Const",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Constants and variables",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Var", "Let", "Static"]
+  },
+  {
+    "question": "What does the position string function typically return?",
+    "marks": 1,
+    "mark_scheme": "The index of a character within a string",
+    "topic": "Fundamentals of programming",
+    "subtopic": "String-handling operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The number of substrings", "The ASCII code", "The size of the string"]
+  },
+  {
+    "question": "In programming, what does truncation do?",
+    "marks": 1,
+    "mark_scheme": "Removes the fractional part of a real number",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Arithmetic operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Rounds to the nearest integer", "Converts to string", "Returns remainder"]
+  },
+  {
+    "question": "What is the main characteristic of a pointer or reference data type?",
+    "marks": 1,
+    "mark_scheme": "It stores the memory address of another value",
+    "topic": "Fundamentals of programming",
+    "subtopic": "Data types",
+    "question_type": "mul_choice",
+    "wrong_choices": ["It stores only integers", "It is always immutable", "It cannot be used in subroutines"]
+  }
+]

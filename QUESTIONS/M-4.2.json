@@ -1,0 +1,380 @@
+[
+  {
+    "question": "Which of the following is an example of a static data structure?",
+    "marks": 1,
+    "mark_scheme": "Array",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Data structures",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Stack", "Queue", "Linked list"]
+  },
+  {
+    "question": "What is the main advantage of a dynamic data structure compared to a static one?",
+    "marks": 1,
+    "mark_scheme": "It can change size during program execution",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Data structures",
+    "question_type": "mul_choice",
+    "wrong_choices": ["It uses less memory", "It is always faster", "It stores only integers"]
+  },
+  {
+    "question": "In a one-dimensional array, how is each element accessed?",
+    "marks": 1,
+    "mark_scheme": "By its index",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Arrays",
+    "question_type": "mul_choice",
+    "wrong_choices": ["By its value", "By its size", "By its key"]
+  },
+  {
+    "question": "What does a two-dimensional array represent?",
+    "marks": 1,
+    "mark_scheme": "A matrix of rows and columns",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Arrays",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A list of keys", "A binary tree", "A dictionary of pairs"]
+  },
+  {
+    "question": "Which of the following best describes a record?",
+    "marks": 1,
+    "mark_scheme": "A collection of related fields that can contain different data types",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Records and fields",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A collection of identical items", "A two-dimensional array", "A single character of data"]
+  },
+  {
+    "question": "What is a file in the context of data structures?",
+    "marks": 1,
+    "mark_scheme": "A collection of records stored together",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Files",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A single integer variable", "A function definition", "A list of pointers"]
+  },
+  {
+    "question": "Which data structure works on a First In First Out (FIFO) principle?",
+    "marks": 1,
+    "mark_scheme": "Queue",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Queues",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Stack", "Array", "Tree"]
+  },
+  {
+    "question": "What operation adds an item to the rear of a queue?",
+    "marks": 1,
+    "mark_scheme": "Enqueue",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Queues",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Dequeue", "Push", "Pop"]
+  },
+  {
+    "question": "Which operation removes an item from the front of a queue?",
+    "marks": 1,
+    "mark_scheme": "Dequeue",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Queues",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Peek", "Push", "Append"]
+  },
+  {
+    "question": "What is the difference between a circular queue and a linear queue?",
+    "marks": 1,
+    "mark_scheme": "A circular queue reuses empty spaces at the front",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Queues",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A circular queue has no front", "A circular queue stores only numbers", "A circular queue cannot dequeue items"]
+  },
+  {
+    "question": "Which data structure works on a Last In First Out (LIFO) principle?",
+    "marks": 1,
+    "mark_scheme": "Stack",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Stacks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Queue", "Array", "Graph"]
+  },
+  {
+    "question": "Which stack operation adds an item to the top?",
+    "marks": 1,
+    "mark_scheme": "Push",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Stacks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Pop", "Peek", "Append"]
+  },
+  {
+    "question": "Which stack operation removes the top item?",
+    "marks": 1,
+    "mark_scheme": "Pop",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Stacks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Push", "Peek", "Shift"]
+  },
+  {
+    "question": "What does the stack operation 'peek' return?",
+    "marks": 1,
+    "mark_scheme": "The top element without removing it",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Stacks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The bottom element", "A random element", "The number of elements"]
+  },
+  {
+    "question": "What is a graph in computer science?",
+    "marks": 1,
+    "mark_scheme": "A collection of nodes connected by edges",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Graphs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A linear array of data", "A hierarchical tree", "A list of records"]
+  },
+  {
+    "question": "Which of the following is a weighted graph?",
+    "marks": 1,
+    "mark_scheme": "A graph where edges have values associated with them",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Graphs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A graph with no edges", "A graph with only one node", "A graph with self-loops"]
+  },
+  {
+    "question": "Which representation of a graph is more space efficient for sparse graphs?",
+    "marks": 1,
+    "mark_scheme": "Adjacency list",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Graphs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Adjacency matrix", "Stack", "Queue"]
+  },
+  {
+    "question": "Which representation of a graph is faster for checking if two nodes are connected?",
+    "marks": 1,
+    "mark_scheme": "Adjacency matrix",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Graphs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Adjacency list", "Stack", "Binary tree"]
+  },
+  {
+    "question": "What defines a tree in computer science?",
+    "marks": 1,
+    "mark_scheme": "A connected graph with no cycles",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Trees",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A disconnected set of nodes", "A cyclic graph", "A directed graph"]
+  },
+  {
+    "question": "What is a binary tree?",
+    "marks": 1,
+    "mark_scheme": "A rooted tree where each node has at most two children",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Trees",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A tree with only one child per node", "A tree with exactly two children per node", "A cyclic tree"]
+  },
+  {
+    "question": "Which data structure is commonly used for implementing a binary search tree?",
+    "marks": 1,
+    "mark_scheme": "Linked nodes with left and right pointers",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Trees",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Array only", "Stack", "Queue"]
+  },
+  {
+    "question": "What is a hash table?",
+    "marks": 1,
+    "mark_scheme": "A data structure that maps keys to values using a hash function",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Hash tables",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A table of arrays", "A tree with hashed nodes", "A queue of keys"]
+  },
+  {
+    "question": "What is a collision in a hash table?",
+    "marks": 1,
+    "mark_scheme": "When two keys hash to the same location",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Hash tables",
+    "question_type": "mul_choice",
+    "wrong_choices": ["When a key cannot be stored", "When the table becomes full", "When values are equal"]
+  },
+  {
+    "question": "Which method can resolve hash collisions?",
+    "marks": 1,
+    "mark_scheme": "Rehashing",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Hash tables",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Sorting", "Pushing", "Recursion"]
+  },
+  {
+    "question": "What is a dictionary in computer science?",
+    "marks": 1,
+    "mark_scheme": "A collection of key-value pairs",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Dictionaries",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A stack of keys", "A sorted array", "A matrix of values"]
+  },
+  {
+    "question": "Which operation retrieves a value from a dictionary?",
+    "marks": 1,
+    "mark_scheme": "Accessing with its key",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Dictionaries",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Searching by value", "Peeking", "Traversing in order"]
+  },
+  {
+    "question": "What is a vector?",
+    "marks": 1,
+    "mark_scheme": "An ordered list of numbers representing a mathematical object",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Vectors",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A list of records", "A binary tree", "A queue of items"]
+  },
+  {
+    "question": "Which operation on vectors corresponds to scaling?",
+    "marks": 1,
+    "mark_scheme": "Scalar multiplication",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Vectors",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Dot product", "Addition", "Concatenation"]
+  },
+  {
+    "question": "What does the dot product of two vectors represent?",
+    "marks": 1,
+    "mark_scheme": "A scalar value used to find the angle between them",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Vectors",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A new vector", "A hash value", "A matrix"]
+  },
+  {
+    "question": "What is the time complexity of accessing an element in an array by index?",
+    "marks": 1,
+    "mark_scheme": "O(1)",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Arrays",
+    "question_type": "mul_choice",
+    "wrong_choices": ["O(n)", "O(log n)", "O(n^2)"]
+  },
+  {
+    "question": "What is the time complexity of searching for an item in an unsorted array?",
+    "marks": 1,
+    "mark_scheme": "O(n)",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Arrays",
+    "question_type": "mul_choice",
+    "wrong_choices": ["O(1)", "O(log n)", "O(n^2)"]
+  },
+  {
+    "question": "Which data structure is best for implementing undo functionality?",
+    "marks": 1,
+    "mark_scheme": "Stack",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Stacks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Queue", "Array", "Hash table"]
+  },
+  {
+    "question": "Which queue variant gives priority to certain items over others?",
+    "marks": 1,
+    "mark_scheme": "Priority queue",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Queues",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Circular queue", "Linear queue", "Stacked queue"]
+  },
+  {
+    "question": "What is an adjacency matrix?",
+    "marks": 1,
+    "mark_scheme": "A 2D array showing connections between graph nodes",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Graphs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A hash table", "A dictionary", "A linked list"]
+  },
+  {
+    "question": "Which tree traversal visits the root, then the left subtree, then the right subtree?",
+    "marks": 1,
+    "mark_scheme": "Pre-order",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Trees",
+    "question_type": "mul_choice",
+    "wrong_choices": ["In-order", "Post-order", "Breadth-first"]
+  },
+  {
+    "question": "Which tree traversal is used to output a binary search tree in ascending order?",
+    "marks": 1,
+    "mark_scheme": "In-order",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Trees",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Pre-order", "Post-order", "Depth-first"]
+  },
+  {
+    "question": "What is the maximum number of edges in a tree with n nodes?",
+    "marks": 1,
+    "mark_scheme": "n-1",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Trees",
+    "question_type": "mul_choice",
+    "wrong_choices": ["n", "2n", "n+1"]
+  },
+  {
+    "question": "Which property makes hash tables efficient for lookups?",
+    "marks": 1,
+    "mark_scheme": "Constant time average access",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Hash tables",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Guaranteed sorted order", "No collisions", "Use of recursion"]
+  },
+  {
+    "question": "Which operation on a stack would be invalid if the stack is empty?",
+    "marks": 1,
+    "mark_scheme": "Pop",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Stacks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Push", "Peek", "Check empty"]
+  },
+  {
+    "question": "What is the typical use of a queue in operating systems?",
+    "marks": 1,
+    "mark_scheme": "Managing processes waiting for CPU time",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Queues",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Undo functionality", "Storing global variables", "Representing recursive calls"]
+  },
+  {
+    "question": "What is the degree of a node in a tree?",
+    "marks": 1,
+    "mark_scheme": "The number of children it has",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Trees",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The depth of the tree", "The number of siblings", "The level of the node"]
+  },
+  {
+    "question": "Which vector operation corresponds to translation?",
+    "marks": 1,
+    "mark_scheme": "Vector addition",
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Vectors",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Dot product", "Scalar multiplication", "Hashing"]
+  }
+]
