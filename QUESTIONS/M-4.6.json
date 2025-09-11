@@ -5,7 +5,7 @@
     "mark_scheme": "Software provides instructions that control the hardware",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Hardware and software",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Hardware controls software directly", "Software is part of the CPU", "Hardware and software are the same thing"]
   },
   {
@@ -14,7 +14,7 @@
     "mark_scheme": "Operating system",
     "topic": "Fundamentals of computer systems",
     "subtopic": "System software",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Word processor", "Spreadsheet", "Presentation software"]
   },
   {
@@ -23,7 +23,7 @@
     "mark_scheme": "Web browser",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Application software",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Assembler", "Compiler", "Operating system"]
   },
   {
@@ -32,7 +32,7 @@
     "mark_scheme": "To perform maintenance tasks on a computer system",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Utilities",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["To provide user applications", "To run directly on hardware", "To translate high-level code"]
   },
   {
@@ -41,7 +41,7 @@
     "mark_scheme": "Anti-virus software",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Utilities",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Word processor", "Compiler", "Assembler"]
   },
   {
@@ -50,7 +50,7 @@
     "mark_scheme": "To manage hardware and provide a user interface",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Operating systems",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["To translate code into machine instructions", "To connect computers to the internet", "To store user documents"]
   },
   {
@@ -59,7 +59,7 @@
     "mark_scheme": "Compiling source code into machine code",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Operating systems",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Managing memory", "Scheduling processes", "Handling input/output"]
   },
   {
@@ -68,7 +68,7 @@
     "mark_scheme": "They allow the operating system to communicate with hardware devices",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Operating systems",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["They translate high-level code", "They compress files", "They store files permanently"]
   },
   {
@@ -77,7 +77,7 @@
     "mark_scheme": "A collection of pre-written code that can be reused",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Libraries",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A collection of documents", "A memory cache", "An assembler"]
   },
   {
@@ -86,7 +86,7 @@
     "mark_scheme": "Compiler",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Translators",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Interpreter", "Assembler", "Optimizer"]
   },
   {
@@ -95,7 +95,7 @@
     "mark_scheme": "Assembler",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Translators",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Compiler", "Interpreter", "Loader"]
   },
   {
@@ -104,7 +104,7 @@
     "mark_scheme": "Interpreter",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Translators",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Compiler", "Assembler", "Linker"]
   },
   {
@@ -113,7 +113,7 @@
     "mark_scheme": "Python",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Programming languages",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Assembly", "Machine code", "Bytecode"]
   },
   {
@@ -122,7 +122,7 @@
     "mark_scheme": "Assembly",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Programming languages",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Python", "Java", "C#"]
   },
   {
@@ -131,7 +131,7 @@
     "mark_scheme": "Assembly language",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Programming languages",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["High-level language", "Fourth-generation language", "Java bytecode"]
   },
   {
@@ -140,7 +140,7 @@
     "mark_scheme": "Step-by-step instructions that change program state",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Programming languages",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Functional", "Declarative", "Logical"]
   },
   {
@@ -149,7 +149,7 @@
     "mark_scheme": "Compiler for languages like Java",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Translators",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Assembler", "Interpreter", "Linker"]
   },
   {
@@ -158,7 +158,7 @@
     "mark_scheme": "Run on any system with a virtual machine",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Translators",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Run only on Windows", "Run only on Linux", "Run without translation"]
   },
   {
@@ -167,7 +167,7 @@
     "mark_scheme": "AND gate",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["OR gate", "NOT gate", "XOR gate"]
   },
   {
@@ -176,7 +176,7 @@
     "mark_scheme": "OR gate",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["AND gate", "NOT gate", "XOR gate"]
   },
   {
@@ -185,7 +185,7 @@
     "mark_scheme": "NOT gate",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["AND gate", "OR gate", "NAND gate"]
   },
   {
@@ -194,7 +194,7 @@
     "mark_scheme": "XOR gate",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["AND gate", "OR gate", "NOR gate"]
   },
   {
@@ -203,7 +203,7 @@
     "mark_scheme": "NAND gate",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["AND gate", "NOR gate", "XOR gate"]
   },
   {
@@ -212,7 +212,7 @@
     "mark_scheme": "NOR gate",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["AND gate", "XOR gate", "NAND gate"]
   },
   {
@@ -221,7 +221,7 @@
     "mark_scheme": "0",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["1", "Both 1 and 0", "Undefined"]
   },
   {
@@ -230,7 +230,7 @@
     "mark_scheme": "1",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["0", "Both 1 and 0", "Undefined"]
   },
   {
@@ -239,7 +239,7 @@
     "mark_scheme": "Identity law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Distributive law", "Complement law", "De Morgan’s law"]
   },
   {
@@ -248,7 +248,7 @@
     "mark_scheme": "Identity law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Distributive law", "Complement law", "Associative law"]
   },
   {
@@ -257,7 +257,7 @@
     "mark_scheme": "Complement law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Identity law", "Distributive law", "De Morgan’s law"]
   },
   {
@@ -266,7 +266,7 @@
     "mark_scheme": "Complement law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Identity law", "Associative law", "Absorption law"]
   },
   {
@@ -275,7 +275,7 @@
     "mark_scheme": "NOT (A AND B) = NOT A OR NOT B",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A AND (B OR C) = (A AND B) OR (A AND C)", "A OR 1 = 1", "A OR A = A"]
   },
   {
@@ -284,7 +284,7 @@
     "mark_scheme": "Distributive law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Identity law", "Complement law", "Absorption law"]
   },
   {
@@ -293,7 +293,7 @@
     "mark_scheme": "Idempotent law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Identity law", "Associative law", "Distributive law"]
   },
   {
@@ -302,7 +302,7 @@
     "mark_scheme": "Absorption law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Distributive law", "Complement law", "Identity law"]
   },
   {
@@ -311,7 +311,7 @@
     "mark_scheme": "Associative law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Distributive law", "Identity law", "Idempotent law"]
   },
   {
@@ -320,7 +320,7 @@
     "mark_scheme": "Null law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Identity law", "Absorption law", "De Morgan’s law"]
   },
   {
@@ -329,7 +329,7 @@
     "mark_scheme": "Null law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Identity law", "Complement law", "Associative law"]
   },
   {
@@ -338,7 +338,7 @@
     "mark_scheme": "Idempotent law",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Boolean algebra",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Null law", "Identity law", "Complement law"]
   },
   {
@@ -347,7 +347,7 @@
     "mark_scheme": "To show all possible input and output combinations for logic gates",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Truth tables",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["To compile code", "To measure efficiency", "To represent images"]
   },
   {
@@ -356,7 +356,7 @@
     "mark_scheme": "NOT (A AND B)",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["NOT (A OR B)", "A OR B", "A AND B"]
   },
   {
@@ -365,7 +365,7 @@
     "mark_scheme": "NOT (A OR B)",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["NOT (A AND B)", "A XOR B", "A AND B"]
   },
   {
@@ -374,7 +374,7 @@
     "mark_scheme": "1",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Logic gates",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["0", "Undefined", "Both 0 and 1"]
   },
   {
@@ -383,7 +383,7 @@
     "mark_scheme": "The kernel",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Operating systems",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Device driver", "File manager", "Interpreter"]
   },
   {
@@ -392,7 +392,7 @@
     "mark_scheme": "Binary instructions executed directly by the CPU",
     "topic": "Fundamentals of computer systems",
     "subtopic": "Programming languages",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Assembly instructions", "Human-readable code", "High-level source code"]
   }
 ]

@@ -1,0 +1,389 @@
+[
+  {
+    "question": "Which component of the CPU is responsible for carrying out arithmetic and logic operations?",
+    "marks": 1,
+    "mark_scheme": ["Arithmetic Logic Unit (ALU)"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Internal hardware components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Control Unit", "Cache memory", "Address bus"]
+  },
+  {
+    "question": "Which bus carries the actual data between CPU, memory, and I/O devices?",
+    "marks": 1,
+    "mark_scheme": ["Data bus"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Internal hardware components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Address bus", "Control bus", "System bus"]
+  },
+  {
+    "question": "Which bus specifies the location in memory that the CPU wants to read from or write to?",
+    "marks": 1,
+    "mark_scheme": ["Address bus"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Internal hardware components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Data bus", "Control bus", "Instruction bus"]
+  },
+  {
+    "question": "What does the control bus do?",
+    "marks": 1,
+    "mark_scheme": ["Transmits control signals between components of the CPU and other parts of the computer"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Internal hardware components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Holds program instructions", "Transfers only addresses", "Stores binary data permanently"]
+  },
+  {
+    "question": "Which architecture uses the same memory for instructions and data?",
+    "marks": 1,
+    "mark_scheme": ["Von Neumann architecture"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Internal hardware components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Harvard architecture", "RISC architecture", "CISC architecture"]
+  },
+  {
+    "question": "Which architecture has separate memory for instructions and data?",
+    "marks": 1,
+    "mark_scheme": ["Harvard architecture"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Internal hardware components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Von Neumann architecture", "Pipeline architecture", "Turing architecture"]
+  },
+  {
+    "question": "What is meant by the stored program concept?",
+    "marks": 1,
+    "mark_scheme": ["Instructions and data are stored in the same memory"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Stored program concept",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Programs are permanently hardwired", "Instructions are stored only on external storage", "Data is stored but instructions are executed directly"]
+  },
+  {
+    "question": "Which CPU register holds the address of the next instruction to be executed?",
+    "marks": 1,
+    "mark_scheme": ["Program Counter"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor and components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Memory Address Register", "Accumulator", "Status Register"]
+  },
+  {
+    "question": "Which CPU register holds the current instruction being executed?",
+    "marks": 1,
+    "mark_scheme": ["Current Instruction Register"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor and components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Program Counter", "Accumulator", "Memory Buffer Register"]
+  },
+  {
+    "question": "What does the Memory Address Register (MAR) do?",
+    "marks": 1,
+    "mark_scheme": ["Stores the memory address of data or an instruction to be fetched or stored"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor and components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Holds actual data read from memory", "Holds instructions", "Holds program status flags"]
+  },
+  {
+    "question": "What does the Memory Buffer Register (MBR) do?",
+    "marks": 1,
+    "mark_scheme": ["Holds the data being transferred to or from memory"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor and components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Holds the next instruction address", "Controls instruction execution", "Stores program code permanently"]
+  },
+  {
+    "question": "Which cycle describes the process by which the CPU fetches, decodes, and executes instructions?",
+    "marks": 1,
+    "mark_scheme": ["Fetch-Execute cycle"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Fetch-Execute cycle",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Pipeline cycle", "Instruction pipeline", "Clock cycle"]
+  },
+  {
+    "question": "What is the first step of the fetch-execute cycle?",
+    "marks": 1,
+    "mark_scheme": ["The address in the Program Counter is transferred to the MAR"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Fetch-Execute cycle",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The instruction is decoded", "The ALU performs an operation", "The MBR stores the result"]
+  },
+  {
+    "question": "What are machine instructions made up of?",
+    "marks": 1,
+    "mark_scheme": ["Opcode and operand"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Instruction set",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Operand and data bus", "Opcode and memory", "Address and control signals"]
+  },
+  {
+    "question": "Which addressing mode uses the actual value as the operand?",
+    "marks": 1,
+    "mark_scheme": ["Immediate addressing"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Addressing modes",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Direct addressing", "Indirect addressing", "Relative addressing"]
+  },
+  {
+    "question": "Which addressing mode uses the memory address as the operand?",
+    "marks": 1,
+    "mark_scheme": ["Direct addressing"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Addressing modes",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Immediate addressing", "Register addressing", "Indirect addressing"]
+  },
+  {
+    "question": "Which machine-code operation loads data from memory into a register?",
+    "marks": 1,
+    "mark_scheme": ["LOAD"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Machine-code operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["STORE", "ADD", "JUMP"]
+  },
+  {
+    "question": "Which machine-code instruction saves the contents of a register into memory?",
+    "marks": 1,
+    "mark_scheme": ["STORE"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Machine-code operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["LOAD", "CMP", "ADD"]
+  },
+  {
+    "question": "Which factor increases processor performance by allowing simultaneous execution of instructions?",
+    "marks": 1,
+    "mark_scheme": ["Multiple cores"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor performance",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Longer address bus", "Larger control unit", "Von Neumann architecture"]
+  },
+  {
+    "question": "Which type of memory is closest to the CPU and speeds up access to frequently used data?",
+    "marks": 1,
+    "mark_scheme": ["Cache memory"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor performance",
+    "question_type": "mul_choice",
+    "wrong_choices": ["RAM", "ROM", "Secondary storage"]
+  },
+  {
+    "question": "Which unit is responsible for coordinating the activities of the CPU?",
+    "marks": 1,
+    "mark_scheme": ["Control Unit"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor and components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["ALU", "Accumulator", "System bus"]
+  },
+  {
+    "question": "Which register contains information about the outcome of operations, such as zero or carry flags?",
+    "marks": 1,
+    "mark_scheme": ["Status Register"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor and components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Program Counter", "Accumulator", "Current Instruction Register"]
+  },
+  {
+    "question": "What happens during the decode stage of the fetch-execute cycle?",
+    "marks": 1,
+    "mark_scheme": ["The control unit interprets the opcode of the instruction"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Fetch-Execute cycle",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The ALU performs the operation", "The Program Counter is incremented", "The MAR fetches data"]
+  },
+  {
+    "question": "Which machine-code instruction halts execution of a program?",
+    "marks": 1,
+    "mark_scheme": ["HALT"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Machine-code operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["STOP", "BREAK", "END"]
+  },
+  {
+    "question": "What does increasing clock speed generally do?",
+    "marks": 1,
+    "mark_scheme": ["Increases the number of instructions executed per second"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor performance",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Reduces memory size", "Eliminates need for cache", "Allows multitasking without cores"]
+  },
+  {
+    "question": "What is a branch instruction?",
+    "marks": 1,
+    "mark_scheme": ["An instruction that changes the sequence of execution to another part of the program"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Machine-code operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["An instruction that performs addition", "An instruction that stores data", "An instruction that clears registers"]
+  },
+  {
+    "question": "Which external device uses reflected light patterns to read information?",
+    "marks": 1,
+    "mark_scheme": ["Barcode reader"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Input/output devices",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Laser printer", "Digital camera", "RFID tag"]
+  },
+  {
+    "question": "Which device captures images electronically as a grid of pixels?",
+    "marks": 1,
+    "mark_scheme": ["Digital camera"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Input/output devices",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Laser scanner", "Barcode reader", "RFID system"]
+  },
+  {
+    "question": "Which output device uses toner and a laser beam to produce high-quality prints?",
+    "marks": 1,
+    "mark_scheme": ["Laser printer"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Input/output devices",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Inkjet printer", "Plotter", "Dot matrix printer"]
+  },
+  {
+    "question": "Which input/output technology uses radio waves to identify and track tags?",
+    "marks": 1,
+    "mark_scheme": ["RFID"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Input/output devices",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Bluetooth", "WiFi", "Barcode scanning"]
+  },
+  {
+    "question": "Why is secondary storage necessary?",
+    "marks": 1,
+    "mark_scheme": ["To store data and programs permanently when not in use"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Secondary storage",
+    "question_type": "mul_choice",
+    "wrong_choices": ["To replace main memory", "To execute instructions", "To speed up processing"]
+  },
+  {
+    "question": "Which type of secondary storage uses magnetic platters?",
+    "marks": 1,
+    "mark_scheme": ["Hard disk"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Secondary storage",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Optical disk", "SSD", "Flash drive"]
+  },
+  {
+    "question": "Which secondary storage medium uses laser light to read and write data?",
+    "marks": 1,
+    "mark_scheme": ["Optical disk"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Secondary storage",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Hard disk", "SSD", "Tape drive"]
+  },
+  {
+    "question": "Which secondary storage type is based on NAND flash memory?",
+    "marks": 1,
+    "mark_scheme": ["Solid-state drive (SSD)"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Secondary storage",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Hard disk", "Optical disk", "Magnetic tape"]
+  },
+  {
+    "question": "Which factor most directly affects the speed of data transfer in storage devices?",
+    "marks": 1,
+    "mark_scheme": ["Access time"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Secondary storage",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Storage capacity", "Bus width", "Word length"]
+  },
+  {
+    "question": "Which factor affects the maximum addressable memory?",
+    "marks": 1,
+    "mark_scheme": ["Address bus width"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor performance",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Data bus width", "Cache size", "Clock speed"]
+  },
+  {
+    "question": "What is word length in a processor?",
+    "marks": 1,
+    "mark_scheme": ["The number of bits the CPU can process in one operation"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor performance",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The size of memory", "The number of instructions in a program", "The width of the address bus"]
+  },
+  {
+    "question": "Which machine-code instruction compares two values?",
+    "marks": 1,
+    "mark_scheme": ["COMPARE"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Machine-code operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["ADD", "SUBTRACT", "JUMP"]
+  },
+  {
+    "question": "Which machine-code instruction conditionally changes the execution flow?",
+    "marks": 1,
+    "mark_scheme": ["Conditional branch"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Machine-code operations",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Unconditional branch", "ADD", "LOAD"]
+  },
+  {
+    "question": "Which addressing mode specifies the operand by giving the register where it is stored?",
+    "marks": 1,
+    "mark_scheme": ["Register addressing"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Addressing modes",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Direct addressing", "Immediate addressing", "Relative addressing"]
+  },
+  {
+    "question": "What is pipelining in CPU design?",
+    "marks": 1,
+    "mark_scheme": ["Executing multiple instruction stages concurrently to improve performance"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor performance",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Executing instructions out of order", "Increasing clock speed", "Using multiple CPUs"]
+  },
+  {
+    "question": "Which external storage type typically offers the largest capacity?",
+    "marks": 1,
+    "mark_scheme": ["Magnetic tape"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Secondary storage",
+    "question_type": "mul_choice",
+    "wrong_choices": ["SSD", "Hard disk", "Optical disk"]
+  },
+  {
+    "question": "What is the primary purpose of the control signals carried by the control bus?",
+    "marks": 1,
+    "mark_scheme": ["To manage and coordinate the use of the data and address buses"],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Internal hardware components",
+    "question_type": "mul_choice",
+    "wrong_choices": ["To store program data", "To execute ALU operations", "To provide permanent memory storage"]
+  }
+]

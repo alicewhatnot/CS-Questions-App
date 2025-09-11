@@ -1,0 +1,182 @@
+[
+  {
+    "question": "Which of the following is an individual consequence of computer misuse?",
+    "marks": 1,
+    "mark_scheme": ["Identity theft"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Individual consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Climate change", "Copyright infringement", "Market competition"]
+  },
+  {
+    "question": "Which social consequence can arise from excessive use of social media?",
+    "marks": 1,
+    "mark_scheme": ["Reduced face-to-face interaction"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Social consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Improved CPU speed", "Increased data compression", "Stronger encryption standards"]
+  },
+  {
+    "question": "What is a common ethical issue in computing?",
+    "marks": 1,
+    "mark_scheme": ["Privacy of personal data"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Ethical consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Improving processing power", "Designing instruction sets", "Building larger caches"]
+  },
+  {
+    "question": "Which cultural impact has been enabled by global connectivity?",
+    "marks": 1,
+    "mark_scheme": ["Increased cultural exchange and communication"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Cultural consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Decreased globalisation", "Reduced sharing of ideas", "Decline in digital collaboration"]
+  },
+  {
+    "question": "Which is an environmental consequence of widespread computer use?",
+    "marks": 1,
+    "mark_scheme": ["Electronic waste from obsolete devices"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Environmental consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Faster CPU cycles", "Increased storage capacity", "Lower latency in networks"]
+  },
+  {
+    "question": "Which legislation protects the storage and processing of personal data in the UK?",
+    "marks": 1,
+    "mark_scheme": ["Data Protection Act"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Legislative consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Computer Misuse Act", "Freedom of Information Act", "Copyright, Designs and Patents Act"]
+  },
+  {
+    "question": "Which law makes it illegal to gain unauthorised access to computer systems?",
+    "marks": 1,
+    "mark_scheme": ["Computer Misuse Act"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Legislative consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Data Protection Act", "Copyright Act", "Equality Act"]
+  },
+  {
+    "question": "Which of the following is a key feature of open source software?",
+    "marks": 1,
+    "mark_scheme": ["Its source code is freely available and modifiable"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Open source vs proprietary",
+    "question_type": "mul_choice",
+    "wrong_choices": ["It requires a license fee", "It cannot be modified", "It is always owned by a company"]
+  },
+  {
+    "question": "Which is a disadvantage of proprietary software compared to open source?",
+    "marks": 1,
+    "mark_scheme": ["Users cannot freely modify or share the code"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Open source vs proprietary",
+    "question_type": "mul_choice",
+    "wrong_choices": ["It usually has customer support", "It may provide frequent updates", "It can be more secure"]
+  },
+  {
+    "question": "Which stakeholders are most directly affected by a company’s decision to automate jobs?",
+    "marks": 1,
+    "mark_scheme": ["Employees"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Stakeholders",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Software vendors", "Competitors", "Government regulators"]
+  },
+  {
+    "question": "Which of the following is a cultural issue caused by globalisation of computing?",
+    "marks": 1,
+    "mark_scheme": ["Loss of local languages online"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Cultural consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Faster internet speeds", "Growth in data centers", "Better processor designs"]
+  },
+  {
+    "question": "Which environmental benefit comes from cloud computing?",
+    "marks": 1,
+    "mark_scheme": ["Efficient use of shared resources reducing energy consumption"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Environmental consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Unlimited storage capacity", "No need for programming", "Elimination of all hardware"]
+  },
+  {
+    "question": "Which law protects original creators of software from unauthorised copying?",
+    "marks": 1,
+    "mark_scheme": ["Copyright, Designs and Patents Act"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Legislative consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Computer Misuse Act", "Data Protection Act", "Human Rights Act"]
+  },
+  {
+    "question": "Which ethical issue relates to companies collecting more personal data than needed?",
+    "marks": 1,
+    "mark_scheme": ["Data minimisation"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Ethical consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Digital divide", "Software piracy", "Cloud licensing"]
+  },
+  {
+    "question": "Which group of stakeholders is directly affected by changes in copyright law?",
+    "marks": 1,
+    "mark_scheme": ["Software developers"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Stakeholders",
+    "question_type": "mul_choice",
+    "wrong_choices": ["End users", "Hardware manufacturers", "Internet providers"]
+  },
+  {
+    "question": "Which of these is a negative individual consequence of computer overuse?",
+    "marks": 1,
+    "mark_scheme": ["Repetitive strain injury"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Individual consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Faster access to news", "Better global communication", "Improved education tools"]
+  },
+  {
+    "question": "Which of these is an example of a digital divide?",
+    "marks": 1,
+    "mark_scheme": ["Unequal access to technology between urban and rural areas"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Social consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Equal access to online courses", "Increased use of mobile banking", "Reduced hardware costs globally"]
+  },
+  {
+    "question": "Which environmental issue arises from data centers?",
+    "marks": 1,
+    "mark_scheme": ["High energy consumption for cooling systems"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Environmental consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Increased cloud storage", "Faster processors", "Improved network security"]
+  },
+  {
+    "question": "Which social benefit has online collaboration tools provided?",
+    "marks": 1,
+    "mark_scheme": ["Improved teamwork across geographical boundaries"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Social consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Reduced job automation", "Lower hardware costs", "Higher electricity consumption"]
+  },
+  {
+    "question": "Which ethical issue arises when companies track user behaviour online without consent?",
+    "marks": 1,
+    "mark_scheme": ["Invasion of privacy"],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Ethical consequences",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Copyright protection", "Software reliability", "Data compression"]
+  }
+]

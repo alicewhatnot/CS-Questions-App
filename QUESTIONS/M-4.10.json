@@ -1,0 +1,299 @@
+[
+  {
+    "question": "In an Entity-Relationship model, what does a primary key represent?",
+    "marks": 1,
+    "mark_scheme": ["A unique identifier for each record in an entity"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Conceptual data models and entity relationship modelling",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A field that allows duplicate values", "A foreign key reference", "A data type definition"]
+  },
+  {
+    "question": "Which notation is typically used to represent an entity relationship diagram (ERD)?",
+    "marks": 1,
+    "mark_scheme": ["Rectangles for entities, ovals for attributes, diamonds for relationships"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Conceptual data models and entity relationship modelling",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Flowchart symbols", "Circuit diagrams", "Stack diagrams"]
+  },
+  {
+    "question": "What does underlining an attribute in an ER diagram indicate?",
+    "marks": 1,
+    "mark_scheme": ["That the attribute is the primary key"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Conceptual data models and entity relationship modelling",
+    "question_type": "mul_choice",
+    "wrong_choices": ["That the attribute is a foreign key", "That the attribute is optional", "That the attribute is composite"]
+  },
+  {
+    "question": "What does cardinality describe in an ER diagram?",
+    "marks": 1,
+    "mark_scheme": ["The number of instances of one entity that can be associated with another"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Conceptual data models and entity relationship modelling",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The number of tables in the database", "The number of attributes in an entity", "The number of users connected to the system"]
+  },
+  {
+    "question": "Which best defines a relational database?",
+    "marks": 1,
+    "mark_scheme": ["A collection of tables with relationships between them"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Relational databases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A single flat file of data", "A hierarchical tree of records", "A network model of nodes and edges"]
+  },
+  {
+    "question": "Which key uniquely identifies a record in a relational table?",
+    "marks": 1,
+    "mark_scheme": ["Primary key"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Relational databases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Foreign key", "Composite key", "Candidate key"]
+  },
+  {
+    "question": "Which type of key references the primary key of another table?",
+    "marks": 1,
+    "mark_scheme": ["Foreign key"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Relational databases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Candidate key", "Super key", "Secondary key"]
+  },
+  {
+    "question": "What is referential integrity?",
+    "marks": 1,
+    "mark_scheme": ["A condition where a foreign key must match a valid primary key value in another table"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Relational databases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A database free from redundancy", "Ensuring that all keys are unique", "The speed of data retrieval"]
+  },
+  {
+    "question": "What is the purpose of normalisation in databases?",
+    "marks": 1,
+    "mark_scheme": ["To reduce redundancy and improve data integrity"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Database design and normalisation techniques",
+    "question_type": "mul_choice",
+    "wrong_choices": ["To speed up CPU processing", "To compress files", "To encrypt data"]
+  },
+  {
+    "question": "Which normal form removes partial dependencies?",
+    "marks": 1,
+    "mark_scheme": ["Second Normal Form (2NF)"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Database design and normalisation techniques",
+    "question_type": "mul_choice",
+    "wrong_choices": ["First Normal Form (1NF)", "Third Normal Form (3NF)", "Boyce-Codd Normal Form (BCNF)"]
+  },
+  {
+    "question": "Which normal form eliminates transitive dependencies?",
+    "marks": 1,
+    "mark_scheme": ["Third Normal Form (3NF)"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Database design and normalisation techniques",
+    "question_type": "mul_choice",
+    "wrong_choices": ["First Normal Form (1NF)", "Second Normal Form (2NF)", "Fifth Normal Form (5NF)"]
+  },
+  {
+    "question": "What must a relation in First Normal Form (1NF) not contain?",
+    "marks": 1,
+    "mark_scheme": ["Repeating groups or arrays"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Database design and normalisation techniques",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Foreign keys", "Unique constraints", "Any attributes at all"]
+  },
+  {
+    "question": "Which normal form resolves anomalies by ensuring every determinant is a candidate key?",
+    "marks": 1,
+    "mark_scheme": ["Boyce-Codd Normal Form (BCNF)"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Database design and normalisation techniques",
+    "question_type": "mul_choice",
+    "wrong_choices": ["2NF", "3NF", "5NF"]
+  },
+  {
+    "question": "Which SQL keyword is used to extract data from a database?",
+    "marks": 1,
+    "mark_scheme": ["SELECT"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["EXTRACT", "OUTPUT", "PULL"]
+  },
+  {
+    "question": "Which SQL keyword is used to add new records to a table?",
+    "marks": 1,
+    "mark_scheme": ["INSERT"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["ADD", "APPEND", "CREATE"]
+  },
+  {
+    "question": "Which SQL command is used to change existing data in a table?",
+    "marks": 1,
+    "mark_scheme": ["UPDATE"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["CHANGE", "ALTER", "SETDATA"]
+  },
+  {
+    "question": "Which SQL statement deletes rows from a table?",
+    "marks": 1,
+    "mark_scheme": ["DELETE"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["REMOVE", "DROP", "ERASE"]
+  },
+  {
+    "question": "Which SQL clause is used to filter results?",
+    "marks": 1,
+    "mark_scheme": ["WHERE"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["HAVING", "FILTER", "CONDITION"]
+  },
+  {
+    "question": "Which SQL clause groups rows that have the same values?",
+    "marks": 1,
+    "mark_scheme": ["GROUP BY"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["ORDER BY", "SORT BY", "COLLECT"]
+  },
+  {
+    "question": "Which SQL keyword sorts query results?",
+    "marks": 1,
+    "mark_scheme": ["ORDER BY"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["GROUP BY", "SORT", "ARRANGE"]
+  },
+  {
+    "question": "Which SQL keyword defines a new table?",
+    "marks": 1,
+    "mark_scheme": ["CREATE"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["MAKE", "DEFINE", "NEW"]
+  },
+  {
+    "question": "Which SQL keyword removes a table entirely?",
+    "marks": 1,
+    "mark_scheme": ["DROP"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["DELETE", "ERASE", "REMOVE"]
+  },
+  {
+    "question": "Which SQL operator is used to combine rows from two tables based on a related column?",
+    "marks": 1,
+    "mark_scheme": ["JOIN"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["MERGE", "APPEND", "UNION"]
+  },
+  {
+    "question": "Which SQL function returns the number of rows in a result set?",
+    "marks": 1,
+    "mark_scheme": ["COUNT()"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["SUM()", "TOTAL()", "NUMBER()"]
+  },
+  {
+    "question": "Which SQL function finds the average of values in a column?",
+    "marks": 1,
+    "mark_scheme": ["AVG()"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["MEAN()", "AVERAGE()", "TOTAL()"]
+  },
+  {
+    "question": "Which SQL keyword ensures only unique rows are returned?",
+    "marks": 1,
+    "mark_scheme": ["DISTINCT"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["UNIQUE", "SINGLE", "ONLY"]
+  },
+  {
+    "question": "Which SQL clause restricts groups of rows based on a condition after aggregation?",
+    "marks": 1,
+    "mark_scheme": ["HAVING"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Structured Query Language (SQL)",
+    "question_type": "mul_choice",
+    "wrong_choices": ["WHERE", "GROUP BY", "FILTER"]
+  },
+  {
+    "question": "What is a client-server database system?",
+    "marks": 1,
+    "mark_scheme": ["A system where multiple clients access a database managed by a central server"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Client server databases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A standalone database on a personal computer", "A single user accessing a flat file", "A database stored only in RAM"]
+  },
+  {
+    "question": "Which issue can arise from concurrent access in client-server databases?",
+    "marks": 1,
+    "mark_scheme": ["Lost updates when two clients edit the same record"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Client server databases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Slow network speeds", "Corrupted hardware", "Duplicate IP addresses"]
+  },
+  {
+    "question": "Which technique prevents two users editing the same record at the same time?",
+    "marks": 1,
+    "mark_scheme": ["Record locking"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Client server databases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Encryption", "Indexing", "Hashing"]
+  },
+  {
+    "question": "Which concurrency control method uses ordering of transactions to avoid conflicts?",
+    "marks": 1,
+    "mark_scheme": ["Timestamp ordering"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Client server databases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["File compression", "Data sharding", "Replication"]
+  },
+  {
+    "question": "What does the 'A' in ACID properties stand for in database transactions?",
+    "marks": 1,
+    "mark_scheme": ["Atomicity"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Client server databases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Accuracy", "Access", "Association"]
+  },
+  {
+    "question": "Which ACID property ensures that once a transaction is committed, it will survive power loss or errors?",
+    "marks": 1,
+    "mark_scheme": ["Durability"],
+    "topic": "Fundamentals of databases",
+    "subtopic": "Client server databases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Consistency", "Integrity", "Isolation"]
+  }
+]

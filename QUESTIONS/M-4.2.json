@@ -5,7 +5,7 @@
     "mark_scheme": "Array",
     "topic": "Fundamentals of data structures",
     "subtopic": "Data structures",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Stack", "Queue", "Linked list"]
   },
   {
@@ -14,7 +14,7 @@
     "mark_scheme": "It can change size during program execution",
     "topic": "Fundamentals of data structures",
     "subtopic": "Data structures",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["It uses less memory", "It is always faster", "It stores only integers"]
   },
   {
@@ -23,7 +23,7 @@
     "mark_scheme": "By its index",
     "topic": "Fundamentals of data structures",
     "subtopic": "Arrays",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["By its value", "By its size", "By its key"]
   },
   {
@@ -32,7 +32,7 @@
     "mark_scheme": "A matrix of rows and columns",
     "topic": "Fundamentals of data structures",
     "subtopic": "Arrays",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A list of keys", "A binary tree", "A dictionary of pairs"]
   },
   {
@@ -41,7 +41,7 @@
     "mark_scheme": "A collection of related fields that can contain different data types",
     "topic": "Fundamentals of data structures",
     "subtopic": "Records and fields",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A collection of identical items", "A two-dimensional array", "A single character of data"]
   },
   {
@@ -50,7 +50,7 @@
     "mark_scheme": "A collection of records stored together",
     "topic": "Fundamentals of data structures",
     "subtopic": "Files",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A single integer variable", "A function definition", "A list of pointers"]
   },
   {
@@ -59,7 +59,7 @@
     "mark_scheme": "Queue",
     "topic": "Fundamentals of data structures",
     "subtopic": "Queues",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Stack", "Array", "Tree"]
   },
   {
@@ -68,7 +68,7 @@
     "mark_scheme": "Enqueue",
     "topic": "Fundamentals of data structures",
     "subtopic": "Queues",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Dequeue", "Push", "Pop"]
   },
   {
@@ -77,7 +77,7 @@
     "mark_scheme": "Dequeue",
     "topic": "Fundamentals of data structures",
     "subtopic": "Queues",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Peek", "Push", "Append"]
   },
   {
@@ -86,7 +86,7 @@
     "mark_scheme": "A circular queue reuses empty spaces at the front",
     "topic": "Fundamentals of data structures",
     "subtopic": "Queues",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A circular queue has no front", "A circular queue stores only numbers", "A circular queue cannot dequeue items"]
   },
   {
@@ -95,7 +95,7 @@
     "mark_scheme": "Stack",
     "topic": "Fundamentals of data structures",
     "subtopic": "Stacks",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Queue", "Array", "Graph"]
   },
   {
@@ -104,7 +104,7 @@
     "mark_scheme": "Push",
     "topic": "Fundamentals of data structures",
     "subtopic": "Stacks",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Pop", "Peek", "Append"]
   },
   {
@@ -113,7 +113,7 @@
     "mark_scheme": "Pop",
     "topic": "Fundamentals of data structures",
     "subtopic": "Stacks",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Push", "Peek", "Shift"]
   },
   {
@@ -122,7 +122,7 @@
     "mark_scheme": "The top element without removing it",
     "topic": "Fundamentals of data structures",
     "subtopic": "Stacks",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["The bottom element", "A random element", "The number of elements"]
   },
   {
@@ -131,7 +131,7 @@
     "mark_scheme": "A collection of nodes connected by edges",
     "topic": "Fundamentals of data structures",
     "subtopic": "Graphs",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A linear array of data", "A hierarchical tree", "A list of records"]
   },
   {
@@ -140,7 +140,7 @@
     "mark_scheme": "A graph where edges have values associated with them",
     "topic": "Fundamentals of data structures",
     "subtopic": "Graphs",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A graph with no edges", "A graph with only one node", "A graph with self-loops"]
   },
   {
@@ -149,7 +149,7 @@
     "mark_scheme": "Adjacency list",
     "topic": "Fundamentals of data structures",
     "subtopic": "Graphs",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Adjacency matrix", "Stack", "Queue"]
   },
   {
@@ -158,7 +158,7 @@
     "mark_scheme": "Adjacency matrix",
     "topic": "Fundamentals of data structures",
     "subtopic": "Graphs",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Adjacency list", "Stack", "Binary tree"]
   },
   {
@@ -167,7 +167,7 @@
     "mark_scheme": "A connected graph with no cycles",
     "topic": "Fundamentals of data structures",
     "subtopic": "Trees",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A disconnected set of nodes", "A cyclic graph", "A directed graph"]
   },
   {
@@ -176,7 +176,7 @@
     "mark_scheme": "A rooted tree where each node has at most two children",
     "topic": "Fundamentals of data structures",
     "subtopic": "Trees",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A tree with only one child per node", "A tree with exactly two children per node", "A cyclic tree"]
   },
   {
@@ -185,7 +185,7 @@
     "mark_scheme": "Linked nodes with left and right pointers",
     "topic": "Fundamentals of data structures",
     "subtopic": "Trees",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Array only", "Stack", "Queue"]
   },
   {
@@ -194,7 +194,7 @@
     "mark_scheme": "A data structure that maps keys to values using a hash function",
     "topic": "Fundamentals of data structures",
     "subtopic": "Hash tables",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A table of arrays", "A tree with hashed nodes", "A queue of keys"]
   },
   {
@@ -203,7 +203,7 @@
     "mark_scheme": "When two keys hash to the same location",
     "topic": "Fundamentals of data structures",
     "subtopic": "Hash tables",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["When a key cannot be stored", "When the table becomes full", "When values are equal"]
   },
   {
@@ -212,7 +212,7 @@
     "mark_scheme": "Rehashing",
     "topic": "Fundamentals of data structures",
     "subtopic": "Hash tables",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Sorting", "Pushing", "Recursion"]
   },
   {
@@ -221,7 +221,7 @@
     "mark_scheme": "A collection of key-value pairs",
     "topic": "Fundamentals of data structures",
     "subtopic": "Dictionaries",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A stack of keys", "A sorted array", "A matrix of values"]
   },
   {
@@ -230,7 +230,7 @@
     "mark_scheme": "Accessing with its key",
     "topic": "Fundamentals of data structures",
     "subtopic": "Dictionaries",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Searching by value", "Peeking", "Traversing in order"]
   },
   {
@@ -239,7 +239,7 @@
     "mark_scheme": "An ordered list of numbers representing a mathematical object",
     "topic": "Fundamentals of data structures",
     "subtopic": "Vectors",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A list of records", "A binary tree", "A queue of items"]
   },
   {
@@ -248,7 +248,7 @@
     "mark_scheme": "Scalar multiplication",
     "topic": "Fundamentals of data structures",
     "subtopic": "Vectors",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Dot product", "Addition", "Concatenation"]
   },
   {
@@ -257,7 +257,7 @@
     "mark_scheme": "A scalar value used to find the angle between them",
     "topic": "Fundamentals of data structures",
     "subtopic": "Vectors",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A new vector", "A hash value", "A matrix"]
   },
   {
@@ -266,7 +266,7 @@
     "mark_scheme": "O(1)",
     "topic": "Fundamentals of data structures",
     "subtopic": "Arrays",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(n)", "O(log n)", "O(n^2)"]
   },
   {
@@ -275,7 +275,7 @@
     "mark_scheme": "O(n)",
     "topic": "Fundamentals of data structures",
     "subtopic": "Arrays",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(1)", "O(log n)", "O(n^2)"]
   },
   {
@@ -284,7 +284,7 @@
     "mark_scheme": "Stack",
     "topic": "Fundamentals of data structures",
     "subtopic": "Stacks",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Queue", "Array", "Hash table"]
   },
   {
@@ -293,7 +293,7 @@
     "mark_scheme": "Priority queue",
     "topic": "Fundamentals of data structures",
     "subtopic": "Queues",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Circular queue", "Linear queue", "Stacked queue"]
   },
   {
@@ -302,7 +302,7 @@
     "mark_scheme": "A 2D array showing connections between graph nodes",
     "topic": "Fundamentals of data structures",
     "subtopic": "Graphs",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A hash table", "A dictionary", "A linked list"]
   },
   {
@@ -311,7 +311,7 @@
     "mark_scheme": "Pre-order",
     "topic": "Fundamentals of data structures",
     "subtopic": "Trees",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["In-order", "Post-order", "Breadth-first"]
   },
   {
@@ -320,7 +320,7 @@
     "mark_scheme": "In-order",
     "topic": "Fundamentals of data structures",
     "subtopic": "Trees",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Pre-order", "Post-order", "Depth-first"]
   },
   {
@@ -329,7 +329,7 @@
     "mark_scheme": "n-1",
     "topic": "Fundamentals of data structures",
     "subtopic": "Trees",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["n", "2n", "n+1"]
   },
   {
@@ -338,7 +338,7 @@
     "mark_scheme": "Constant time average access",
     "topic": "Fundamentals of data structures",
     "subtopic": "Hash tables",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Guaranteed sorted order", "No collisions", "Use of recursion"]
   },
   {
@@ -347,7 +347,7 @@
     "mark_scheme": "Pop",
     "topic": "Fundamentals of data structures",
     "subtopic": "Stacks",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Push", "Peek", "Check empty"]
   },
   {
@@ -356,7 +356,7 @@
     "mark_scheme": "Managing processes waiting for CPU time",
     "topic": "Fundamentals of data structures",
     "subtopic": "Queues",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Undo functionality", "Storing global variables", "Representing recursive calls"]
   },
   {
@@ -365,7 +365,7 @@
     "mark_scheme": "The number of children it has",
     "topic": "Fundamentals of data structures",
     "subtopic": "Trees",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["The depth of the tree", "The number of siblings", "The level of the node"]
   },
   {
@@ -374,7 +374,7 @@
     "mark_scheme": "Vector addition",
     "topic": "Fundamentals of data structures",
     "subtopic": "Vectors",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Dot product", "Scalar multiplication", "Hashing"]
   }
 ]

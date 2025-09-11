@@ -1,0 +1,407 @@
+[
+  {
+    "question": "What is an algorithm?",
+    "marks": 1,
+    "mark_scheme": ["A sequence of steps that can be followed to complete a task and always terminates"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Any computer program", "A mathematical proof", "A set of data values"]
+  },
+  {
+    "question": "Which of the following best describes representational abstraction?",
+    "marks": 1,
+    "mark_scheme": ["Removing unnecessary details to create a simplified model"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Grouping items by common characteristics", "Hiding details of data representation", "Breaking problems into sub-problems"]
+  },
+  {
+    "question": "What does procedural abstraction focus on?",
+    "marks": 1,
+    "mark_scheme": ["Representing a computational method as a procedure"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Hiding the method used to compute a result", "Grouping problems by type", "Breaking problems into smaller parts"]
+  },
+  {
+    "question": "Which type of abstraction hides the details of how data is represented?",
+    "marks": 1,
+    "mark_scheme": ["Data abstraction"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Functional abstraction", "Problem abstraction", "Representational abstraction"]
+  },
+  {
+    "question": "What is the purpose of decomposition in computational thinking?",
+    "marks": 1,
+    "mark_scheme": ["Breaking a problem into sub-problems that each accomplish an identifiable task"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Combining procedures into a single solution", "Generalising data types", "Reducing the problem to a known one"]
+  },
+  {
+    "question": "What is meant by automation in computer science?",
+    "marks": 1,
+    "mark_scheme": ["Putting models into action by creating algorithms and executing them in code"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Using robots in manufacturing", "Simulating human intelligence", "Replacing workers with computers"]
+  },
+  {
+    "question": "Which diagram represents the behaviour of a finite state machine?",
+    "marks": 1,
+    "mark_scheme": ["A state transition diagram"],
+    "topic": "Theory of computation",
+    "subtopic": "Regular languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A class diagram", "A flowchart", "A tree diagram"]
+  },
+  {
+    "question": "What is a regular expression used for?",
+    "marks": 1,
+    "mark_scheme": ["Defining patterns in strings within a regular language"],
+    "topic": "Theory of computation",
+    "subtopic": "Regular languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Encrypting data", "Defining database schemas", "Describing Turing machines"]
+  },
+  {
+    "question": "Which of these languages can be recognised by a finite state machine?",
+    "marks": 1,
+    "mark_scheme": ["Regular languages"],
+    "topic": "Theory of computation",
+    "subtopic": "Regular languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Context-free languages", "All computable languages", "Turing-complete languages"]
+  },
+  {
+    "question": "What is a context-free language typically defined with?",
+    "marks": 1,
+    "mark_scheme": ["BNF notation or syntax diagrams"],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Regular expressions", "Finite state machines", "Flowcharts"]
+  },
+  {
+    "question": "Which notation uses production rules to define a grammar?",
+    "marks": 1,
+    "mark_scheme": ["Backus-Naur Form (BNF)"],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Regular expressions", "Turing machines", "Syntax trees"]
+  },
+  {
+    "question": "Which of the following best describes Big-O notation?",
+    "marks": 1,
+    "mark_scheme": ["A measure of the upper bound on algorithm complexity as input size grows"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The exact runtime of an algorithm", "The amount of memory used by an algorithm", "The best case performance of an algorithm"]
+  },
+  {
+    "question": "Which of the following has time complexity O(n log n)?",
+    "marks": 1,
+    "mark_scheme": ["Merge sort"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Bubble sort", "Linear search", "Binary search"]
+  },
+  {
+    "question": "Which problem is provably unsolvable by algorithms?",
+    "marks": 1,
+    "mark_scheme": ["The Halting problem"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Sorting a list", "Finding a path in a graph", "Encrypting a message"]
+  },
+  {
+    "question": "What term describes problems that can be solved in polynomial time?",
+    "marks": 1,
+    "mark_scheme": ["Class P"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Class NP", "Undecidable problems", "Exponential problems"]
+  },
+  {
+    "question": "What is a Turing machine used to model?",
+    "marks": 1,
+    "mark_scheme": ["The theoretical limits of computation"],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Database operations", "Machine learning models", "High-level programming languages"]
+  },
+  {
+    "question": "What is the key difference between a finite state machine and a Turing machine?",
+    "marks": 1,
+    "mark_scheme": ["A Turing machine has infinite memory tape, while an FSM does not"],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["FSMs can recognise any language", "Turing machines cannot accept inputs", "FSMs can execute any algorithm"]
+  },
+  {
+    "question": "What is a universal Turing machine?",
+    "marks": 1,
+    "mark_scheme": ["A machine that can simulate any other Turing machine"],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A machine with infinite states", "A computer with multiple processors", "A machine that can solve the halting problem"]
+  },
+  {
+    "question": "Which abstraction disregards the particular computation method to focus on the input-output relationship?",
+    "marks": 1,
+    "mark_scheme": ["Functional abstraction"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Procedural abstraction", "Data abstraction", "Problem abstraction"]
+  },
+  {
+    "question": "Which of the following is an example of problem abstraction?",
+    "marks": 1,
+    "mark_scheme": ["Reducing a new problem to one that has already been solved"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Hiding the way data is stored", "Creating compound data types", "Defining a grammar for a language"]
+  },
+  {
+    "question": "What is composition in computational thinking?",
+    "marks": 1,
+    "mark_scheme": ["Combining procedures or data objects to build compound structures"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Breaking problems into sub-problems", "Hiding implementation details", "Generalising data by category"]
+  },
+  {
+    "question": "Which of the following is an example of information hiding?",
+    "marks": 1,
+    "mark_scheme": ["Providing only essential features while hiding internal details"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Using Big-O notation", "Applying regular expressions", "Breaking a problem into sub-problems"]
+  },
+  {
+    "question": "Which of these best defines a regular language?",
+    "marks": 1,
+    "mark_scheme": ["A language that can be described using a regular expression and recognised by an FSM"],
+    "topic": "Theory of computation",
+    "subtopic": "Regular languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A language that requires context-free grammar", "A language only recognised by a Turing machine", "A language without any syntax rules"]
+  },
+  {
+    "question": "Which notation graphically represents context-free grammars?",
+    "marks": 1,
+    "mark_scheme": ["Syntax diagrams"],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Finite state diagrams", "Flowcharts", "State transition tables"]
+  },
+  {
+    "question": "Which of the following statements about context-free grammars is correct?",
+    "marks": 1,
+    "mark_scheme": ["They are more powerful than regular expressions and can describe nested structures"],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["They are less powerful than FSMs", "They cannot describe programming language syntax", "They are equivalent to regular languages"]
+  },
+  {
+    "question": "Which time complexity class represents exponential growth?",
+    "marks": 1,
+    "mark_scheme": ["O(2^n)"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["O(n)", "O(log n)", "O(n log n)"]
+  },
+  {
+    "question": "Which type of problems have no algorithm that can solve them for all cases?",
+    "marks": 1,
+    "mark_scheme": ["Unsolvable problems"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Tractable problems", "Intractable problems", "Polynomial problems"]
+  },
+  {
+    "question": "What is meant by 'computable' in computer science?",
+    "marks": 1,
+    "mark_scheme": ["A problem is computable if there exists an algorithm that will solve it in a finite number of steps"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["It can be solved quickly", "It requires no memory", "It must run in constant time"]
+  },
+  {
+    "question": "Which of the following is an undecidable problem?",
+    "marks": 1,
+    "mark_scheme": ["The Halting problem"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Sorting integers", "Calculating Fibonacci numbers", "Finding shortest path in a graph"]
+  },
+  {
+    "question": "Which type of computational model provides the foundation of modern computer science?",
+    "marks": 1,
+    "mark_scheme": ["The Turing machine"],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The abacus", "Finite automata", "Von Neumann architecture"]
+  },
+  {
+    "question": "What is the input alphabet in a Turing machine?",
+    "marks": 1,
+    "mark_scheme": ["The finite set of symbols that the machine can read"],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The machine’s states", "The length of input tape", "The stack of symbols"]
+  },
+  {
+    "question": "Which part of a Turing machine determines the next action based on the current state and symbol?",
+    "marks": 1,
+    "mark_scheme": ["The transition function"],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The tape", "The input alphabet", "The halting condition"]
+  },
+  {
+    "question": "Which computational class do finite state machines belong to?",
+    "marks": 1,
+    "mark_scheme": ["Regular languages"],
+    "topic": "Theory of computation",
+    "subtopic": "Regular languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Context-free languages", "Turing-complete languages", "Polynomial problems"]
+  },
+  {
+    "question": "Which best describes the Church-Turing thesis?",
+    "marks": 1,
+    "mark_scheme": ["Anything that is computable can be computed by a Turing machine"],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["All algorithms run in polynomial time", "FSMs can solve any problem", "Universal machines can solve undecidable problems"]
+  },
+  {
+    "question": "Which abstraction helps design reusable functions regardless of implementation?",
+    "marks": 1,
+    "mark_scheme": ["Functional abstraction"],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Procedural abstraction", "Problem abstraction", "Data abstraction"]
+  },
+  {
+    "question": "Which diagrammatic form can represent an FSM’s possible states and transitions?",
+    "marks": 1,
+    "mark_scheme": ["State transition diagram"],
+    "topic": "Theory of computation",
+    "subtopic": "Regular languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Syntax tree", "Class diagram", "UML sequence diagram"]
+  },
+  {
+    "question": "Which notation is commonly used to define the syntax of programming languages?",
+    "marks": 1,
+    "mark_scheme": ["Backus-Naur Form (BNF)"],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Regular expressions", "Finite state diagrams", "Truth tables"]
+  },
+  {
+    "question": "What does it mean if an algorithm is described as O(1)?",
+    "marks": 1,
+    "mark_scheme": ["Its runtime is constant regardless of input size"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Its runtime grows linearly with input size", "It requires exponential time", "It requires logarithmic time"]
+  },
+  {
+    "question": "Which type of grammar can generate nested structures like balanced parentheses?",
+    "marks": 1,
+    "mark_scheme": ["Context-free grammars"],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Regular grammars", "Regular expressions", "Finite state machines"]
+  },
+  {
+    "question": "Which of the following can a Universal Turing machine do?",
+    "marks": 1,
+    "mark_scheme": ["Simulate any other Turing machine"],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Solve the halting problem", "Run faster than any FSM", "Represent context-free grammars"]
+  },
+  {
+    "question": "What is meant by an intractable problem?",
+    "marks": 1,
+    "mark_scheme": ["A problem that can be solved but only with algorithms that take impractically long time for large inputs"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A problem that has no solution", "A problem that requires no computation", "A problem with polynomial-time algorithms"]
+  },
+  {
+    "question": "Which complexity class do decision problems verifiable in polynomial time belong to?",
+    "marks": 1,
+    "mark_scheme": ["Class NP"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Class P", "Class EXP", "Unsolvable problems"]
+  },
+  {
+    "question": "Which is an example of a regular expression?",
+    "marks": 1,
+    "mark_scheme": ["a(b|c)*"],
+    "topic": "Theory of computation",
+    "subtopic": "Regular languages",
+    "question_type": "mul_choice",
+    "wrong_choices": ["if x then y else z", "E → E + T", "while x < y do z"]
+  },
+  {
+    "question": "What is the halting problem concerned with?",
+    "marks": 1,
+    "mark_scheme": ["Determining whether a program will finish running or continue forever"],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Finding the shortest path", "Checking syntax errors", "Sorting a list of numbers"]
+  },
+  {
+    "question": "Which is true about Universal Turing machines?",
+    "marks": 1,
+    "mark_scheme": ["They form the basis of modern general-purpose computers"],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["They can solve undecidable problems", "They cannot simulate other machines", "They are less powerful than FSMs"]
+  }
+]

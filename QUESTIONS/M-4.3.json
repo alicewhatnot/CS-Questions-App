@@ -2,10 +2,10 @@
   {
     "question": "What is the definition of an algorithm?",
     "marks": 1,
-    "mark_scheme": "A finite sequence of unambiguous instructions to solve a problem",
+    "mark_scheme": "A finite sequence of instructions to solve a problem in a finite amount of time",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Nature of algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A programming language", "A computer program", "A flowchart diagram"]
   },
   {
@@ -14,7 +14,7 @@
     "mark_scheme": "Removing unnecessary details to focus on the essential features",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Nature of algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Breaking a problem into smaller tasks", "Tracing through pseudocode", "Comparing algorithm speeds"]
   },
   {
@@ -23,7 +23,7 @@
     "mark_scheme": "Breaking a problem into smaller subproblems",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Nature of algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Writing pseudocode", "Abstracting away details", "Measuring algorithm complexity"]
   },
   {
@@ -32,7 +32,7 @@
     "mark_scheme": "Tracking variable values step by step through execution",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Tracing algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Running the algorithm on a compiler", "Measuring execution time", "Drawing flowcharts"]
   },
   {
@@ -41,7 +41,7 @@
     "mark_scheme": "How well it uses time and resources",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Comparing efficiency",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["How easy it is to read", "How often it produces errors", "How much it costs to run"]
   },
   {
@@ -50,7 +50,7 @@
     "mark_scheme": "Big-O notation",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Big-O notation",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Binary notation", "Hexadecimal notation", "Prefix notation"]
   },
   {
@@ -59,7 +59,7 @@
     "mark_scheme": "O(1)",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Big-O notation",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(n)", "O(log n)", "O(n^2)"]
   },
   {
@@ -68,7 +68,7 @@
     "mark_scheme": "O(log n)",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Big-O notation",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(1)", "O(n)", "O(n^2)"]
   },
   {
@@ -77,7 +77,7 @@
     "mark_scheme": "O(n^2)",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Big-O notation",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(1)", "O(n)", "O(log n)"]
   },
   {
@@ -86,7 +86,7 @@
     "mark_scheme": "Linear search",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Searching algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Binary search", "Bubble sort", "Merge sort"]
   },
   {
@@ -95,7 +95,7 @@
     "mark_scheme": "Binary search",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Searching algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Linear search", "Bubble sort", "Quick sort"]
   },
   {
@@ -104,7 +104,7 @@
     "mark_scheme": "O(log n)",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Searching algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(1)", "O(n)", "O(n log n)"]
   },
   {
@@ -113,7 +113,7 @@
     "mark_scheme": "Bubble sort",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Merge sort", "Quick sort", "Insertion sort"]
   },
   {
@@ -122,7 +122,7 @@
     "mark_scheme": "Merge sort",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Bubble sort", "Quick sort", "Insertion sort"]
   },
   {
@@ -131,7 +131,7 @@
     "mark_scheme": "Quick sort",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Merge sort", "Bubble sort", "Selection sort"]
   },
   {
@@ -140,7 +140,7 @@
     "mark_scheme": "Insertion sort",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Bubble sort", "Merge sort", "Quick sort"]
   },
   {
@@ -149,7 +149,7 @@
     "mark_scheme": "O(n^2)",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(n)", "O(log n)", "O(n log n)"]
   },
   {
@@ -158,7 +158,7 @@
     "mark_scheme": "O(n log n)",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(n)", "O(n^2)", "O(1)"]
   },
   {
@@ -167,7 +167,7 @@
     "mark_scheme": "O(n^2)",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(n log n)", "O(log n)", "O(1)"]
   },
   {
@@ -176,7 +176,7 @@
     "mark_scheme": "Merge sort",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Quick sort", "Selection sort", "Heap sort"]
   },
   {
@@ -185,7 +185,7 @@
     "mark_scheme": "Depth-first search",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Graph traversal",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Breadth-first search", "Binary search", "Linear search"]
   },
   {
@@ -194,7 +194,7 @@
     "mark_scheme": "Breadth-first search",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Graph traversal",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Depth-first search", "Binary search", "Insertion sort"]
   },
   {
@@ -203,7 +203,7 @@
     "mark_scheme": "Stack",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Graph traversal",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Queue", "Array", "Heap"]
   },
   {
@@ -212,7 +212,7 @@
     "mark_scheme": "Queue",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Graph traversal",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Stack", "Linked list", "Hash table"]
   },
   {
@@ -221,34 +221,16 @@
     "mark_scheme": "Dijkstra’s algorithm",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Shortest path",
-    "question_type": "multiple_choice",
-    "wrong_choices": ["Prim’s algorithm", "Kruskal’s algorithm", "Bubble sort"]
+    "question_type": "mul_choice",
+    "wrong_choices": ["Linear search", "Kruskal’s algorithm", "Bubble sort"]
   },
   {
-    "question": "Which algorithm finds a minimum spanning tree of a graph?",
-    "marks": 1,
-    "mark_scheme": "Prim’s algorithm",
-    "topic": "Fundamentals of algorithms",
-    "subtopic": "Minimum spanning tree",
-    "question_type": "multiple_choice",
-    "wrong_choices": ["Dijkstra’s algorithm", "Binary search", "Merge sort"]
-  },
-  {
-    "question": "Which other algorithm also finds a minimum spanning tree?",
-    "marks": 1,
-    "mark_scheme": "Kruskal’s algorithm",
-    "topic": "Fundamentals of algorithms",
-    "subtopic": "Minimum spanning tree",
-    "question_type": "multiple_choice",
-    "wrong_choices": ["Depth-first search", "Insertion sort", "Bubble sort"]
-  },
-  {
-    "question": "What is the main advantage of quick sort compared to bubble sort?",
+    "question": "What is the main advantage of merge sort compared to bubble sort?",
     "marks": 1,
     "mark_scheme": "It is more efficient on average",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["It always requires less memory", "It is easier to code", "It guarantees stability"]
   },
   {
@@ -257,7 +239,7 @@
     "mark_scheme": "Brute force",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Algorithm design",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Greedy", "Divide and conquer", "Dynamic programming"]
   },
   {
@@ -266,7 +248,7 @@
     "mark_scheme": "Dynamic programming",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Algorithm design",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Greedy", "Brute force", "Linear search"]
   },
   {
@@ -275,7 +257,7 @@
     "mark_scheme": "Greedy algorithm",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Algorithm design",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Dynamic programming", "Divide and conquer", "Brute force"]
   },
   {
@@ -284,7 +266,7 @@
     "mark_scheme": "Divide and conquer",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Algorithm design",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Greedy", "Brute force", "Dynamic programming"]
   },
   {
@@ -292,8 +274,8 @@
     "marks": 1,
     "mark_scheme": "The size of the input",
     "topic": "Fundamentals of algorithms",
-    "subtopic": "Complexity",
-    "question_type": "multiple_choice",
+    "subtopic": "Time complexity",
+    "question_type": "mul_choice",
     "wrong_choices": ["The programming language", "The compiler used", "The variable names chosen"]
   },
   {
@@ -301,8 +283,8 @@
     "marks": 1,
     "mark_scheme": "O(1)",
     "topic": "Fundamentals of algorithms",
-    "subtopic": "Complexity",
-    "question_type": "multiple_choice",
+    "subtopic": "Time complexity",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(log n)", "O(n)", "O(n^2)"]
   },
   {
@@ -310,8 +292,8 @@
     "marks": 1,
     "mark_scheme": "Dijkstra’s algorithm",
     "topic": "Fundamentals of algorithms",
-    "subtopic": "Shortest path",
-    "question_type": "multiple_choice",
+    "subtopic": "Optimisation algorithms",
+    "question_type": "mul_choice",
     "wrong_choices": ["Breadth-first search", "Depth-first search", "Quick sort"]
   },
   {
@@ -320,7 +302,7 @@
     "mark_scheme": "A* algorithm",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Shortest path",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Bubble sort", "Insertion sort", "Merge sort"]
   },
   {
@@ -329,7 +311,7 @@
     "mark_scheme": "The upper bound of an algorithm’s growth rate",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Big-O notation",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["The exact run time", "The memory used", "The average case only"]
   },
   {
@@ -337,8 +319,8 @@
     "marks": 1,
     "mark_scheme": "Finding the most efficient solution to a problem",
     "topic": "Fundamentals of algorithms",
-    "subtopic": "Optimisation",
-    "question_type": "multiple_choice",
+    "subtopic": "Optimisation algorithms",
+    "question_type": "mul_choice",
     "wrong_choices": ["Making code shorter", "Removing variables", "Using fewer functions"]
   },
   {
@@ -347,7 +329,7 @@
     "mark_scheme": "Insertion sort",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Bubble sort", "Merge sort", "Quick sort"]
   },
   {
@@ -356,7 +338,7 @@
     "mark_scheme": "Quick sort",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Bubble sort", "Insertion sort", "Selection sort"]
   },
   {
@@ -365,7 +347,7 @@
     "mark_scheme": "Stack",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Recursion and structures",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Queue", "Linked list", "Heap"]
   },
   {
@@ -374,7 +356,7 @@
     "mark_scheme": "Binary search",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Searching algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Linear search", "Bubble sort", "Merge sort"]
   },
   {
@@ -383,7 +365,7 @@
     "mark_scheme": "Selection sort",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Insertion sort", "Merge sort", "Quick sort"]
   },
   {
@@ -392,7 +374,7 @@
     "mark_scheme": "O(n^2)",
     "topic": "Fundamentals of algorithms",
     "subtopic": "Sorting algorithms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["O(n)", "O(log n)", "O(n log n)"]
   },
   {
@@ -400,8 +382,8 @@
     "marks": 1,
     "mark_scheme": "Optimisation algorithm",
     "topic": "Fundamentals of algorithms",
-    "subtopic": "Optimisation",
-    "question_type": "multiple_choice",
+    "subtopic": "Optimisation algorithms",
+    "question_type": "mul_choice",
     "wrong_choices": ["Heuristic algorithm", "Approximation algorithm", "Greedy algorithm"]
   }
 ]

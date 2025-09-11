@@ -1,0 +1,317 @@
+[
+  {
+    "question": "Which type of network covers a small geographical area such as a school or office?",
+    "marks": 1,
+    "mark_scheme": ["Local Area Network (LAN)"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Networks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Wide Area Network (WAN)", "Metropolitan Area Network (MAN)", "Global network"]
+  },
+  {
+    "question": "Which type of network spans a large geographical area and often uses third-party carriers?",
+    "marks": 1,
+    "mark_scheme": ["Wide Area Network (WAN)"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Networks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["LAN", "Intranet", "PAN"]
+  },
+  {
+    "question": "Which topology connects all devices to a central hub or switch?",
+    "marks": 1,
+    "mark_scheme": ["Star topology"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Networks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Bus topology", "Ring topology", "Mesh topology"]
+  },
+  {
+    "question": "In which topology does each device connect to exactly two others, forming a closed loop?",
+    "marks": 1,
+    "mark_scheme": ["Ring topology"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Networks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Bus topology", "Star topology", "Mesh topology"]
+  },
+  {
+    "question": "Which topology provides the highest redundancy by connecting every device to every other?",
+    "marks": 1,
+    "mark_scheme": ["Mesh topology"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Networks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Ring topology", "Bus topology", "Star topology"]
+  },
+  {
+    "question": "Which transmission method sends one bit at a time over a single channel?",
+    "marks": 1,
+    "mark_scheme": ["Serial transmission"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Networks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Parallel transmission", "Synchronous transmission", "Duplex transmission"]
+  },
+  {
+    "question": "Which is an advantage of peer-to-peer networks?",
+    "marks": 1,
+    "mark_scheme": ["They are cheaper and easier to set up"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Networks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["They are more secure", "They centralise control", "They guarantee high performance"]
+  },
+  {
+    "question": "In a client-server model, what role does the client perform?",
+    "marks": 1,
+    "mark_scheme": ["Requests services and resources from the server"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Networks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Stores all shared files", "Provides security for the network", "Controls network routing"]
+  },
+  {
+    "question": "Which device forwards data packets between networks?",
+    "marks": 1,
+    "mark_scheme": ["Router"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Networks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Switch", "Hub", "Bridge"]
+  },
+  {
+    "question": "Which device learns MAC addresses and sends frames only to intended recipients?",
+    "marks": 1,
+    "mark_scheme": ["Switch"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Networks",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Hub", "Router", "Firewall"]
+  },
+  {
+    "question": "What does DNS stand for?",
+    "marks": 1,
+    "mark_scheme": ["Domain Name System"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The internet",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Digital Network Service", "Dynamic Number System", "Data Naming Service"]
+  },
+  {
+    "question": "What is the function of DNS?",
+    "marks": 1,
+    "mark_scheme": ["Translates domain names into IP addresses"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The internet",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Encrypts messages", "Provides firewalls", "Hosts user data"]
+  },
+  {
+    "question": "Which type of IP address is 128 bits long?",
+    "marks": 1,
+    "mark_scheme": ["IPv6"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The internet",
+    "question_type": "mul_choice",
+    "wrong_choices": ["IPv4", "MAC", "Subnet mask"]
+  },
+  {
+    "question": "Which type of IP address uses 32 bits?",
+    "marks": 1,
+    "mark_scheme": ["IPv4"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The internet",
+    "question_type": "mul_choice",
+    "wrong_choices": ["IPv6", "Port number", "MAC address"]
+  },
+  {
+    "question": "Which addressing system is unique to each network interface card?",
+    "marks": 1,
+    "mark_scheme": ["MAC address"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The internet",
+    "question_type": "mul_choice",
+    "wrong_choices": ["IP address", "Subnet mask", "Port number"]
+  },
+  {
+    "question": "What is packet switching?",
+    "marks": 1,
+    "mark_scheme": ["Dividing data into packets sent independently across a network"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The internet",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Sending data as one large continuous stream", "Encrypting packets", "Broadcasting messages to all devices"]
+  },
+  {
+    "question": "How many layers are there in the TCP/IP stack?",
+    "marks": 1,
+    "mark_scheme": ["Four"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The TCP/IP stack",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Three", "Five", "Seven"]
+  },
+  {
+    "question": "Which layer of the TCP/IP stack is responsible for routing data between networks?",
+    "marks": 1,
+    "mark_scheme": ["Internet layer"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The TCP/IP stack",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Application layer", "Transport layer", "Link layer"]
+  },
+  {
+    "question": "Which layer of the TCP/IP stack ensures reliable delivery using acknowledgements and retransmissions?",
+    "marks": 1,
+    "mark_scheme": ["Transport layer"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The TCP/IP stack",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Application layer", "Internet layer", "Physical layer"]
+  },
+  {
+    "question": "Which layer of the TCP/IP stack includes HTTP, FTP, and SMTP?",
+    "marks": 1,
+    "mark_scheme": ["Application layer"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The TCP/IP stack",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Internet layer", "Transport layer", "Link layer"]
+  },
+  {
+    "question": "Which layer of the TCP/IP stack corresponds to Ethernet and Wi-Fi?",
+    "marks": 1,
+    "mark_scheme": ["Link layer"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "The TCP/IP stack",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Application layer", "Transport layer", "Internet layer"]
+  },
+  {
+    "question": "Which protocol is used for secure web browsing?",
+    "marks": 1,
+    "mark_scheme": ["HTTPS"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Protocols",
+    "question_type": "mul_choice",
+    "wrong_choices": ["HTTP", "FTP", "SMTP"]
+  },
+  {
+    "question": "Which protocol is used for transferring files between computers?",
+    "marks": 1,
+    "mark_scheme": ["FTP"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Protocols",
+    "question_type": "mul_choice",
+    "wrong_choices": ["SMTP", "IMAP", "TCP"]
+  },
+  {
+    "question": "Which protocol is used for sending emails?",
+    "marks": 1,
+    "mark_scheme": ["SMTP"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Protocols",
+    "question_type": "mul_choice",
+    "wrong_choices": ["POP3", "IMAP", "FTP"]
+  },
+  {
+    "question": "Which protocol allows a client to retrieve emails while keeping them on the server?",
+    "marks": 1,
+    "mark_scheme": ["IMAP"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Protocols",
+    "question_type": "mul_choice",
+    "wrong_choices": ["SMTP", "POP3", "FTP"]
+  },
+  {
+    "question": "Which protocol downloads emails to a client and usually removes them from the server?",
+    "marks": 1,
+    "mark_scheme": ["POP3"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Protocols",
+    "question_type": "mul_choice",
+    "wrong_choices": ["SMTP", "IMAP", "HTTP"]
+  },
+  {
+    "question": "Which security measure inspects incoming and outgoing network traffic based on rules?",
+    "marks": 1,
+    "mark_scheme": ["Firewall"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Network security",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Proxy server", "Router", "Switch"]
+  },
+  {
+    "question": "What is the purpose of a proxy server?",
+    "marks": 1,
+    "mark_scheme": ["Acts as an intermediary between clients and servers for security and caching"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Network security",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Encrypts all traffic", "Detects malware automatically", "Provides physical network isolation"]
+  },
+  {
+    "question": "Which method of authentication typically involves something the user knows?",
+    "marks": 1,
+    "mark_scheme": ["Password"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Network security",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Fingerprint", "Smart card", "Retina scan"]
+  },
+  {
+    "question": "Which authentication method uses two or more independent categories of credentials?",
+    "marks": 1,
+    "mark_scheme": ["Multi-factor authentication"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Network security",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Single sign-on", "Password only", "Certificate-based login"]
+  },
+  {
+    "question": "Which malware self-replicates without attaching to another program?",
+    "marks": 1,
+    "mark_scheme": ["Worm"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Network security",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Virus", "Trojan horse", "Spyware"]
+  },
+  {
+    "question": "Which type of malware disguises itself as legitimate software?",
+    "marks": 1,
+    "mark_scheme": ["Trojan horse"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Network security",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Worm", "Keylogger", "Adware"]
+  },
+  {
+    "question": "Which type of malware records keystrokes to steal information?",
+    "marks": 1,
+    "mark_scheme": ["Keylogger"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Network security",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Trojan", "Worm", "Spyware"]
+  },
+  {
+    "question": "Which attack floods a network with useless traffic to make services unavailable?",
+    "marks": 1,
+    "mark_scheme": ["Denial of Service (DoS) attack"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Network security",
+    "question_type": "mul_choice",
+    "wrong_choices": ["SQL injection", "Phishing", "Brute force attack"]
+  },
+  {
+    "question": "Which technique scrambles data so only authorised parties can read it?",
+    "marks": 1,
+    "mark_scheme": ["Encryption"],
+    "topic": "Fundamentals of communication and networking",
+    "subtopic": "Network security",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Compression", "Hashing", "Encoding"]
+  }
+]

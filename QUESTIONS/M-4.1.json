@@ -5,7 +5,7 @@
     "mark_scheme": "Array",
     "topic": "Fundamentals of programming",
     "subtopic": "Data types",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Integer", "Boolean", "Character"]
   },
   {
@@ -14,7 +14,7 @@
     "mark_scheme": "Boolean",
     "topic": "Fundamentals of programming",
     "subtopic": "Data types",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Integer", "String", "Character"]
   },
   {
@@ -23,7 +23,7 @@
     "mark_scheme": "Real/Float",
     "topic": "Fundamentals of programming",
     "subtopic": "Data types",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Integer", "Boolean", "String"]
   },
   {
@@ -32,7 +32,7 @@
     "mark_scheme": "Record",
     "topic": "Fundamentals of programming",
     "subtopic": "Data types",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Integer", "Boolean", "String"]
   },
   {
@@ -41,7 +41,7 @@
     "mark_scheme": "Selection",
     "topic": "Fundamentals of programming",
     "subtopic": "Programming concepts",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Iteration", "Assignment", "Declaration"]
   },
   {
@@ -50,7 +50,7 @@
     "mark_scheme": "Sequence",
     "topic": "Fundamentals of programming",
     "subtopic": "Programming concepts",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Selection", "Iteration", "Recursion"]
   },
   {
@@ -59,7 +59,7 @@
     "mark_scheme": "Stores the value 5 in variable x",
     "topic": "Fundamentals of programming",
     "subtopic": "Programming concepts",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Checks if x equals 5", "Creates a new constant x", "Divides x by 5"]
   },
   {
@@ -67,8 +67,8 @@
     "marks": 1,
     "mark_scheme": "Do...while loop",
     "topic": "Fundamentals of programming",
-    "subtopic": "Iteration",
-    "question_type": "multiple_choice",
+    "subtopic": "Programming concepts",
+    "question_type": "mul_choice",
     "wrong_choices": ["For loop", "While loop", "Repeat until loop"]
   },
   {
@@ -77,7 +77,7 @@
     "mark_scheme": "3",
     "topic": "Fundamentals of programming",
     "subtopic": "Arithmetic operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["3.4", "2", "5"]
   },
   {
@@ -86,7 +86,7 @@
     "mark_scheme": "The remainder of a division",
     "topic": "Fundamentals of programming",
     "subtopic": "Arithmetic operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["The quotient of a division", "The rounded result", "The reciprocal of a number"]
   },
   {
@@ -95,7 +95,7 @@
     "mark_scheme": "!=",
     "topic": "Fundamentals of programming",
     "subtopic": "Relational operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["=", "<>", "//"]
   },
   {
@@ -104,7 +104,7 @@
     "mark_scheme": "AND",
     "topic": "Fundamentals of programming",
     "subtopic": "Boolean operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["OR", "NOT", "XOR"]
   },
   {
@@ -113,7 +113,7 @@
     "mark_scheme": "NOT",
     "topic": "Fundamentals of programming",
     "subtopic": "Boolean operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["AND", "OR", "XOR"]
   },
   {
@@ -122,7 +122,7 @@
     "mark_scheme": "Code is easier to read and maintain",
     "topic": "Fundamentals of programming",
     "subtopic": "Constants and variables",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Code runs faster", "It reduces memory usage", "It prevents logic errors"]
   },
   {
@@ -131,7 +131,7 @@
     "mark_scheme": "Length",
     "topic": "Fundamentals of programming",
     "subtopic": "String-handling operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Substring", "Concatenation", "Position"]
   },
   {
@@ -140,7 +140,7 @@
     "mark_scheme": "Concatenation",
     "topic": "Fundamentals of programming",
     "subtopic": "String-handling operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Substring", "Length", "Position"]
   },
   {
@@ -149,7 +149,7 @@
     "mark_scheme": "String to integer",
     "topic": "Fundamentals of programming",
     "subtopic": "String-handling operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Integer to string", "Character code", "Float to string"]
   },
   {
@@ -158,7 +158,7 @@
     "mark_scheme": "To introduce unpredictability into a program",
     "topic": "Fundamentals of programming",
     "subtopic": "Random number generation",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["To speed up execution", "To increase accuracy", "To remove errors"]
   },
   {
@@ -167,7 +167,7 @@
     "mark_scheme": "Exception handling",
     "topic": "Fundamentals of programming",
     "subtopic": "Exception handling",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Recursion", "Selection", "Iteration"]
   },
   {
@@ -176,7 +176,7 @@
     "mark_scheme": "A named block of code that can be executed when called",
     "topic": "Fundamentals of programming",
     "subtopic": "Subroutines",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A variable type", "A programming loop", "A constant value"]
   },
   {
@@ -185,7 +185,7 @@
     "mark_scheme": "They improve code reuse and readability",
     "topic": "Fundamentals of programming",
     "subtopic": "Subroutines",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["They reduce CPU speed", "They prevent syntax errors", "They eliminate memory usage"]
   },
   {
@@ -194,7 +194,7 @@
     "mark_scheme": "A value passed into a subroutine",
     "topic": "Fundamentals of programming",
     "subtopic": "Parameters",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["The return value of a function", "A global variable", "A compiler setting"]
   },
   {
@@ -203,7 +203,7 @@
     "mark_scheme": "Return",
     "topic": "Fundamentals of programming",
     "subtopic": "Returning values",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Call", "Yield", "Pass"]
   },
   {
@@ -212,7 +212,7 @@
     "mark_scheme": "In memory allocated only during the subroutine’s execution",
     "topic": "Fundamentals of programming",
     "subtopic": "Local variables",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["In global storage", "In permanent memory", "In the CPU registers only"]
   },
   {
@@ -221,7 +221,7 @@
     "mark_scheme": "Global variable",
     "topic": "Fundamentals of programming",
     "subtopic": "Global variables",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Local variable", "Parameter", "Constant"]
   },
   {
@@ -230,7 +230,7 @@
     "mark_scheme": "Return addresses, parameters, and local variables",
     "topic": "Fundamentals of programming",
     "subtopic": "Stack frames",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Only constants", "Machine code instructions", "Global variables"]
   },
   {
@@ -239,7 +239,7 @@
     "mark_scheme": "Recursion",
     "topic": "Fundamentals of programming",
     "subtopic": "Recursion",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Iteration", "Encapsulation", "Inheritance"]
   },
   {
@@ -248,7 +248,7 @@
     "mark_scheme": "A base case",
     "topic": "Fundamentals of programming",
     "subtopic": "Recursion",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A global variable", "A parameter", "An exception handler"]
   },
   {
@@ -257,7 +257,7 @@
     "mark_scheme": "Object-oriented programming",
     "topic": "Fundamentals of programming",
     "subtopic": "Programming paradigms",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Procedural programming", "Functional programming", "Assembly programming"]
   },
   {
@@ -266,7 +266,7 @@
     "mark_scheme": "Encapsulation",
     "topic": "Fundamentals of programming",
     "subtopic": "Object-oriented programming",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Inheritance", "Polymorphism", "Abstraction"]
   },
   {
@@ -275,7 +275,7 @@
     "mark_scheme": "Inheritance",
     "topic": "Fundamentals of programming",
     "subtopic": "Object-oriented programming",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Encapsulation", "Polymorphism", "Composition"]
   },
   {
@@ -284,7 +284,7 @@
     "mark_scheme": "Polymorphism",
     "topic": "Fundamentals of programming",
     "subtopic": "Object-oriented programming",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Encapsulation", "Inheritance", "Aggregation"]
   },
   {
@@ -293,7 +293,7 @@
     "mark_scheme": "A black diamond line",
     "topic": "Fundamentals of programming",
     "subtopic": "Object-oriented programming",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["A white diamond line", "A dotted line", "A triangle"]
   },
   {
@@ -302,7 +302,7 @@
     "mark_scheme": "Programs are easier to test, debug and maintain",
     "topic": "Fundamentals of programming",
     "subtopic": "Structured programming",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Programs run faster", "Programs need no documentation", "Programs use less memory"]
   },
   {
@@ -311,7 +311,7 @@
     "mark_scheme": "Definite has a known number of repetitions, indefinite does not",
     "topic": "Fundamentals of programming",
     "subtopic": "Iteration",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Definite uses recursion, indefinite uses loops", "Definite loops cannot use conditions", "Indefinite loops never terminate"]
   },
   {
@@ -320,7 +320,7 @@
     "mark_scheme": "Concatenation",
     "topic": "Fundamentals of programming",
     "subtopic": "String-handling operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Subsetting", "Joining", "Addition"]
   },
   {
@@ -329,7 +329,7 @@
     "mark_scheme": "8",
     "topic": "Fundamentals of programming",
     "subtopic": "Arithmetic operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["6", "9", "16"]
   },
   {
@@ -338,7 +338,7 @@
     "mark_scheme": "True",
     "topic": "Fundamentals of programming",
     "subtopic": "Boolean operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["False", "Error", "Null"]
   },
   {
@@ -347,7 +347,7 @@
     "mark_scheme": "String",
     "topic": "Fundamentals of programming",
     "subtopic": "Data types",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Integer", "Boolean", "Float"]
   },
   {
@@ -356,7 +356,7 @@
     "mark_scheme": "It can be accessed from anywhere in the program",
     "topic": "Fundamentals of programming",
     "subtopic": "Global variables",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["It is deleted after use", "It is only accessible within loops", "It is stored in stack frames"]
   },
   {
@@ -365,7 +365,7 @@
     "mark_scheme": "Runtime error",
     "topic": "Fundamentals of programming",
     "subtopic": "Exception handling",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Syntax error", "Logic error", "Compiler error"]
   },
   {
@@ -374,7 +374,7 @@
     "mark_scheme": "Modular programming",
     "topic": "Fundamentals of programming",
     "subtopic": "Procedural programming",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Recursion", "Iteration", "Object-oriented programming"]
   },
   {
@@ -383,7 +383,7 @@
     "mark_scheme": "Const",
     "topic": "Fundamentals of programming",
     "subtopic": "Constants and variables",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Var", "Let", "Static"]
   },
   {
@@ -392,7 +392,7 @@
     "mark_scheme": "The index of a character within a string",
     "topic": "Fundamentals of programming",
     "subtopic": "String-handling operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["The number of substrings", "The ASCII code", "The size of the string"]
   },
   {
@@ -401,7 +401,7 @@
     "mark_scheme": "Removes the fractional part of a real number",
     "topic": "Fundamentals of programming",
     "subtopic": "Arithmetic operations",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["Rounds to the nearest integer", "Converts to string", "Returns remainder"]
   },
   {
@@ -410,7 +410,7 @@
     "mark_scheme": "It stores the memory address of another value",
     "topic": "Fundamentals of programming",
     "subtopic": "Data types",
-    "question_type": "multiple_choice",
+    "question_type": "mul_choice",
     "wrong_choices": ["It stores only integers", "It is always immutable", "It cannot be used in subroutines"]
   }
 ]
