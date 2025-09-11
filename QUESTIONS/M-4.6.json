@@ -394,5 +394,32 @@
     "subtopic": "Programming languages",
     "question_type": "mul_choice",
     "wrong_choices": ["Assembly instructions", "Human-readable code", "High-level source code"]
+  },
+  {
+    "question": "What is a virtual machine?",
+    "marks": 1,
+    "mark_scheme": "Software that emulates a physical computer to run programs",
+    "topic": "Fundamentals of computer systems",
+    "subtopic": "System software",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A low-level language", "A compiler", "An encryption tool"]
+  },
+  {
+    "question": "Which of the following is firmware?",
+    "marks": 1,
+    "mark_scheme": "Software embedded into hardware devices to control basic functions",
+    "topic": "Fundamentals of computer systems",
+    "subtopic": "System software",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Antivirus software", "Interpreter", "Web browser"]
+  },
+  {
+    "question": "Which of the following is an example use of Boolean algebra in computing?",
+    "marks": 1,
+    "mark_scheme": "Simplifying digital circuit design",
+    "topic": "Fundamentals of computer systems",
+    "subtopic": "Boolean algebra",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Compressing images", "Encrypting text", "Allocating memory"]
   }
 ]

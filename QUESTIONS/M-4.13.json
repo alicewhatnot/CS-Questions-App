@@ -1,0 +1,110 @@
+[
+  {
+    "question": "What is the main purpose of the analysis stage in problem solving?",
+    "marks": 1,
+    "mark_scheme": ["To establish and fully understand the requirements of the problem"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Analysis",
+    "question_type": "mul_choice",
+    "wrong_choices": ["To write the program code", "To check the program for errors", "To compare the solution with alternatives"]
+  },
+  {
+    "question": "Which of the following would typically happen during the design stage?",
+    "marks": 1,
+    "mark_scheme": ["Creating algorithms, flowcharts, or pseudocode to outline the solution"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Design",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Interviewing users to gather requirements", "Writing test data", "Refining performance after implementation"]
+  },
+  {
+    "question": "What is the goal of the implementation stage?",
+    "marks": 1,
+    "mark_scheme": ["To write and develop the actual code for the solution"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Implementation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["To identify requirements", "To plan test cases", "To evaluate efficiency"]
+  },
+  {
+    "question": "Which of the following occurs in the testing stage?",
+    "marks": 1,
+    "mark_scheme": ["The program is checked against test data to ensure it meets requirements"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Testing",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The solution is decomposed", "Pseudocode is written", "End-users are interviewed"]
+  },
+  {
+    "question": "Why is evaluation important in the problem-solving process?",
+    "marks": 1,
+    "mark_scheme": ["To assess how well the solution meets requirements and suggest improvements"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Evaluation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["To collect user requirements", "To design algorithms", "To convert code to machine language"]
+  },
+  {
+    "question": "Which stage involves determining what the inputs, processes, and outputs of a system should be?",
+    "marks": 1,
+    "mark_scheme": ["Analysis"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Analysis",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Design", "Testing", "Evaluation"]
+  },
+  {
+    "question": "Which stage would most likely produce a data dictionary or system diagram?",
+    "marks": 1,
+    "mark_scheme": ["Design"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Design",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Analysis", "Implementation", "Evaluation"]
+  },
+  {
+    "question": "Alpha and beta testing would occur during which stage?",
+    "marks": 1,
+    "mark_scheme": ["Testing"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Testing",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Design", "Implementation", "Evaluation"]
+  },
+  {
+    "question": "Which stage checks whether the final product is maintainable and efficient in real-world use?",
+    "marks": 1,
+    "mark_scheme": ["Evaluation"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Evaluation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Analysis", "Design", "Testing"]
+  },
+  {
+    "question": "What is a key deliverable of the analysis stage?",
+    "marks": 1,
+    "mark_scheme": ["A requirements specification document"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Analysis",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A flowchart", "The final code", "Test results"]
+  },
+  {
+    "question": "At which stage are algorithms translated into actual programming code?",
+    "marks": 1,
+    "mark_scheme": ["Implementation"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Implementation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Analysis", "Design", "Evaluation"]
+  },
+  {
+    "question": "Which stage would involve checking whether the system meets both functional and non-functional requirements?",
+    "marks": 1,
+    "mark_scheme": ["Evaluation"],
+    "topic": "Systematic approach to problem solving",
+    "subtopic": "Evaluation",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Analysis", "Implementation", "Testing"]
+  }
+]

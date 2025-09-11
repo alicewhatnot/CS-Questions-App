@@ -1,0 +1,182 @@
+[
+  {
+    "question": "Which of the following best describes 'Big Data'?",
+    "marks": 1,
+    "mark_scheme": ["Data too large or complex to fit into usual containers such as a single server"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Any data stored in a database", "Small datasets processed on a single machine", "Only structured financial records"]
+  },
+  {
+    "question": "What are the '3 Vs' commonly used to characterise Big Data?",
+    "marks": 1,
+    "mark_scheme": ["Volume, Velocity, Variety"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Validity, Value, Versioning", "Variables, Verification, Visualization", "Volume, Value, Vulnerability"]
+  },
+  {
+    "question": "Why is analysing Big Data more difficult compared to smaller structured datasets?",
+    "marks": 1,
+    "mark_scheme": ["Big Data is often unstructured, making analysis significantly more complex"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Because it only exists in numerical form", "Because it is always encrypted", "Because relational databases cannot store text"]
+  },
+  {
+    "question": "Why are relational databases generally unsuitable for Big Data?",
+    "marks": 1,
+    "mark_scheme": ["They require data to fit into rigid row-and-column formats"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["They only support text data", "They cannot perform queries", "They cannot store more than 1 GB of data"]
+  },
+  {
+    "question": "What type of techniques are often required to find patterns in Big Data?",
+    "marks": 1,
+    "mark_scheme": ["Machine learning techniques"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Binary search", "Bubble sort", "SQL joins"]
+  },
+  {
+    "question": "Why does Big Data often require distributed processing?",
+    "marks": 1,
+    "mark_scheme": ["The data is too large to fit onto a single server"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["It must always be encrypted", "It contains only video data", "It requires manual entry from multiple people"]
+  },
+  {
+    "question": "Which of the following is a typical source of streaming Big Data?",
+    "marks": 1,
+    "mark_scheme": ["Networked sensors"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Paper-based surveys", "Textbooks", "Static PDFs"]
+  },
+  {
+    "question": "What is the role of functional programming in Big Data processing?",
+    "marks": 1,
+    "mark_scheme": ["It makes it easier to write correct and distributed code"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["It reduces network latency automatically", "It converts unstructured data into SQL", "It encrypts data during transmission"]
+  },
+  {
+    "question": "Which feature of functional programming supports correctness in distributed Big Data systems?",
+    "marks": 1,
+    "mark_scheme": ["Immutable data structures"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Global variables", "Mutable state", "Nested loops"]
+  },
+  {
+    "question": "Which of the following features of functional programming aids parallel and distributed processing?",
+    "marks": 1,
+    "mark_scheme": ["Statelessness"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Recursion", "Local variables", "Centralised control"]
+  },
+  {
+    "question": "Which of the following is NOT one of the '3 Vs' of Big Data?",
+    "marks": 1,
+    "mark_scheme": ["Validity"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Volume", "Velocity", "Variety"]
+  },
+  {
+    "question": "What does the 'velocity' of Big Data refer to?",
+    "marks": 1,
+    "mark_scheme": ["The speed at which new data is generated and processed"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The number of data types", "The size of the storage media", "The efficiency of the database schema"]
+  },
+  {
+    "question": "Why don’t relational databases scale well for Big Data across multiple machines?",
+    "marks": 1,
+    "mark_scheme": ["They are not designed to distribute data across many servers"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["They cannot handle text", "They are too expensive", "They lack encryption"]
+  },
+  {
+    "question": "Which aspect of Big Data typically receives the most attention, despite not being the hardest challenge?",
+    "marks": 1,
+    "mark_scheme": ["The size (volume) of the data"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The accuracy of the data", "The security of the data", "The programming language used"]
+  },
+  {
+    "question": "Which type of schema is used to capture the structure of Big Data datasets?",
+    "marks": 1,
+    "mark_scheme": ["Graph schema"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Relational schema", "Tabular schema", "Sequential schema"]
+  },
+  {
+    "question": "In a graph schema, what do 'nodes' represent?",
+    "marks": 1,
+    "mark_scheme": ["Entities in the dataset"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Relationships between entities", "Attributes of entities", "Randomised keys"]
+  },
+  {
+    "question": "In a graph schema, what do 'edges' represent?",
+    "marks": 1,
+    "mark_scheme": ["Relationships between nodes"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Entities", "Properties of nodes", "Unique identifiers"]
+  },
+  {
+    "question": "What is a fact-based model used for in Big Data?",
+    "marks": 1,
+    "mark_scheme": ["Representing each individual piece of information as a fact"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Encrypting all data", "Organising data into tables", "Compressing multimedia data"]
+  },
+  {
+    "question": "Which property of functional programming supports using functions as inputs and outputs for other functions?",
+    "marks": 1,
+    "mark_scheme": ["Higher-order functions"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Nested loops", "SQL aggregation", "Machine code"]
+  },
+  {
+    "question": "Which of these is a real-world example of continuous Big Data streaming?",
+    "marks": 1,
+    "mark_scheme": ["Video surveillance feeds"],
+    "topic": "Big Data",
+    "subtopic": "Big Data",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Printed books", "Archived census data", "Spreadsheets stored locally"]
+  }
+]
