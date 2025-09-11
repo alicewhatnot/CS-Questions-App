@@ -1,0 +1,506 @@
+[
+  {
+    "question": "How many bits are in a byte?",
+    "marks": 1,
+    "mark_scheme": "8",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Units of information",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["2", "4", "16"]
+  },
+  {
+    "question": "What number base is hexadecimal?",
+    "marks": 1,
+    "mark_scheme": "Base 16",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number systems and bases",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Base 2", "Base 8", "Base 10"]
+  },
+  {
+    "question": "What is the binary equivalent of decimal 13?",
+    "marks": 1,
+    "mark_scheme": "1101",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["1011", "1110", "1001"]
+  },
+  {
+    "question": "What is the decimal equivalent of binary 1010?",
+    "marks": 1,
+    "mark_scheme": "10",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["8", "12", "15"]
+  },
+  {
+    "question": "What is the hexadecimal representation of binary 1111?",
+    "marks": 1,
+    "mark_scheme": "F",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number systems and bases",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["E", "10", "A"]
+  },
+  {
+    "question": "Which of the following is the largest unit?",
+    "marks": 1,
+    "mark_scheme": "Terabyte",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Units of information",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Kilobyte", "Megabyte", "Gigabyte"]
+  },
+  {
+    "question": "Which system represents negative numbers by flipping bits and adding one?",
+    "marks": 1,
+    "mark_scheme": "Two’s complement",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Sign and magnitude", "Floating point", "BCD"]
+  },
+  {
+    "question": "What is the range of values in 8-bit unsigned binary?",
+    "marks": 1,
+    "mark_scheme": "0 to 255",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["-128 to 127", "1 to 256", "-255 to 255"]
+  },
+  {
+    "question": "What is the range of values in 8-bit two’s complement?",
+    "marks": 1,
+    "mark_scheme": "-128 to 127",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["0 to 255", "1 to 128", "-255 to 255"]
+  },
+  {
+    "question": "Which encoding system uses 7 bits per character?",
+    "marks": 1,
+    "mark_scheme": "ASCII",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Character representation",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Unicode", "UTF-8", "Extended ASCII"]
+  },
+  {
+    "question": "Which encoding system allows representation of most world languages?",
+    "marks": 1,
+    "mark_scheme": "Unicode",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Character representation",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["ASCII", "Base64", "Morse code"]
+  },
+  {
+    "question": "What does resolution mean in bitmap images?",
+    "marks": 1,
+    "mark_scheme": "The number of pixels in an image",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["The number of colours available", "The file size", "The screen brightness"]
+  },
+  {
+    "question": "What does colour depth refer to?",
+    "marks": 1,
+    "mark_scheme": "The number of bits used to represent each pixel",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["The number of pixels", "The brightness level", "The screen resolution"]
+  },
+  {
+    "question": "How many different colours can be represented with 8-bit colour depth?",
+    "marks": 1,
+    "mark_scheme": "256",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["128", "512", "1024"]
+  },
+  {
+    "question": "What does the sample rate mean in digital sound?",
+    "marks": 1,
+    "mark_scheme": "The number of samples taken per second",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["The number of bits per sample", "The file size", "The sound frequency"]
+  },
+  {
+    "question": "What does bit depth mean in digital sound?",
+    "marks": 1,
+    "mark_scheme": "The number of bits used to store each sample",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["The number of samples per second", "The volume", "The pitch of sound"]
+  },
+  {
+    "question": "What happens to file size if sample rate increases?",
+    "marks": 1,
+    "mark_scheme": "It increases",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["It decreases", "It stays the same", "It becomes unpredictable"]
+  },
+  {
+    "question": "What type of compression permanently removes data?",
+    "marks": 1,
+    "mark_scheme": "Lossy compression",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Compression",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Lossless compression", "Run-length encoding", "Huffman coding"]
+  },
+  {
+    "question": "Which compression technique uses variable-length codes for frequent symbols?",
+    "marks": 1,
+    "mark_scheme": "Huffman coding",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Compression",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Lossy compression", "Run-length encoding", "ASCII"]
+  },
+  {
+    "question": "What does run-length encoding compress best?",
+    "marks": 1,
+    "mark_scheme": "Data with long runs of repeated values",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Compression",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Random data", "Short unique values", "Floating point numbers"]
+  },
+  {
+    "question": "What is the binary value of decimal 255?",
+    "marks": 1,
+    "mark_scheme": "11111111",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["10000000", "11111110", "10101010"]
+  },
+  {
+    "question": "What is the hexadecimal value of decimal 255?",
+    "marks": 1,
+    "mark_scheme": "FF",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number systems and bases",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["F0", "AA", "1F"]
+  },
+  {
+    "question": "Which binary number represents -5 in 8-bit two’s complement?",
+    "marks": 1,
+    "mark_scheme": "11111011",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["11111101", "11110111", "11110011"]
+  },
+  {
+    "question": "What is the main advantage of Unicode over ASCII?",
+    "marks": 1,
+    "mark_scheme": "It can represent a larger range of characters",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Character representation",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["It uses fewer bits", "It is faster to process", "It is compatible with binary numbers"]
+  },
+  {
+    "question": "What is 2^10 in terms of data storage?",
+    "marks": 1,
+    "mark_scheme": "1024 bytes (1 KiB)",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Units of information",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["1000 bytes", "2048 bytes", "512 bytes"]
+  },
+  {
+    "question": "What effect does increasing colour depth have on an image?",
+    "marks": 1,
+    "mark_scheme": "Increases the number of colours represented",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Decreases resolution", "Reduces file size", "Lowers quality"]
+  },
+  {
+    "question": "What is 11111111 + 1 in 8-bit binary arithmetic?",
+    "marks": 1,
+    "mark_scheme": "00000000 (overflow)",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["11111111", "00000001", "100000000"]
+  },
+  {
+    "question": "How is text stored in a computer?",
+    "marks": 1,
+    "mark_scheme": "As binary codes representing characters",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Character representation",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["As images", "As sound waves", "As decimal numbers"]
+  },
+  {
+    "question": "What is the file size of a 1000 x 1000 image with 8-bit colour depth (uncompressed)?",
+    "marks": 1,
+    "mark_scheme": "1 MB",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["8 MB", "500 KB", "2 MB"]
+  },
+  {
+    "question": "Which number system is used internally by computers?",
+    "marks": 1,
+    "mark_scheme": "Binary",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number systems and bases",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Decimal", "Hexadecimal", "Octal"]
+  },
+  {
+    "question": "What is the hexadecimal equivalent of binary 10101010?",
+    "marks": 1,
+    "mark_scheme": "AA",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number systems and bases",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["A9", "AB", "F0"]
+  },
+  {
+    "question": "What happens to sound quality if bit depth is increased?",
+    "marks": 1,
+    "mark_scheme": "It improves dynamic range and quality",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["It reduces quality", "It reduces sample rate", "It makes sound quieter"]
+  },
+  {
+    "question": "Which of the following is a lossless compression method?",
+    "marks": 1,
+    "mark_scheme": "Run-length encoding",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Compression",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["JPEG", "MP3", "MPEG"]
+  },
+  {
+    "question": "What is the binary value of hexadecimal A?",
+    "marks": 1,
+    "mark_scheme": "1010",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number systems and bases",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["1110", "1001", "1100"]
+  },
+  {
+    "question": "Which part of floating-point representation stores the size of the number?",
+    "marks": 1,
+    "mark_scheme": "Exponent",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Mantissa", "Sign bit", "Base"]
+  },
+  {
+    "question": "Which part of floating-point representation stores the precision of the number?",
+    "marks": 1,
+    "mark_scheme": "Mantissa",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Exponent", "Base", "Bit depth"]
+  },
+  {
+    "question": "What is the main difference between bitmap and vector graphics?",
+    "marks": 1,
+    "mark_scheme": "Bitmap graphics are pixel-based, vector graphics are defined by shapes and equations",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Vector graphics use more memory", "Bitmap graphics scale better", "Vector graphics cannot be resized"]
+  },
+  {
+    "question": "Which of the following is a property of vector graphics?",
+    "marks": 1,
+    "mark_scheme": "They scale without losing quality",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["They store every pixel individually", "They require higher colour depth", "They always have larger file sizes"]
+  },
+  {
+    "question": "Which of the following would NOT be stored in a vector image file?",
+    "marks": 1,
+    "mark_scheme": "Pixel colour values",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Shape coordinates", "Line thickness", "Fill colour"]
+  },
+  {
+    "question": "Which is an advantage of vector graphics over bitmap graphics?",
+    "marks": 1,
+    "mark_scheme": "They are resolution independent",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["They are more realistic for photographs", "They support more colours", "They compress better for photos"]
+  },
+  {
+    "question": "Which of these is typically represented using bitmap graphics instead of vector?",
+    "marks": 1,
+    "mark_scheme": "Photographs",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Logos", "Icons", "Diagrams"]
+  },
+  {
+    "question": "What does sampling mean in sound representation?",
+    "marks": 1,
+    "mark_scheme": "Measuring the amplitude of a sound wave at regular intervals",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Measuring the frequency of sound", "Recording sound continuously", "Converting text into sound"]
+  },
+  {
+    "question": "What is the Nyquist theorem?",
+    "marks": 1,
+    "mark_scheme": "The sample rate must be at least twice the highest frequency to be recorded",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Bit depth must equal sample rate", "Sound can only be sampled once per cycle", "Higher bit depth reduces sample rate"]
+  },
+  {
+    "question": "What happens to file size when the bit depth of sound increases?",
+    "marks": 1,
+    "mark_scheme": "It increases",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["It decreases", "It stays the same", "It halves"]
+  },
+  {
+    "question": "What does analogue mean in the context of sound?",
+    "marks": 1,
+    "mark_scheme": "A continuous signal that varies smoothly over time",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Analogue and Digital",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["A discrete signal", "A binary representation", "A compressed signal"]
+  },
+  {
+    "question": "What does digital mean in the context of sound?",
+    "marks": 1,
+    "mark_scheme": "A discrete signal stored as binary values",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Analogue and Digital",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["A continuous wave", "An analogue representation", "An uncompressed signal"]
+  },
+  {
+    "question": "What is the purpose of analogue-to-digital conversion (ADC)?",
+    "marks": 1,
+    "mark_scheme": "To convert real-world analogue signals into digital data",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Analogue and Digital",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["To improve sound quality", "To compress audio files", "To amplify signals"]
+  },
+  {
+    "question": "What is the purpose of digital-to-analogue conversion (DAC)?",
+    "marks": 1,
+    "mark_scheme": "To convert stored digital data back into analogue signals",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Analogue and Digital",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["To compress audio", "To sample signals", "To store binary numbers"]
+  },
+  {
+    "question": "What does quantisation mean in ADC?",
+    "marks": 1,
+    "mark_scheme": "Approximating an analogue value to the nearest available digital level",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Analogue and Digital",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Measuring frequency", "Reducing bit depth", "Encoding text"]
+  },
+  {
+    "question": "What effect does a low sample rate have on recorded sound?",
+    "marks": 1,
+    "mark_scheme": "It reduces quality and may cause aliasing",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["It reduces file size but not quality", "It increases pitch", "It removes quantisation error"]
+  },
+  {
+    "question": "What does aliasing in sound mean?",
+    "marks": 1,
+    "mark_scheme": "Distortion caused by insufficient sampling rate",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Noise from high bit depth", "Compression artefacts", "Echo effects in playback"]
+  },
+  {
+    "question": "Which factor mainly affects the dynamic range of a digital sound recording?",
+    "marks": 1,
+    "mark_scheme": "Bit depth",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Sample rate", "Compression method", "Frequency"]
+  },
+  {
+    "question": "Which factor mainly affects the frequency range that can be captured?",
+    "marks": 1,
+    "mark_scheme": "Sample rate",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Sound",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["Bit depth", "Quantisation", "File format"]
+  },
+  {
+    "question": "What is an advantage of digital signals over analogue signals?",
+    "marks": 1,
+    "mark_scheme": "They are less prone to noise and degradation",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Analogue and Digital",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["They are continuous", "They are higher quality by default", "They require no conversion"]
+  },
+  {
+    "question": "Why does increasing resolution in vector graphics not increase file size significantly?",
+    "marks": 1,
+    "mark_scheme": "Vector graphics are stored as mathematical descriptions rather than pixels",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["They compress automatically", "They use binary representation", "They discard details"]
+  },
+  {
+    "question": "What is the main disadvantage of vector graphics?",
+    "marks": 1,
+    "mark_scheme": "They are not suitable for detailed photographs",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing Images",
+    "question_type": "multiple_choice",
+    "wrong_choices": ["They scale poorly", "They always use more memory", "They cannot be used for logos"]
+  }
+]
