@@ -84,7 +84,7 @@ function Filters() {
           checked={allKeys.length > 0 && allKeys.every(k => selectedTopics.includes(k))}
           onChange={handleSelectAllTopics}
         />
-        Select All Topics
+        <span>Select All Topics</span>
       </label>
 
       {Object.entries(topicMap).map(([topic, subtopics]) => {
@@ -104,7 +104,7 @@ function Filters() {
                 }}
                 onChange={() => handleSelectAllTopic(topic)}
               />
-              {topic}
+              <span>{topic}</span>
             </label>
 
             {/* Subtopics */}

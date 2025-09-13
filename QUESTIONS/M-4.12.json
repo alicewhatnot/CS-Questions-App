@@ -1,0 +1,380 @@
+[
+  {
+    "question": "In functional programming, what is meant by a 'function type'?",
+    "marks": 1,
+    "mark_scheme": ["The mapping of inputs from a domain to outputs in a co-domain"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The process of compiling code", "The classification of variables", "The data type of a loop index"]
+  },
+  {
+    "question": "What is the domain of a function?",
+    "marks": 1,
+    "mark_scheme": ["The set of input values the function can accept"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The set of all possible outputs", "The memory space allocated to the function", "The type of recursion used"]
+  },
+  {
+    "question": "What is the co-domain of a function?",
+    "marks": 1,
+    "mark_scheme": ["The set of possible outputs from the function"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The set of inputs a function can accept", "The address of the function in memory", "The syntax of the function"]
+  },
+  {
+    "question": "Which of the following describes a first-class object in functional programming?",
+    "marks": 1,
+    "mark_scheme": ["An entity that can be passed as an argument, returned from a function, and assigned to a variable"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["An object with the highest memory priority", "A variable that cannot be reassigned", "An object used only in recursion"]
+  },
+  {
+    "question": "In functional programming, functions are considered ______.",
+    "marks": 1,
+    "mark_scheme": ["First-class objects"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Subroutines only", "Data containers", "Mutable objects"]
+  },
+  {
+    "question": "What does function application mean?",
+    "marks": 1,
+    "mark_scheme": ["Applying a function to its argument(s) to produce a result"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Creating a new function definition", "Composing two functions", "Passing a function as a parameter"]
+  },
+  {
+    "question": "What is partial function application?",
+    "marks": 1,
+    "mark_scheme": ["Fixing some arguments of a function to produce another function of fewer arguments"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Splitting a function into subroutines", "Applying all arguments at once", "Converting recursion to iteration"]
+  },
+  {
+    "question": "What is function composition?",
+    "marks": 1,
+    "mark_scheme": ["Combining two functions so that the output of one becomes the input of another"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Adding the results of two functions", "Defining multiple functions in one block", "Assigning a function to a variable"]
+  },
+  {
+    "question": "In functional programming, higher-order functions are those that ______.",
+    "marks": 1,
+    "mark_scheme": ["Take other functions as arguments or return functions as results"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Always return integers", "Must be recursive", "Cannot be nested"]
+  },
+  {
+    "question": "Which of the following is a common higher-order function?",
+    "marks": 1,
+    "mark_scheme": ["map"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["while", "switch", "goto"]
+  },
+  {
+    "question": "What does the 'map' function do?",
+    "marks": 1,
+    "mark_scheme": ["Applies a function to each element of a list, producing a new list"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Filters elements from a list", "Combines elements into a single value", "Appends two lists together"]
+  },
+  {
+    "question": "What does the 'filter' function do?",
+    "marks": 1,
+    "mark_scheme": ["Selects elements of a list that satisfy a predicate function"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Transforms all elements of a list", "Reverses a list", "Appends elements to a list"]
+  },
+  {
+    "question": "What does the 'reduce' (or 'fold') function do?",
+    "marks": 1,
+    "mark_scheme": ["Combines the elements of a list using a binary function to produce a single value"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Counts the number of elements", "Sorts the list", "Filters unwanted elements"]
+  },
+  {
+    "question": "Which of the following best describes a recursive function?",
+    "marks": 1,
+    "mark_scheme": ["A function that calls itself with modified arguments"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A function that can only run once", "A function that cannot return values", "A function stored in memory permanently"]
+  },
+  {
+    "question": "Why is recursion important in functional programming?",
+    "marks": 1,
+    "mark_scheme": ["It replaces iterative constructs like loops"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["It reduces memory usage", "It prevents stack overflows", "It eliminates all variables"]
+  },
+  {
+    "question": "Which of the following list operations returns the first element of a list?",
+    "marks": 1,
+    "mark_scheme": ["head"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["tail", "append", "length"]
+  },
+  {
+    "question": "What does the 'tail' operation do on a list?",
+    "marks": 1,
+    "mark_scheme": ["Returns the list without its first element"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Returns the first element only", "Reverses the list", "Appends a new item"]
+  },
+  {
+    "question": "Which operation checks whether a list is empty?",
+    "marks": 1,
+    "mark_scheme": ["test for empty"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["head", "append", "reduce"]
+  },
+  {
+    "question": "Which operation gives the number of elements in a list?",
+    "marks": 1,
+    "mark_scheme": ["length"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["head", "tail", "prepend"]
+  },
+  {
+    "question": "What does 'prepend' do in a functional list?",
+    "marks": 1,
+    "mark_scheme": ["Adds an element to the front of a list"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Adds an element to the end", "Removes the first element", "Reverses the list"]
+  },
+  {
+    "question": "What does 'append' do in a functional list?",
+    "marks": 1,
+    "mark_scheme": ["Adds an element to the end of a list"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Adds an element to the front", "Removes the last element", "Filters elements"]
+  },
+  {
+    "question": "In functional programming, what is an empty list often denoted as?",
+    "marks": 1,
+    "mark_scheme": ["[]"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["{}", "null", "0"]
+  },
+  {
+    "question": "Which of the following best explains immutability in functional programming?",
+    "marks": 1,
+    "mark_scheme": ["Once created, data structures cannot be changed"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Variables can be reassigned freely", "Lists can grow or shrink dynamically", "Functions can alter global state"]
+  },
+  {
+    "question": "Why is immutability useful in functional programming?",
+    "marks": 1,
+    "mark_scheme": ["It simplifies reasoning about program state and supports parallelism"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["It speeds up recursion automatically", "It reduces memory use drastically", "It eliminates all higher-order functions"]
+  },
+  {
+    "question": "What is meant by 'statelessness' in functional programming?",
+    "marks": 1,
+    "mark_scheme": ["Functions do not rely on or change external state"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Functions always use global variables", "Functions reset the program state each time", "Functions automatically save previous states"]
+  },
+  {
+    "question": "Which paradigm contrasts most strongly with functional programming?",
+    "marks": 1,
+    "mark_scheme": ["Imperative programming"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Declarative programming", "Logic programming", "Constraint programming"]
+  },
+  {
+    "question": "Which of the following is a property of pure functions?",
+    "marks": 1,
+    "mark_scheme": ["They always return the same output for the same input and have no side effects"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["They depend on global variables", "They modify data structures", "They return random values"]
+  },
+  {
+    "question": "Which of these best describes a side effect in programming?",
+    "marks": 1,
+    "mark_scheme": ["Any observable effect other than returning a value, such as modifying global variables or I/O"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The execution of recursion", "The use of local variables", "The act of defining a function"]
+  },
+  {
+    "question": "Why does functional programming avoid side effects?",
+    "marks": 1,
+    "mark_scheme": ["To make functions predictable and easier to test"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["To save memory", "To avoid recursion", "To eliminate function calls"]
+  },
+  {
+    "question": "What does 'lazy evaluation' mean in functional programming?",
+    "marks": 1,
+    "mark_scheme": ["Expressions are only evaluated when their results are needed"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["All expressions are evaluated before program start", "Only recursive functions are executed", "Evaluation order is random"]
+  },
+  {
+    "question": "Which language is commonly associated with functional programming?",
+    "marks": 1,
+    "mark_scheme": ["Haskell"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["C", "Assembly", "COBOL"]
+  },
+  {
+    "question": "In Haskell, what symbol is commonly used for list construction (cons)?",
+    "marks": 1,
+    "mark_scheme": [":"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": [";", ",", "."]
+  },
+  {
+    "question": "Which of the following is true of lists in functional programming?",
+    "marks": 1,
+    "mark_scheme": ["They are typically defined recursively with head and tail"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["They are mutable arrays", "They are randomised sets", "They must always be sorted"]
+  },
+  {
+    "question": "Which operation combines two lists into one in Haskell?",
+    "marks": 1,
+    "mark_scheme": ["++"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["--", "**", "//"]
+  },
+  {
+    "question": "What is meant by a 'purely functional language'?",
+    "marks": 1,
+    "mark_scheme": ["A language where all functions are pure and side effects are avoided"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A language without variables", "A language without recursion", "A language written in binary"]
+  },
+  {
+    "question": "Which of the following best explains referential transparency?",
+    "marks": 1,
+    "mark_scheme": ["An expression can be replaced with its value without changing program behaviour"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["All functions are recursive", "Functions always return integers", "All values are immutable"]
+  },
+  {
+    "question": "Which of the following is an example of a higher-order list operation?",
+    "marks": 1,
+    "mark_scheme": ["map"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["length", "head", "tail"]
+  },
+  {
+    "question": "What is the base case in a recursive function?",
+    "marks": 1,
+    "mark_scheme": ["A condition where the recursion stops"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The first argument of a function", "The smallest value returned", "The largest list element"]
+  },
+  {
+    "question": "Which of the following is a benefit of higher-order functions?",
+    "marks": 1,
+    "mark_scheme": ["They allow concise and reusable abstractions for common patterns"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Writing functional programs",
+    "question_type": "mul_choice",
+    "wrong_choices": ["They eliminate the need for variables", "They increase compilation speed", "They prevent recursion"]
+  },
+  {
+    "question": "Which list operation can be defined recursively using head and tail?",
+    "marks": 1,
+    "mark_scheme": ["length"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Lists in functional programming",
+    "question_type": "mul_choice",
+    "wrong_choices": ["goto", "switch", "case"]
+  },
+  {
+    "question": "What is a curried function?",
+    "marks": 1,
+    "mark_scheme": ["A function expressed as a sequence of functions each with a single argument"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["A function that runs only once", "A function with no arguments", "A function stored in memory"]
+  },
+  {
+    "question": "What is meant by 'function as data' in functional programming?",
+    "marks": 1,
+    "mark_scheme": ["Functions can be passed around and manipulated like any other value"],
+    "topic": "Fundamentals of functional programming",
+    "subtopic": "Functional programming paradigm",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Functions always return strings", "Functions cannot return other functions", "Functions are limited to arithmetic"]
+  }
+]

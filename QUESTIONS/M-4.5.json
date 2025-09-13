@@ -520,5 +520,50 @@
     "subtopic": "Encryption",
     "question_type": "mul_choice",
     "wrong_choices": ["It shifts letters by a fixed number", "It is a type of asymmetric encryption", "It can only encrypt numbers"]
+  },
+  {
+    "question": "Which method of error detection adds a single bit to ensure the total number of 1s is even or odd?",
+    "marks": 1,
+    "mark_scheme": "Parity bit",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Error checking",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Checksum", "Huffman coding", "Run-length encoding"]
+  },
+  {
+    "question": "Which error detection method adds together binary values and transmits the result along with the data?",
+    "marks": 1,
+    "mark_scheme": "Checksum",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Error checking",
+    "question_type": "mul_choice",
+    "wrong_choices": ["Parity bit", "Run-length encoding", "Two’s complement"]
+  },
+  {
+    "question": "What does 'normalised' mean in floating-point representation?",
+    "marks": 1,
+    "mark_scheme": "The most significant digit of the mantissa is always non-zero",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "mul_choice",
+    "wrong_choices": ["The mantissa is always positive", "The exponent is always negative", "All values are rounded to integers"]
+  },
+  {
+    "question": "What is the main advantage of normalised floating-point numbers?",
+    "marks": 1,
+    "mark_scheme": "They maximise precision for a given number of bits",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number system",
+    "question_type": "mul_choice",
+    "wrong_choices": ["They use less memory", "They avoid overflow", "They prevent aliasing"]
+  },
+  {
+    "question": "Convert the hexadecimal number 1A into binary.",
+    "marks": 1,
+    "mark_scheme": "00011010",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number systems and bases",
+    "question_type": "mul_choice",
+    "wrong_choices": ["11011000", "11110000", "00101101"]
   }
 ]

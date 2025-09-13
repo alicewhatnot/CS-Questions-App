@@ -95,24 +95,27 @@ function MulChoice() {
   }, [isReady]);
 
   function handleChoice(idx) {
+    console.log("handleChoice called", alreadyAnswered.current);
     if (!alreadyAnswered.current) {
-        alreadyAnswered.current = true; 
+      alreadyAnswered.current = true; 
       const correct = choices[idx] === question.mark_scheme;
       const correctIdx = choices.findIndex(c => c === question.mark_scheme);
 
       // Update all-time stats
       Preferences.get({ key: 'mulChoiceStats' }).then(({ value }) => {
-        let stats = value ? JSON.parse(value) : { totalAnswered: 0, totalCorrect: 0, perTopic: {} };
-        stats.totalAnswered += 1;
-        if (correct) stats.totalCorrect += 1;
+        let stats = value ? JSON.parse(value) : { totalAnswered: 0, totalCorrect: 0 };
+        stats.totalAnswered += 1/2;
+        if (correct) stats.totalCorrect += 1/2;
+        Preferences.set({ key: 'mulChoiceStats', value: JSON.stringify(stats) }); 
       });
 
       // Update session stats
       if (sessionStats) {
         setSessionStats(prev => {
           const newStats = { ...prev };
-          newStats.mulChoice.totalAnswered += 1;
-          if (correct) newStats.mulChoice.totalCorrect += 1;
+          newStats.mulChoice.totalAnswered += 1/2;
+          if (correct) newStats.mulChoice.totalCorrect += 1/2;
+          return newStats;
         });
       }
 

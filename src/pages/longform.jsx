@@ -19,7 +19,7 @@ function Longform() {
   const { dbRef, isReady } = useDatabase();
   const { selectedTopics } = useFilter();
   const { sessionStats, setSessionStats } = useStats();
-  
+
   const updateLongformStats = (marksAchieved) => {
     if (!question) return;
     const fullMarks = marksAchieved === question.marks;
@@ -29,10 +29,10 @@ function Longform() {
       let stats = value
         ? JSON.parse(value)
         : { totalAnswered: 0, totalFullMarks: 0, totalMarks: 0, totalPossibleMarks: 0 };
-      stats.totalAnswered += 1;
-      stats.totalMarks += marksAchieved;
-      stats.totalPossibleMarks += question.marks;
-      if (fullMarks) stats.totalFullMarks += 1;
+      stats.totalAnswered += 1/2;
+      stats.totalMarks += marksAchieved/2;
+      stats.totalPossibleMarks += question.marks/2;
+      if (fullMarks) stats.totalFullMarks += 1/2;
       Preferences.set({ key: 'longformStats', value: JSON.stringify(stats) });
     });
 
@@ -40,10 +40,10 @@ function Longform() {
     if (sessionStats) {
       setSessionStats(prev => {
         const newStats = { ...prev };
-        newStats.longform.totalAnswered += 1;
-        newStats.longform.totalMarks += marksAchieved;
-        newStats.longform.totalPossibleMarks += question.marks;
-        if (fullMarks) newStats.longform.totalFullMarks += 1;
+        newStats.longform.totalAnswered += .5;
+        newStats.longform.totalMarks += marksAchieved/2;
+        newStats.longform.totalPossibleMarks += question.marks/2;
+        if (fullMarks) newStats.longform.totalFullMarks += .5;
         return newStats;
       });
     }
