@@ -1,0 +1,298 @@
+[
+  {
+    "question": "Explain the concept of abstraction in computer science and give one practical example.",
+    "marks": 4,
+    "mark_scheme": [
+      "Abstraction means hiding unnecessary details",
+      "Focuses only on relevant aspects of a problem",
+      "Simplifies problem-solving and system design",
+      "Example: representing a map as a graph of cities and roads"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Define decomposition and explain why it is important in solving complex problems.",
+    "marks": 4,
+    "mark_scheme": [
+      "Decomposition breaks a problem into smaller subproblems",
+      "Each subproblem can be solved independently",
+      "Solutions combined to solve the overall problem",
+      "Improves clarity and manageability of complex systems"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe what is meant by a finite state machine (FSM) and give one practical application.",
+    "marks": 4,
+    "mark_scheme": [
+      "FSM consists of a finite number of states",
+      "Transitions occur based on inputs",
+      "Can be deterministic or non-deterministic",
+      "Application: vending machines, traffic lights"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the difference between deterministic finite automata (DFA) and non-deterministic finite automata (NFA).",
+    "marks": 5,
+    "mark_scheme": [
+      "DFA: exactly one transition per input symbol per state",
+      "NFA: may have multiple or zero transitions for input",
+      "Every DFA is an NFA but not vice versa",
+      "NFAs may include epsilon transitions",
+      "DFAs easier to implement, NFAs more expressive"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Define what is meant by a regular expression and describe how it can be used to define a regular language.",
+    "marks": 4,
+    "mark_scheme": [
+      "Regular expression is a sequence of characters defining search patterns",
+      "Can describe sets of strings",
+      "Equivalent to regular languages",
+      "Useful in pattern matching and lexical analysis"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Regular languages",
+    "question_type": "longform"
+  },
+  {
+    "question": "Give a regular expression that defines all binary strings ending with 01 and explain it.",
+    "marks": 4,
+    "mark_scheme": [
+      "Regular expression: (0|1)*01",
+      "‘(0|1)*’ allows any sequence of 0s and 1s",
+      "‘01’ ensures the string ends with 01",
+      "Defines the required language"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Regular languages",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the difference between a regular language and a context-free language.",
+    "marks": 5,
+    "mark_scheme": [
+      "Regular languages can be recognised by finite automata",
+      "Context-free languages require pushdown automata",
+      "Context-free can describe nested structures",
+      "Example regular: strings of a’s and b’s",
+      "Example context-free: balanced parentheses"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "longform"
+  },
+  {
+    "question": "Write a BNF definition for an arithmetic expression involving addition of integers.",
+    "marks": 4,
+    "mark_scheme": [
+      "<expr> ::= <int> | <expr> + <int>",
+      "<int> ::= digit | digit<int>",
+      "Defines recursive structure of addition",
+      "Represents valid syntax for simple expressions"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how a syntax diagram can represent the grammar of a programming construct.",
+    "marks": 3,
+    "mark_scheme": [
+      "Graphical representation of grammar rules",
+      "Shows flow between terminals and non-terminals",
+      "Helps visualise valid constructs of language"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain what is meant by a context-free grammar and give one application in computing.",
+    "marks": 4,
+    "mark_scheme": [
+      "Set of production rules for generating strings",
+      "Non-terminals expanded into terminals or non-terminals",
+      "Can describe hierarchical language structures",
+      "Application: parsing programming languages"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain what is meant by a tractable problem and give one example.",
+    "marks": 3,
+    "mark_scheme": [
+      "Problem that can be solved in polynomial time",
+      "Feasible to solve in reasonable time",
+      "Example: binary search in sorted list"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Define an intractable problem and give one example.",
+    "marks": 3,
+    "mark_scheme": [
+      "Problem that cannot be solved in polynomial time",
+      "Requires exponential or non-polynomial time",
+      "Example: travelling salesman problem"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the difference between decidable and undecidable problems.",
+    "marks": 4,
+    "mark_scheme": [
+      "Decidable: algorithm exists to always give correct yes/no answer",
+      "Undecidable: no algorithm can always decide answer",
+      "Example decidable: checking if a number is prime",
+      "Example undecidable: halting problem"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain what is meant by a Turing machine and describe its components.",
+    "marks": 5,
+    "mark_scheme": [
+      "Abstract computational model",
+      "Infinite tape divided into cells",
+      "Tape head reads and writes symbols",
+      "Finite set of states with transition rules",
+      "Can simulate any computation"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the significance of the Universal Turing Machine (UTM).",
+    "marks": 4,
+    "mark_scheme": [
+      "UTM can simulate any other Turing machine",
+      "Uses encoded input of machine + data",
+      "Foundation of general-purpose computers",
+      "Shows universality of computation"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain why the halting problem is undecidable.",
+    "marks": 4,
+    "mark_scheme": [
+      "No algorithm can determine if all programs halt",
+      "Proof by contradiction using self-referential program",
+      "Alan Turing proved undecidability",
+      "Fundamental limit of computation"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how state transition diagrams can be used to represent finite state machines.",
+    "marks": 3,
+    "mark_scheme": [
+      "States represented by circles",
+      "Arrows show transitions between states",
+      "Labels on arrows show input conditions"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Abstraction and automation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Give one advantage and one disadvantage of using regular expressions to define languages.",
+    "marks": 3,
+    "mark_scheme": [
+      "Advantage: concise definition of patterns",
+      "Advantage: can be processed automatically by tools",
+      "Disadvantage: cannot describe nested structures"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Regular languages",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how pushdown automata differ from finite automata.",
+    "marks": 4,
+    "mark_scheme": [
+      "Pushdown automata include a stack memory",
+      "Can recognise context-free languages",
+      "Finite automata have no additional memory",
+      "Enables recognition of nested structures"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe how context-free grammars are used in the compilation process of high-level languages.",
+    "marks": 4,
+    "mark_scheme": [
+      "Used to define syntax of programming languages",
+      "Grammar specifies valid constructs",
+      "Parser checks source code against grammar",
+      "Ensures only syntactically correct programs are compiled"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Context-free languages",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain what is meant by Big-O notation in classification of algorithms.",
+    "marks": 4,
+    "mark_scheme": [
+      "Big-O describes upper bound of algorithm growth rate",
+      "Focuses on worst-case efficiency",
+      "Abstracts away hardware and implementation details",
+      "Used to compare efficiency of algorithms"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain why some problems are considered intractable even if they are decidable.",
+    "marks": 4,
+    "mark_scheme": [
+      "Decidable problems can be solved by algorithm",
+      "But solution may require impractically long time",
+      "Problems with exponential time complexity are intractable",
+      "Example: brute-force travelling salesman problem"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "Classification of algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the role of a tape head in a Turing machine and how it contributes to computation.",
+    "marks": 3,
+    "mark_scheme": [
+      "Moves left or right along tape",
+      "Reads current cell symbol",
+      "Writes new symbol based on transition rules"
+    ],
+    "topic": "Theory of computation",
+    "subtopic": "A model of computation",
+    "question_type": "longform"
+  }
+]

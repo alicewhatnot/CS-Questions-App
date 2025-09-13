@@ -1,0 +1,324 @@
+[
+  {
+    "question": "Explain the concept of a data type and describe two examples of user-defined data types.",
+    "marks": 4,
+    "mark_scheme": [
+      "Data type defines the kind of data that can be stored and operations permitted",
+      "Example of user-defined type using built-in types (e.g. record of student with name and age)",
+      "Example of enum type (e.g. days of week)",
+      "Improves readability and structure of code"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the difference between integer division and real/float division with an example for each.",
+    "marks": 3,
+    "mark_scheme": [
+      "Integer division returns quotient without remainder (e.g. 7 DIV 2 = 3)",
+      "Real division returns full decimal value (e.g. 7 / 2 = 3.5)",
+      "Shows difference in result depending on operator"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss why meaningful identifier names are important in programming and provide two examples of poor identifiers.",
+    "marks": 4,
+    "mark_scheme": [
+      "Improves readability",
+      "Makes code easier to debug and maintain",
+      "Poor identifiers: x1, temp2 (not descriptive)",
+      "Good identifiers describe purpose, e.g. studentName"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the difference between relational and Boolean operations, providing two examples of each.",
+    "marks": 4,
+    "mark_scheme": [
+      "Relational compares values and returns Boolean result",
+      "Examples: <, >=, ==",
+      "Boolean operations operate on Boolean values",
+      "Examples: AND, OR, NOT"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the advantages of using subroutines in programs.",
+    "marks": 5,
+    "mark_scheme": [
+      "Reduces code repetition",
+      "Improves readability and organisation",
+      "Facilitates code reuse",
+      "Makes debugging and testing easier",
+      "Supports modular design"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how parameters are used to pass data to subroutines and how return values are used.",
+    "marks": 5,
+    "mark_scheme": [
+      "Parameters allow input values to be passed",
+      "Formal and actual parameters linked",
+      "Return values send result back to calling routine",
+      "Supports modularity",
+      "Example: function add(x, y) returns x+y"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Contrast local and global variables and explain why local variables are considered better practice.",
+    "marks": 5,
+    "mark_scheme": [
+      "Local variables exist only in subroutine",
+      "Global variables accessible throughout program",
+      "Local variables avoid unintended side effects",
+      "Encourages modularity",
+      "Easier debugging"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how stack frames are used in subroutine calls.",
+    "marks": 6,
+    "mark_scheme": [
+      "Each subroutine call creates a stack frame",
+      "Contains return address",
+      "Stores parameters",
+      "Stores local variables",
+      "Supports nested calls",
+      "Allows recursion"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the use of recursion in programming, including the terms base case and general case.",
+    "marks": 4,
+    "mark_scheme": [
+      "Recursion: function calls itself",
+      "Base case stops recursion",
+      "General case reduces problem size",
+      "Example: factorial"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain two uses of string-handling operations with examples.",
+    "marks": 4,
+    "mark_scheme": [
+      "Length function finds number of characters (e.g. length('hello') = 5)",
+      "Substring extracts part of string (e.g. 'hello'[0:2] = 'he')",
+      "Concatenation joins strings",
+      "Character to ASCII code conversion"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss the importance of exception handling in programming with two practical examples.",
+    "marks": 5,
+    "mark_scheme": [
+      "Prevents program crashing",
+      "Allows graceful handling of errors",
+      "File not found error handling",
+      "Division by zero handling",
+      "Improves user experience"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the structured approach to program design and its advantages.",
+    "marks": 5,
+    "mark_scheme": [
+      "Uses sequence, selection, iteration",
+      "Divides program into subroutines",
+      "Easier to understand and debug",
+      "Promotes modularity",
+      "Supports code reuse"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Procedural-oriented programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how hierarchy charts can help in structured programming.",
+    "marks": 4,
+    "mark_scheme": [
+      "Shows decomposition of program into subroutines",
+      "Displays relationship between modules",
+      "Helps plan modular program design",
+      "Improves clarity of program structure"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Procedural-oriented programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the concept of a class in object-oriented programming and how it relates to an object.",
+    "marks": 4,
+    "mark_scheme": [
+      "Class defines attributes and methods",
+      "Acts as blueprint for objects",
+      "Object is instance of class",
+      "Objects use constructors to instantiate"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming paradigms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Define encapsulation and describe why it is important in object-oriented design.",
+    "marks": 5,
+    "mark_scheme": [
+      "Encapsulation bundles data and methods together",
+      "Restricts direct access to attributes",
+      "Implemented with access specifiers",
+      "Protects against unintended modification",
+      "Improves modularity and maintainability"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming paradigms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the difference between aggregation and composition in object-oriented programming.",
+    "marks": 6,
+    "mark_scheme": [
+      "Aggregation is has-a relationship, parts independent",
+      "Composition is part-of relationship, parts dependent",
+      "Aggregation: university has students",
+      "Composition: house has rooms",
+      "Represented differently in UML diagrams",
+      "Both describe object association"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming paradigms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Define polymorphism and explain how method overriding implements it.",
+    "marks": 4,
+    "mark_scheme": [
+      "Polymorphism: ability for methods to behave differently in different classes",
+      "Overriding allows subclass to redefine superclass method",
+      "Same interface used with different implementations",
+      "Improves flexibility and reuse"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming paradigms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss why object-oriented programming is widely used in modern software development.",
+    "marks": 6,
+    "mark_scheme": [
+      "Encapsulation provides data security",
+      "Inheritance promotes code reuse",
+      "Polymorphism increases flexibility",
+      "Models real-world entities",
+      "Encourages modular and maintainable code",
+      "Supports large-scale projects"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming paradigms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how composition is favoured over inheritance in object-oriented design principles.",
+    "marks": 4,
+    "mark_scheme": [
+      "Composition allows combining objects for behaviour",
+      "Inheritance tightly couples classes",
+      "Composition is more flexible",
+      "Reduces complexity in class hierarchies"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming paradigms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe two practical applications where recursion is more suitable than iteration.",
+    "marks": 4,
+    "mark_scheme": [
+      "Tree traversal (e.g. binary tree search)",
+      "Solving mathematical sequences (factorial, Fibonacci)",
+      "Problems naturally defined in recursive terms",
+      "Simplifies code for divide-and-conquer algorithms"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how random number generation is used in simulation and testing.",
+    "marks": 3,
+    "mark_scheme": [
+      "Simulates unpredictable events (e.g. dice roll)",
+      "Monte Carlo simulations for probability problems",
+      "Used for stress testing algorithms with random input"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain why named constants are useful in programming with one example.",
+    "marks": 3,
+    "mark_scheme": [
+      "Improves readability",
+      "Easier to update if value changes",
+      "Example: PI = 3.14159 used in multiple calculations"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss the importance of using meaningful error messages when exception handling.",
+    "marks": 4,
+    "mark_scheme": [
+      "Helps user understand what went wrong",
+      "Assists in debugging",
+      "Prevents confusion and frustration",
+      "Supports maintainability of code"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the role of inheritance in object-oriented programming with an example.",
+    "marks": 5,
+    "mark_scheme": [
+      "Inheritance allows subclass to inherit attributes and methods",
+      "Promotes code reuse",
+      "Subclass can extend or override methods",
+      "Example: class Car inherits from Vehicle",
+      "Encourages hierarchical design"
+    ],
+    "topic": "Fundamentals of programming",
+    "subtopic": "Programming paradigms",
+    "question_type": "longform"
+  }
+]

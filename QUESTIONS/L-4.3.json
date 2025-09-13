@@ -1,0 +1,298 @@
+[
+  {
+    "question": "Describe how a depth-first traversal of a graph operates and explain one situation where it is useful.",
+    "marks": 5,
+    "mark_scheme": [
+      "Explores as far as possible along one branch before backtracking",
+      "Uses a stack (explicit or recursion) to track nodes",
+      "Marks visited nodes to avoid cycles",
+      "Visits all nodes connected in depth order",
+      "Useful for maze solving or topological ordering"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Graph-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how breadth-first traversal of a graph works and give an application.",
+    "marks": 4,
+    "mark_scheme": [
+      "Explores all neighbours of a node before moving to next level",
+      "Uses a queue to track nodes",
+      "Visits nodes in increasing distance from start",
+      "Application: shortest path in unweighted graph"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Graph-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Compare depth-first search (DFS) and breadth-first search (BFS) in terms of data structures used and typical applications.",
+    "marks": 6,
+    "mark_scheme": [
+      "DFS uses a stack (or recursion)",
+      "BFS uses a queue",
+      "DFS explores deep paths before backtracking",
+      "BFS explores level by level",
+      "DFS used in topological sorting, solving puzzles",
+      "BFS used in shortest path finding in unweighted graphs"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Graph-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how pre-order tree traversal works using an example binary tree.",
+    "marks": 4,
+    "mark_scheme": [
+      "Visit root node first",
+      "Traverse left subtree",
+      "Traverse right subtree",
+      "Produces root-left-right order"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Tree-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe in-order traversal of a binary search tree and explain its useful property.",
+    "marks": 4,
+    "mark_scheme": [
+      "Traverse left subtree first",
+      "Visit root node",
+      "Traverse right subtree",
+      "Produces nodes in ascending order"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Tree-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain post-order traversal of a tree and give one application.",
+    "marks": 4,
+    "mark_scheme": [
+      "Traverse left subtree first",
+      "Then right subtree",
+      "Then visit root node",
+      "Application: deleting or freeing tree nodes safely"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Tree-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Convert the infix expression (3 + 4) * 5 into Reverse Polish notation (RPN) and show the steps.",
+    "marks": 5,
+    "mark_scheme": [
+      "Identify operator precedence",
+      "Convert (3 + 4) into 3 4 +",
+      "Multiply result by 5 → 3 4 + 5 *",
+      "RPN expression: 3 4 + 5 *",
+      "Shows use of stack-based conversion"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Reverse Polish notation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how a stack can be used to evaluate the Reverse Polish expression 5 2 + 8 *.",
+    "marks": 5,
+    "mark_scheme": [
+      "Read tokens left to right",
+      "Push 5, push 2",
+      "Encounter '+': pop 2 and 5, add to get 7, push 7",
+      "Push 8",
+      "Encounter '*': pop 8 and 7, multiply to get 56, push result"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Reverse Polish notation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss the advantages of Reverse Polish notation compared to infix notation.",
+    "marks": 4,
+    "mark_scheme": [
+      "No need for brackets",
+      "Order of operations unambiguous",
+      "Easier for computers to evaluate",
+      "Implemented efficiently with stacks"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Reverse Polish notation",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the steps of linear search and state its time complexity.",
+    "marks": 3,
+    "mark_scheme": [
+      "Check each element in list sequentially",
+      "Stop when item found or list ends",
+      "Time complexity O(n)"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Searching algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe binary search and explain why the data must be sorted.",
+    "marks": 4,
+    "mark_scheme": [
+      "Repeatedly check middle element",
+      "Discard half of list each time",
+      "Continues until item found or list empty",
+      "Requires sorted data to eliminate half correctly"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Searching algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Compare linear and binary search in terms of efficiency and applicability.",
+    "marks": 5,
+    "mark_scheme": [
+      "Linear search works on unsorted data",
+      "Binary search requires sorted data",
+      "Linear is O(n)",
+      "Binary is O(log n)",
+      "Trade-off between flexibility and efficiency"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Searching algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe how the bubble sort algorithm works with reference to passes through the list.",
+    "marks": 4,
+    "mark_scheme": [
+      "Repeatedly compare adjacent items",
+      "Swap if in wrong order",
+      "Each pass moves largest item to end",
+      "Continue until no swaps needed"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Sorting algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain why bubble sort is considered inefficient for large lists.",
+    "marks": 3,
+    "mark_scheme": [
+      "Time complexity O(n^2)",
+      "Requires many comparisons and swaps",
+      "Not suitable for large datasets"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Sorting algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the merge sort algorithm and explain how it uses recursion.",
+    "marks": 5,
+    "mark_scheme": [
+      "Divide list into halves recursively",
+      "Sort each half",
+      "Merge sorted halves",
+      "Uses divide-and-conquer",
+      "Time complexity O(n log n)"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Sorting algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Compare bubble sort and merge sort in terms of efficiency and memory use.",
+    "marks": 5,
+    "mark_scheme": [
+      "Bubble sort O(n^2) time complexity",
+      "Merge sort O(n log n)",
+      "Merge sort requires extra memory for merging",
+      "Bubble sort works in-place",
+      "Merge sort better for large datasets"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Sorting algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain Dijkstra’s algorithm for finding the shortest path in a weighted graph.",
+    "marks": 6,
+    "mark_scheme": [
+      "Assign tentative distance values to nodes",
+      "Start with source node at distance 0",
+      "Update distances to neighbouring nodes",
+      "Choose unvisited node with smallest tentative distance",
+      "Repeat until destination reached or all nodes visited",
+      "Produces shortest path in weighted graph"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Graph-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Why does Dijkstra’s algorithm not work correctly with negative edge weights?",
+    "marks": 3,
+    "mark_scheme": [
+      "Algorithm assumes once a node is visited its distance is final",
+      "Negative edges could reduce distances later",
+      "Breaks correctness of shortest path calculation"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Graph-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Compare breadth-first search and Dijkstra’s algorithm in terms of graph type and application.",
+    "marks": 5,
+    "mark_scheme": [
+      "BFS works on unweighted graphs",
+      "Dijkstra’s works on weighted graphs",
+      "BFS finds shortest path in terms of number of edges",
+      "Dijkstra’s finds shortest path in terms of weights",
+      "Different applications depending on problem"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Graph-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how recursion is used in tree traversals such as in-order and post-order.",
+    "marks": 4,
+    "mark_scheme": [
+      "Recursive call on left subtree",
+      "Process current node depending on traversal order",
+      "Recursive call on right subtree",
+      "Each subtree processed in same way"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Tree-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Trace a breadth-first traversal on the following graph: A connected to B and C; B connected to D and E; C connected to F.",
+    "marks": 5,
+    "mark_scheme": [
+      "Start at A",
+      "Visit B, C",
+      "Then visit D, E, F",
+      "Traversal order A-B-C-D-E-F",
+      "Shows level-order processing"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Graph-traversal algorithms",
+    "question_type": "longform"
+  },
+  {
+    "question": "Trace the in-order traversal of a binary search tree with nodes 4 (root), left child 2, right child 6, and leaf nodes 1, 3, 5, 7.",
+    "marks": 5,
+    "mark_scheme": [
+      "Traverse left subtree → 1,2,3",
+      "Visit root → 4",
+      "Traverse right subtree → 5,6,7",
+      "In-order result: 1,2,3,4,5,6,7",
+      "Demonstrates sorted order property"
+    ],
+    "topic": "Fundamentals of algorithms",
+    "subtopic": "Tree-traversal algorithms",
+    "question_type": "longform"
+  }
+]

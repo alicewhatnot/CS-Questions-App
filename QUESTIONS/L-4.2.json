@@ -1,0 +1,298 @@
+[
+  {
+    "question": "Explain the difference between static and dynamic data structures, giving one advantage of each.",
+    "marks": 4,
+    "mark_scheme": [
+      "Static data structures have fixed size defined at compile-time",
+      "Dynamic data structures can change size at runtime",
+      "Static advantage: fast access, memory allocated in advance",
+      "Dynamic advantage: more memory efficient for variable-size data"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Data structures and abstract data types",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the difference between one-dimensional and two-dimensional arrays and give an example use for each.",
+    "marks": 4,
+    "mark_scheme": [
+      "1D array stores data in a single list format",
+      "2D array stores data in rows and columns (matrix)",
+      "Example 1D: storing a list of student names",
+      "Example 2D: storing a multiplication table"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Data structures and abstract data types",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how records differ from arrays and provide an example where a record would be more suitable.",
+    "marks": 3,
+    "mark_scheme": [
+      "Record stores multiple fields of possibly different data types",
+      "Array stores multiple items of the same data type",
+      "Example: record for a book with title (string), price (float), and stock (integer)"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Data structures and abstract data types",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe how to read from and write to a text file in a high-level programming language.",
+    "marks": 4,
+    "mark_scheme": [
+      "Open file in correct mode (read/write)",
+      "Read or write data using file-handling functions",
+      "Close file after operation",
+      "Example syntax provided in language such as Python or Java"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Data structures and abstract data types",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the main operations of a queue, and how a circular queue differs from a linear queue.",
+    "marks": 5,
+    "mark_scheme": [
+      "Enqueue adds item to rear",
+      "Dequeue removes item from front",
+      "Test for full/empty queue",
+      "Circular queue wraps around when end is reached",
+      "Efficient use of memory compared to linear queue"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Queues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe how a priority queue operates differently to a normal queue.",
+    "marks": 3,
+    "mark_scheme": [
+      "Items dequeued in order of priority, not just order of arrival",
+      "Higher priority items removed first",
+      "Example: task scheduling in operating systems"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Queues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the operations push, pop, and peek for a stack data structure.",
+    "marks": 4,
+    "mark_scheme": [
+      "Push adds an item to the top of stack",
+      "Pop removes the top item",
+      "Peek returns top item without removing it",
+      "Stack follows LIFO principle"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Stacks",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss two typical applications of stack data structures.",
+    "marks": 4,
+    "mark_scheme": [
+      "Undo functionality in text editors",
+      "Function call management in recursion",
+      "Expression evaluation",
+      "Backtracking algorithms (e.g. maze solving)"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Stacks",
+    "question_type": "longform"
+  },
+  {
+    "question": "Define a graph and explain the difference between a directed and undirected graph.",
+    "marks": 4,
+    "mark_scheme": [
+      "Graph: set of vertices/nodes connected by edges",
+      "Directed graph has edges with direction",
+      "Undirected graph edges have no direction",
+      "Example: road network vs one-way system"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Graphs",
+    "question_type": "longform"
+  },
+  {
+    "question": "Compare adjacency matrices and adjacency lists as methods for representing graphs.",
+    "marks": 5,
+    "mark_scheme": [
+      "Adjacency matrix uses 2D array to represent connections",
+      "Adjacency list stores list of edges for each vertex",
+      "Matrix: fast to check if edge exists, but uses more memory",
+      "List: memory efficient for sparse graphs",
+      "Trade-off between speed and space"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Graphs",
+    "question_type": "longform"
+  },
+  {
+    "question": "Define a tree and explain how it differs from a general graph.",
+    "marks": 3,
+    "mark_scheme": [
+      "Tree is a connected graph with no cycles",
+      "Has hierarchical parent-child relationships",
+      "Graph may contain cycles and multiple connections"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Trees",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the structure and purpose of a binary search tree.",
+    "marks": 5,
+    "mark_scheme": [
+      "Each node has at most two children",
+      "Left child smaller, right child greater than parent",
+      "Supports efficient searching",
+      "Typical operations O(log n) average case",
+      "Used for dynamic sets and lookups"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Trees",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe one real-world application of tree data structures.",
+    "marks": 3,
+    "mark_scheme": [
+      "File systems stored as hierarchical trees",
+      "Decision trees in AI",
+      "Organisation charts"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Trees",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the concept of a hash table and what is meant by a collision.",
+    "marks": 4,
+    "mark_scheme": [
+      "Hash table maps keys to values using hash function",
+      "Provides fast data retrieval",
+      "Collision occurs when two keys map to same index",
+      "Requires resolution techniques"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Hash tables",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe two common methods of handling collisions in a hash table.",
+    "marks": 4,
+    "mark_scheme": [
+      "Open addressing (rehashing, linear probing)",
+      "Chaining (linked list at each index)",
+      "Both aim to resolve multiple keys mapping to same location",
+      "Choice affects efficiency"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Hash tables",
+    "question_type": "longform"
+  },
+  {
+    "question": "Define a dictionary data structure and explain one typical application.",
+    "marks": 3,
+    "mark_scheme": [
+      "Collection of key-value pairs",
+      "Values accessed via unique keys",
+      "Application: word frequency counting"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Dictionaries",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how dictionaries may be implemented using hash tables.",
+    "marks": 4,
+    "mark_scheme": [
+      "Keys hashed to compute index",
+      "Value stored at index",
+      "Collisions resolved with chaining or rehashing",
+      "Enables efficient retrieval and updates"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Dictionaries",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe what is meant by a vector and provide two different ways of representing one.",
+    "marks": 4,
+    "mark_scheme": [
+      "Vector is an ordered collection of numbers from same field",
+      "Can be represented as a list or array",
+      "Can be represented as a function mapping indices to values",
+      "Also visualised geometrically as arrow in space"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Vectors",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain what is meant by scalar-vector multiplication and give one use.",
+    "marks": 3,
+    "mark_scheme": [
+      "Each component of vector multiplied by scalar",
+      "Results in scaling of vector length",
+      "Use: resizing graphics in computer graphics"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Vectors",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the concept of vector dot product and one application of it.",
+    "marks": 4,
+    "mark_scheme": [
+      "Dot product is sum of products of corresponding elements",
+      "u·v = u1v1 + u2v2 + … + unvn",
+      "Produces scalar result",
+      "Used to calculate angle between vectors in physics/graphics"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Vectors",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss the advantages and disadvantages of adjacency lists compared to adjacency matrices for sparse graphs.",
+    "marks": 5,
+    "mark_scheme": [
+      "Adjacency list uses less memory",
+      "Efficient for sparse graphs with few edges",
+      "Matrix wastes memory with many zero entries",
+      "Matrix faster to check if edge exists",
+      "List slower for edge lookup but more efficient in storage"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Graphs",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how linear queues may be inefficient and how circular queues solve this problem.",
+    "marks": 4,
+    "mark_scheme": [
+      "Linear queue requires shifting items after deletion",
+      "Wastes memory space at front",
+      "Circular queue reuses empty slots",
+      "Improves memory efficiency"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Queues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the role of a binary file compared to a text file, and give an example where a binary file is appropriate.",
+    "marks": 3,
+    "mark_scheme": [
+      "Binary files store data in raw format",
+      "Text files store data as human-readable characters",
+      "Example: storing images or sound files"
+    ],
+    "topic": "Fundamentals of data structures",
+    "subtopic": "Data structures and abstract data types",
+    "question_type": "longform"
+  }
+]

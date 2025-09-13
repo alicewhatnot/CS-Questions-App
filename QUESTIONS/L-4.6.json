@@ -1,0 +1,444 @@
+[
+  {
+    "question": "State what is meant by the stored program concept.",
+    "marks": 2,
+    "mark_scheme": [
+      "Instructions and data are stored together in main memory",
+      "Instructions are fetched and executed sequentially"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Stored program concept",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the role of the arithmetic logic unit (ALU) in a processor.",
+    "marks": 3,
+    "mark_scheme": [
+      "Performs arithmetic operations such as addition and subtraction",
+      "Performs logical operations such as AND, OR, NOT",
+      "Outputs result to registers"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor structure",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the role of the control unit in the processor.",
+    "marks": 3,
+    "mark_scheme": [
+      "Directs operation of the processor",
+      "Sends control signals to other components",
+      "Coordinates execution of instructions"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Processor structure",
+    "question_type": "longform"
+  },
+  {
+    "question": "Draw and label a simple diagram showing the main components of the CPU and memory under the stored program concept.",
+    "marks": 5,
+    "mark_scheme": [
+      "Includes CPU box with ALU, CU, registers",
+      "Includes main memory",
+      "Includes data bus",
+      "Includes address bus",
+      "Includes control bus"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Stored program concept",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how the fetch–decode–execute cycle operates.",
+    "marks": 6,
+    "mark_scheme": [
+      "Program counter holds address of next instruction",
+      "Address copied to MAR",
+      "Instruction fetched from memory into MDR",
+      "Instruction loaded into CIR",
+      "Instruction decoded by control unit",
+      "Instruction executed by appropriate component"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "CPU and FDE cycle",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the role of the program counter (PC) in the fetch–decode–execute cycle.",
+    "marks": 2,
+    "mark_scheme": [
+      "Holds address of next instruction to be fetched",
+      "Increments after each fetch unless a jump occurs"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Registers",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the purpose of the memory address register (MAR) and memory data register (MDR).",
+    "marks": 4,
+    "mark_scheme": [
+      "MAR holds the address of memory location to access",
+      "MDR holds the data being transferred to or from memory",
+      "MAR used in fetch and writeback stages",
+      "MDR ensures correct data exchange between CPU and memory"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Registers",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss how the use of general-purpose registers improves CPU efficiency.",
+    "marks": 4,
+    "mark_scheme": [
+      "Registers provide fast temporary storage",
+      "Reduce need to access slower main memory",
+      "Enable intermediate results to be held",
+      "Improve execution speed of programs"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Registers",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the role of the clock in CPU operation.",
+    "marks": 3,
+    "mark_scheme": [
+      "Generates regular timing signals",
+      "Coordinates synchronisation of CPU operations",
+      "One instruction step executed per clock pulse"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "CPU and FDE cycle",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe three factors that can affect CPU performance.",
+    "marks": 3,
+    "mark_scheme": [
+      "Clock speed determines number of instructions executed per second",
+      "Cache size reduces memory access time",
+      "Number of cores allows parallel execution of instructions"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "CPU performance factors",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how increasing cache memory can improve CPU performance.",
+    "marks": 4,
+    "mark_scheme": [
+      "Cache stores frequently used instructions and data",
+      "Located closer to CPU, faster than main memory",
+      "Reduces time spent waiting for memory access",
+      "Improves throughput of instructions"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "CPU performance factors",
+    "question_type": "longform"
+  },
+  {
+    "question": "Evaluate the impact of increasing the number of cores on processor performance.",
+    "marks": 6,
+    "mark_scheme": [
+      "Multiple cores allow parallel execution of instructions",
+      "Performance depends on software written for parallelism",
+      "Some tasks benefit significantly, others less so",
+      "Overheads of coordination may reduce gains",
+      "Can improve multitasking",
+      "Not all programs scale with cores"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Multi-core and parallel systems",
+    "question_type": "longform"
+  },
+  {
+    "question": "Compare multi-core processors with parallel systems.",
+    "marks": 5,
+    "mark_scheme": [
+      "Multi-core: multiple cores on one chip",
+      "Parallel systems: multiple processors working together",
+      "Both allow concurrent execution",
+      "Parallel systems can scale across machines",
+      "Multi-core limited to single processor chip"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Multi-core and parallel systems",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how solid-state drives (SSDs) differ from magnetic hard drives.",
+    "marks": 4,
+    "mark_scheme": [
+      "SSDs use flash memory, no moving parts",
+      "Magnetic hard drives use spinning platters",
+      "SSDs faster access times",
+      "SSDs more durable and energy efficient"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "State two examples of input devices and describe their functions.",
+    "marks": 2,
+    "mark_scheme": [
+      "Keyboard – enters text and commands",
+      "Mouse – controls on-screen pointer"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how an optical scanner works as an input device.",
+    "marks": 3,
+    "mark_scheme": [
+      "Shines light onto surface",
+      "Sensor detects reflected light intensity",
+      "Converts into digital representation"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the difference between volatile and non-volatile memory, giving one example of each.",
+    "marks": 3,
+    "mark_scheme": [
+      "Volatile loses contents when power off, e.g. RAM",
+      "Non-volatile retains data without power, e.g. ROM",
+      "Used for different roles in computer system"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the function of secondary storage in a computer system.",
+    "marks": 3,
+    "mark_scheme": [
+      "Stores programs and data permanently",
+      "Non-volatile",
+      "Examples include HDDs and SSDs"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss how different levels of cache (L1, L2, L3) impact performance.",
+    "marks": 5,
+    "mark_scheme": [
+      "L1 closest, smallest, fastest",
+      "L2 larger but slower than L1",
+      "L3 shared across cores, slower still",
+      "Hierarchy balances cost and performance",
+      "More cache reduces main memory access"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "CPU performance factors",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the role of the accumulator register.",
+    "marks": 2,
+    "mark_scheme": [
+      "Holds intermediate results of calculations",
+      "Reduces need to access main memory"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Registers",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain why clock speed is not the only determinant of CPU performance.",
+    "marks": 4,
+    "mark_scheme": [
+      "Higher clock speed means more instructions per second",
+      "But bottlenecks may exist (memory latency)",
+      "Instruction set efficiency matters",
+      "Parallelism and architecture also important"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "CPU performance factors",
+    "question_type": "longform"
+  },
+  {
+    "question": "State one example each of an output device used for text and for graphics.",
+    "marks": 2,
+    "mark_scheme": [
+      "Text output: printer",
+      "Graphics output: monitor"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss the role of buses in the stored program concept.",
+    "marks": 5,
+    "mark_scheme": [
+      "Address bus carries location addresses",
+      "Data bus carries data between CPU and memory",
+      "Control bus carries control signals",
+      "Enable communication between processor and memory",
+      "Essential for FDE cycle operation"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Stored program concept",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how a GPU can be used as an external hardware device to improve performance.",
+    "marks": 4,
+    "mark_scheme": [
+      "Specialised for parallel processing",
+      "Handles graphics and mathematical operations",
+      "Relieves load from CPU",
+      "Improves performance in games and scientific applications"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the role of the current instruction register (CIR).",
+    "marks": 2,
+    "mark_scheme": [
+      "Holds instruction currently being decoded or executed",
+      "Ensures CPU processes correct instruction"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Registers",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss how heat dissipation affects CPU performance and reliability.",
+    "marks": 4,
+    "mark_scheme": [
+      "Higher speeds generate more heat",
+      "Excessive heat can damage CPU",
+      "Cooling required to maintain performance",
+      "Limits maximum practical clock speed"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "CPU performance factors",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the function of RAM in a computer system.",
+    "marks": 2,
+    "mark_scheme": [
+      "Stores currently running programs and data",
+      "Volatile, cleared when power off"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain why SSDs are preferred over HDDs in portable devices.",
+    "marks": 3,
+    "mark_scheme": [
+      "SSDs have no moving parts",
+      "More resistant to shock and damage",
+      "Faster and use less power"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe one advantage and one disadvantage of multi-core processors.",
+    "marks": 2,
+    "mark_scheme": [
+      "Advantage: allows multiple tasks at once",
+      "Disadvantage: not all programs use multiple cores"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Multi-core and parallel systems",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the role of virtual memory in a computer system.",
+    "marks": 4,
+    "mark_scheme": [
+      "Uses secondary storage to extend RAM",
+      "Stores parts of programs not currently in use",
+      "Prevents memory overflow",
+      "Slower than real RAM"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the role of input/output controllers in a computer system.",
+    "marks": 3,
+    "mark_scheme": [
+      "Manage communication between CPU and peripheral devices",
+      "Convert signals between device and system format",
+      "Reduce CPU involvement in device control"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss how the Harvard architecture differs from the Von Neumann architecture.",
+    "marks": 6,
+    "mark_scheme": [
+      "Von Neumann: single memory for data and instructions",
+      "Harvard: separate memory for data and instructions",
+      "Harvard allows simultaneous access",
+      "Von Neumann has bottleneck on single bus",
+      "Harvard used in embedded systems",
+      "Von Neumann used in general-purpose processors"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Stored program concept",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how Direct Memory Access (DMA) improves system performance.",
+    "marks": 4,
+    "mark_scheme": [
+      "Allows devices to transfer data directly to memory",
+      "Bypasses CPU during transfer",
+      "Frees CPU for other tasks",
+      "Improves overall throughput"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "External hardware devices",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe one role of the status register during instruction execution.",
+    "marks": 2,
+    "mark_scheme": [
+      "Holds flags about results of operations",
+      "E.g. zero flag, carry flag, overflow flag"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Registers",
+    "question_type": "longform"
+  },
+  {
+    "question": "Evaluate the effect of multi-core processors on software design.",
+    "marks": 8,
+    "mark_scheme": [
+      "Multi-core allows concurrent execution of tasks",
+      "Software must be written to take advantage of multiple cores",
+      "Parallel programming introduces complexity",
+      "Thread synchronisation and communication required",
+      "Not all problems parallelisable",
+      "Legacy software may not benefit",
+      "Well-written software can see performance gains",
+      "Design requires careful consideration of concurrency"
+    ],
+    "topic": "Fundamentals of computer organisation and architecture",
+    "subtopic": "Multi-core and parallel systems",
+    "question_type": "longform"
+  }
+]
