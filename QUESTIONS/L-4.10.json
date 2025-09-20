@@ -1,0 +1,182 @@
+[
+  {
+    "question": "Define what is meant by a database and give one example of its use in everyday life.",
+    "marks": 1,
+    "mark_scheme": ["Database = an organised collection of data", "Example: online banking system storing customer records"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "The concept of a database",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the difference between a flat file database and a relational database.",
+    "marks": 2,
+    "mark_scheme": ["Flat file = data stored in a single table", "Relational = data stored in multiple related tables", "Relational reduces redundancy and improves integrity"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "The concept of a database",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Describe three benefits of using a database management system (DBMS).",
+    "marks": 3,
+    "mark_scheme": ["Improves data integrity and consistency", "Provides security through access control", "Allows concurrent multi-user access", "Supports backup and recovery mechanisms"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "The concept of a database",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the difference between a primary key and a foreign key in a relational database.",
+    "marks": 2,
+    "mark_scheme": ["Primary key = unique identifier for a record in a table", "Foreign key = field that references primary key in another table"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Relational databases",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "State what is meant by referential integrity and explain why it is important in relational databases.",
+    "marks": 3,
+    "mark_scheme": ["Referential integrity = ensures foreign key values match primary key values in related table", "Prevents orphan records", "Maintains consistency across tables"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Relational databases",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the difference between a one-to-many and many-to-many relationship in a relational database. Give an example of each.",
+    "marks": 4,
+    "mark_scheme": ["One-to-many: one record in table A links to many in table B", "Example: customer → orders", "Many-to-many: many records in A relate to many in B", "Example: students ↔ courses"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Relational databases",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Define first normal form (1NF). Why is it important in database design?",
+    "marks": 2,
+    "mark_scheme": ["1NF = each field contains atomic values, no repeating groups", "Prevents data anomalies, improves clarity"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Database design and normalisation",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain how a database designer would transform a table into second normal form (2NF).",
+    "marks": 4,
+    "mark_scheme": ["Table must first be in 1NF", "Remove partial dependencies (attributes depending on part of composite key)", "Create new tables to hold removed attributes", "Ensure each non-key attribute depends on the whole primary key"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Database design and normalisation",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss the benefits of normalisation when designing a database.",
+    "marks": 5,
+    "mark_scheme": ["Removes redundancy", "Improves consistency and integrity", "Reduces storage requirements", "Simplifies maintenance and updates", "Improves query efficiency"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Database design and normalisation",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Write an SQL statement to create a table Student with fields: StudentID (integer, primary key), Name (text), and DateOfBirth (date).",
+    "marks": 3,
+    "mark_scheme": ["CREATE TABLE Student (...)", "StudentID INTEGER PRIMARY KEY", "Name TEXT", "DateOfBirth DATE"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "SQL",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Write an SQL query to select all customers from the table Customer where City = 'London'.",
+    "marks": 2,
+    "mark_scheme": ["SELECT * FROM Customer WHERE City = 'London';"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "SQL",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Write an SQL query to list the names of students who are enrolled in course 'CS101'. Assume tables Student(StudentID, Name) and Enrolment(StudentID, CourseCode).",
+    "marks": 4,
+    "mark_scheme": ["SELECT Name", "FROM Student JOIN Enrolment", "ON Student.StudentID = Enrolment.StudentID", "WHERE CourseCode = 'CS101';"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "SQL",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Write an SQL query that counts the number of employees in the table Employee grouped by Department.",
+    "marks": 3,
+    "mark_scheme": ["SELECT Department, COUNT(*)", "FROM Employee", "GROUP BY Department;"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "SQL",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the difference between the SQL commands DELETE and DROP.",
+    "marks": 2,
+    "mark_scheme": ["DELETE removes records from a table but keeps the table structure", "DROP removes the entire table including structure and data"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "SQL",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss the advantages and disadvantages of using client-server databases compared to file-based systems.",
+    "marks": 6,
+    "mark_scheme": ["Advantages: centralised management, multi-user support, better security, concurrent access", "Disadvantages: higher cost, requires network infrastructure, dependency on server availability"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Client-server databases",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain how concurrency control is achieved in client-server databases.",
+    "marks": 4,
+    "mark_scheme": ["Locking mechanisms prevent simultaneous conflicting updates", "Timestamp ordering ensures consistent execution order", "Transactions used to group operations", "Rollback ensures database integrity on conflict"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Client-server databases",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the role of a transaction in a client-server database and describe the ACID properties.",
+    "marks": 5,
+    "mark_scheme": ["Transaction = single logical unit of work", "Atomicity = all or nothing", "Consistency = maintains database rules", "Isolation = no interference from other transactions", "Durability = committed transactions are permanent"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Client-server databases",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss the advantages of using SQL as a standard query language across different database systems.",
+    "marks": 5,
+    "mark_scheme": ["Provides portability across DBMSs", "Widely understood by developers", "Supports both data definition and manipulation", "Encourages standardisation and interoperability", "Some dialect differences may exist between DBMSs"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "SQL",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the importance of normalisation and indexing in ensuring efficiency and integrity in relational databases.",
+    "marks": 7,
+    "mark_scheme": ["Normalisation reduces redundancy and anomalies", "Improves data consistency", "Indexing speeds up search queries", "Too many indexes may slow down updates", "Balance between read and write performance", "Both critical for database scalability", "Evaluation: combined use optimises both integrity and performance"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Database design and normalisation",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the advantages and disadvantages of cloud-based client-server databases compared to on-premise databases.",
+    "marks": 8,
+    "mark_scheme": ["Advantages: scalability, reduced hardware costs, remote accessibility, managed backups", "Disadvantages: dependency on internet connection, ongoing subscription costs, data security concerns, compliance issues", "On-premise offers full control but high maintenance", "Cloud databases suit dynamic scaling needs", "On-premise preferred for highly sensitive data"],
+    "topic": "4.10 Fundamentals of databases",
+    "subtopic": "Client-server databases",
+    "question_type": "longform",
+    "wrong_choices": null
+  }
+]

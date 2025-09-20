@@ -1,444 +1,332 @@
 [
   {
-    "question": "State what is meant by the stored program concept.",
-    "marks": 2,
-    "mark_scheme": [
-      "Instructions and data are stored together in main memory",
-      "Instructions are fetched and executed sequentially"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Stored program concept",
-    "question_type": "longform"
-  },
-  {
-    "question": "Describe the role of the arithmetic logic unit (ALU) in a processor.",
+    "question": "Define a natural number and an integer, explaining the difference between them.",
     "marks": 3,
     "mark_scheme": [
-      "Performs arithmetic operations such as addition and subtraction",
-      "Performs logical operations such as AND, OR, NOT",
-      "Outputs result to registers"
+      "Natural numbers are non-negative whole numbers (0,1,2,...)",
+      "Integers include negative numbers as well",
+      "Difference: integers extend naturals to negatives"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Processor structure",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number systems",
     "question_type": "longform"
   },
   {
-    "question": "Explain the role of the control unit in the processor.",
+    "question": "Explain what is meant by a rational number and give one example.",
     "marks": 3,
     "mark_scheme": [
-      "Directs operation of the processor",
-      "Sends control signals to other components",
-      "Coordinates execution of instructions"
+      "Rational number can be expressed as ratio of two integers",
+      "Includes terminating and recurring decimals",
+      "Example: 1/2 or 0.333..."
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Processor structure",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number systems",
     "question_type": "longform"
   },
   {
-    "question": "Draw and label a simple diagram showing the main components of the CPU and memory under the stored program concept.",
+    "question": "Convert the denary number 156 into binary and hexadecimal.",
+    "marks": 3,
+    "mark_scheme": [
+      "Binary conversion: 10011100",
+      "Hexadecimal conversion: 9C",
+      "Shows equivalence across bases"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number bases",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain why hexadecimal is often used in computing instead of binary.",
+    "marks": 3,
+    "mark_scheme": [
+      "Hexadecimal more compact representation",
+      "Easier for humans to read and write",
+      "Maps neatly to groups of 4 binary bits"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Number bases",
+    "question_type": "longform"
+  },
+  {
+    "question": "Define the terms bit, byte, and kilobyte, and explain their relationships.",
+    "marks": 3,
+    "mark_scheme": [
+      "Bit is smallest unit of data, 0 or 1",
+      "Byte is 8 bits",
+      "Kilobyte typically 1024 bytes in binary system"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Units of information",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the difference between SI units (kilo, mega, giga) and binary prefixes (kibi, mebi, gibi).",
+    "marks": 4,
+    "mark_scheme": [
+      "SI kilo = 1000, binary kibi = 1024",
+      "SI prefixes used in networking",
+      "Binary prefixes used in memory/storage",
+      "Avoids ambiguity in measurement"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Units of information",
+    "question_type": "longform"
+  },
+  {
+    "question": "Perform the binary addition 1101 + 1011 and state if an overflow occurs in 4 bits.",
+    "marks": 4,
+    "mark_scheme": [
+      "1101 (13) + 1011 (11) = 11000 (24)",
+      "4-bit result is 1000 with carry",
+      "Overflow occurs since result exceeds 4 bits",
+      "Shows limitation of fixed width representation"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number systems",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how negative integers are represented using two’s complement.",
+    "marks": 4,
+    "mark_scheme": [
+      "Invert all bits of positive number",
+      "Add 1 to result",
+      "Allows single representation of zero",
+      "Simplifies binary arithmetic with negatives"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number systems",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the difference between fixed-point and floating-point binary representation.",
+    "marks": 4,
+    "mark_scheme": [
+      "Fixed-point has fixed position for binary point",
+      "Floating-point uses mantissa and exponent",
+      "Floating-point represents larger range",
+      "Fixed-point faster and simpler"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number systems",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain why floating-point numbers can introduce rounding errors.",
+    "marks": 3,
+    "mark_scheme": [
+      "Not all decimals can be represented exactly in binary",
+      "Truncation/approximation occurs in mantissa",
+      "Causes small errors in calculations"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Binary number systems",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe ASCII and Unicode and explain why Unicode was developed.",
+    "marks": 4,
+    "mark_scheme": [
+      "ASCII uses 7 or 8 bits for basic characters",
+      "Unicode supports many more characters",
+      "Unicode includes global alphabets and symbols",
+      "Developed to allow multilingual support"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Information coding systems",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how parity bits can be used for error detection.",
+    "marks": 3,
+    "mark_scheme": [
+      "Parity adds extra bit to ensure even/odd number of 1s",
+      "Receiver checks parity matches expected value",
+      "Detects single-bit errors"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Information coding systems",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the purpose of checksums and give one example where they are used.",
+    "marks": 3,
+    "mark_scheme": [
+      "Checksum is value calculated from data",
+      "Used to verify integrity of transmitted data",
+      "Example: checking downloaded files or network packets"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Information coding systems",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how sound is represented digitally using sampling and quantisation.",
+    "marks": 4,
+    "mark_scheme": [
+      "Continuous sound wave measured at intervals (sampling)",
+      "Amplitude values rounded to nearest level (quantisation)",
+      "Stored as binary numbers",
+      "Quality depends on sample rate and resolution"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing sound",
+    "question_type": "longform"
+  },
+  {
+    "question": "Calculate the storage required for a 10-second mono sound sampled at 44.1 kHz with 16-bit resolution.",
     "marks": 5,
     "mark_scheme": [
-      "Includes CPU box with ALU, CU, registers",
-      "Includes main memory",
-      "Includes data bus",
-      "Includes address bus",
-      "Includes control bus"
+      "Samples per second = 44,100",
+      "Each sample 16 bits = 2 bytes",
+      "10 seconds × 44,100 × 2 = 882,000 bytes",
+      "≈ 861 KB",
+      "Shows link between quality and storage"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Stored program concept",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing sound",
     "question_type": "longform"
   },
   {
-    "question": "Explain how the fetch–decode–execute cycle operates.",
-    "marks": 6,
-    "mark_scheme": [
-      "Program counter holds address of next instruction",
-      "Address copied to MAR",
-      "Instruction fetched from memory into MDR",
-      "Instruction loaded into CIR",
-      "Instruction decoded by control unit",
-      "Instruction executed by appropriate component"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "CPU and FDE cycle",
-    "question_type": "longform"
-  },
-  {
-    "question": "Describe the role of the program counter (PC) in the fetch–decode–execute cycle.",
-    "marks": 2,
-    "mark_scheme": [
-      "Holds address of next instruction to be fetched",
-      "Increments after each fetch unless a jump occurs"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Registers",
-    "question_type": "longform"
-  },
-  {
-    "question": "Explain the purpose of the memory address register (MAR) and memory data register (MDR).",
+    "question": "Explain the difference between MIDI and sampled sound representation.",
     "marks": 4,
     "mark_scheme": [
-      "MAR holds the address of memory location to access",
-      "MDR holds the data being transferred to or from memory",
-      "MAR used in fetch and writeback stages",
-      "MDR ensures correct data exchange between CPU and memory"
+      "MIDI stores instructions for generating sound",
+      "Sampled sound stores actual wave data",
+      "MIDI smaller file size",
+      "MIDI limited to synthesised instruments"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Registers",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing sound",
     "question_type": "longform"
   },
   {
-    "question": "Discuss how the use of general-purpose registers improves CPU efficiency.",
+    "question": "Explain how resolution and colour depth affect bitmap image quality and storage size.",
     "marks": 4,
     "mark_scheme": [
-      "Registers provide fast temporary storage",
-      "Reduce need to access slower main memory",
-      "Enable intermediate results to be held",
-      "Improve execution speed of programs"
+      "Resolution: number of pixels in image",
+      "Colour depth: number of bits per pixel",
+      "Higher values increase detail and colour range",
+      "Also increase storage requirement"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Registers",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing images",
     "question_type": "longform"
   },
   {
-    "question": "Explain the role of the clock in CPU operation.",
+    "question": "Calculate the storage requirement of a 200×100 pixel image with 24-bit colour depth.",
+    "marks": 4,
+    "mark_scheme": [
+      "Pixels = 200 × 100 = 20,000",
+      "Each pixel requires 24 bits = 3 bytes",
+      "20,000 × 3 = 60,000 bytes",
+      "≈ 58.6 KB"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing images",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe the difference between bitmap and vector image representations.",
+    "marks": 4,
+    "mark_scheme": [
+      "Bitmap stores pixel data",
+      "Vector stores shapes using mathematical descriptions",
+      "Bitmap resolution dependent",
+      "Vector scalable without loss of quality"
+    ],
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing images",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how run-length encoding (RLE) can compress bitmap images.",
     "marks": 3,
     "mark_scheme": [
-      "Generates regular timing signals",
-      "Coordinates synchronisation of CPU operations",
-      "One instruction step executed per clock pulse"
+      "Consecutive identical pixels stored as value + count",
+      "Reduces file size if many repeating pixels",
+      "Lossless compression method"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "CPU and FDE cycle",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Representing images",
     "question_type": "longform"
   },
   {
-    "question": "Describe three factors that can affect CPU performance.",
+    "question": "Explain how dates and times can be represented digitally.",
     "marks": 3,
     "mark_scheme": [
-      "Clock speed determines number of instructions executed per second",
-      "Cache size reduces memory access time",
-      "Number of cores allows parallel execution of instructions"
+      "Stored as integer counts (e.g. seconds since epoch)",
+      "Standardised formats like UNIX timestamp or ISO date",
+      "Allows arithmetic operations on dates"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "CPU performance factors",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Other data representation",
     "question_type": "longform"
   },
   {
-    "question": "Explain how increasing cache memory can improve CPU performance.",
+    "question": "Describe how Hamming code can be used for error correction.",
     "marks": 4,
     "mark_scheme": [
-      "Cache stores frequently used instructions and data",
-      "Located closer to CPU, faster than main memory",
-      "Reduces time spent waiting for memory access",
-      "Improves throughput of instructions"
+      "Adds parity bits at positions based on powers of two",
+      "Allows detection and correction of single-bit errors",
+      "Can locate error position using parity check",
+      "Used in reliable data transmission"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "CPU performance factors",
+    "topic": "Fundamentals of data representation",
+    "subtopic": "Information coding systems",
     "question_type": "longform"
   },
   {
-    "question": "Evaluate the impact of increasing the number of cores on processor performance.",
-    "marks": 6,
+    "question": "State the output of a NOT gate when the input is 1.",
+    "marks": 1,
     "mark_scheme": [
-      "Multiple cores allow parallel execution of instructions",
-      "Performance depends on software written for parallelism",
-      "Some tasks benefit significantly, others less so",
-      "Overheads of coordination may reduce gains",
-      "Can improve multitasking",
-      "Not all programs scale with cores"
+      "Output is 0"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Multi-core and parallel systems",
+    "topic": "Fundamentals of computer systems",
+    "subtopic": "Logic gates",
     "question_type": "longform"
   },
   {
-    "question": "Compare multi-core processors with parallel systems.",
-    "marks": 5,
-    "mark_scheme": [
-      "Multi-core: multiple cores on one chip",
-      "Parallel systems: multiple processors working together",
-      "Both allow concurrent execution",
-      "Parallel systems can scale across machines",
-      "Multi-core limited to single processor chip"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Multi-core and parallel systems",
-    "question_type": "longform"
-  },
-  {
-    "question": "Explain how solid-state drives (SSDs) differ from magnetic hard drives.",
-    "marks": 4,
-    "mark_scheme": [
-      "SSDs use flash memory, no moving parts",
-      "Magnetic hard drives use spinning platters",
-      "SSDs faster access times",
-      "SSDs more durable and energy efficient"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
-    "question_type": "longform"
-  },
-  {
-    "question": "State two examples of input devices and describe their functions.",
+    "question": "State one advantage of using a compiler instead of an interpreter.",
     "marks": 2,
     "mark_scheme": [
-      "Keyboard – enters text and commands",
-      "Mouse – controls on-screen pointer"
+      "Faster execution once compiled",
+      "Executable can run without source code"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
+    "topic": "Fundamentals of computer systems",
+    "subtopic": "Types of translators",
     "question_type": "longform"
   },
   {
-    "question": "Explain how an optical scanner works as an input device.",
-    "marks": 3,
+    "question": "What Boolean expression represents the circuit of an OR gate with inputs A and B?",
+    "marks": 1,
     "mark_scheme": [
-      "Shines light onto surface",
-      "Sensor detects reflected light intensity",
-      "Converts into digital representation"
+      "A + B"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
+    "topic": "Fundamentals of computer systems",
+    "subtopic": "Boolean algebra",
     "question_type": "longform"
   },
   {
-    "question": "Describe the difference between volatile and non-volatile memory, giving one example of each.",
-    "marks": 3,
+    "question": "State one example of system software.",
+    "marks": 1,
     "mark_scheme": [
-      "Volatile loses contents when power off, e.g. RAM",
-      "Non-volatile retains data without power, e.g. ROM",
-      "Used for different roles in computer system"
+      "Operating system",
+      "Utility program"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
+    "topic": "Fundamentals of computer systems",
+    "subtopic": "Hardware and software",
     "question_type": "longform"
   },
   {
-    "question": "Explain the function of secondary storage in a computer system.",
-    "marks": 3,
+    "question": "Which type of translator is used to convert assembly language into machine code?",
+    "marks": 1,
     "mark_scheme": [
-      "Stores programs and data permanently",
-      "Non-volatile",
-      "Examples include HDDs and SSDs"
+      "Assembler"
     ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
-    "question_type": "longform"
-  },
-  {
-    "question": "Discuss how different levels of cache (L1, L2, L3) impact performance.",
-    "marks": 5,
-    "mark_scheme": [
-      "L1 closest, smallest, fastest",
-      "L2 larger but slower than L1",
-      "L3 shared across cores, slower still",
-      "Hierarchy balances cost and performance",
-      "More cache reduces main memory access"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "CPU performance factors",
-    "question_type": "longform"
-  },
-  {
-    "question": "Describe the role of the accumulator register.",
-    "marks": 2,
-    "mark_scheme": [
-      "Holds intermediate results of calculations",
-      "Reduces need to access main memory"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Registers",
-    "question_type": "longform"
-  },
-  {
-    "question": "Explain why clock speed is not the only determinant of CPU performance.",
-    "marks": 4,
-    "mark_scheme": [
-      "Higher clock speed means more instructions per second",
-      "But bottlenecks may exist (memory latency)",
-      "Instruction set efficiency matters",
-      "Parallelism and architecture also important"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "CPU performance factors",
-    "question_type": "longform"
-  },
-  {
-    "question": "State one example each of an output device used for text and for graphics.",
-    "marks": 2,
-    "mark_scheme": [
-      "Text output: printer",
-      "Graphics output: monitor"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
-    "question_type": "longform"
-  },
-  {
-    "question": "Discuss the role of buses in the stored program concept.",
-    "marks": 5,
-    "mark_scheme": [
-      "Address bus carries location addresses",
-      "Data bus carries data between CPU and memory",
-      "Control bus carries control signals",
-      "Enable communication between processor and memory",
-      "Essential for FDE cycle operation"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Stored program concept",
-    "question_type": "longform"
-  },
-  {
-    "question": "Explain how a GPU can be used as an external hardware device to improve performance.",
-    "marks": 4,
-    "mark_scheme": [
-      "Specialised for parallel processing",
-      "Handles graphics and mathematical operations",
-      "Relieves load from CPU",
-      "Improves performance in games and scientific applications"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
-    "question_type": "longform"
-  },
-  {
-    "question": "Describe the role of the current instruction register (CIR).",
-    "marks": 2,
-    "mark_scheme": [
-      "Holds instruction currently being decoded or executed",
-      "Ensures CPU processes correct instruction"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Registers",
-    "question_type": "longform"
-  },
-  {
-    "question": "Discuss how heat dissipation affects CPU performance and reliability.",
-    "marks": 4,
-    "mark_scheme": [
-      "Higher speeds generate more heat",
-      "Excessive heat can damage CPU",
-      "Cooling required to maintain performance",
-      "Limits maximum practical clock speed"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "CPU performance factors",
-    "question_type": "longform"
-  },
-  {
-    "question": "Explain the function of RAM in a computer system.",
-    "marks": 2,
-    "mark_scheme": [
-      "Stores currently running programs and data",
-      "Volatile, cleared when power off"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
-    "question_type": "longform"
-  },
-  {
-    "question": "Explain why SSDs are preferred over HDDs in portable devices.",
-    "marks": 3,
-    "mark_scheme": [
-      "SSDs have no moving parts",
-      "More resistant to shock and damage",
-      "Faster and use less power"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
-    "question_type": "longform"
-  },
-  {
-    "question": "Describe one advantage and one disadvantage of multi-core processors.",
-    "marks": 2,
-    "mark_scheme": [
-      "Advantage: allows multiple tasks at once",
-      "Disadvantage: not all programs use multiple cores"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Multi-core and parallel systems",
-    "question_type": "longform"
-  },
-  {
-    "question": "Explain the role of virtual memory in a computer system.",
-    "marks": 4,
-    "mark_scheme": [
-      "Uses secondary storage to extend RAM",
-      "Stores parts of programs not currently in use",
-      "Prevents memory overflow",
-      "Slower than real RAM"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
-    "question_type": "longform"
-  },
-  {
-    "question": "Describe the role of input/output controllers in a computer system.",
-    "marks": 3,
-    "mark_scheme": [
-      "Manage communication between CPU and peripheral devices",
-      "Convert signals between device and system format",
-      "Reduce CPU involvement in device control"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
-    "question_type": "longform"
-  },
-  {
-    "question": "Discuss how the Harvard architecture differs from the Von Neumann architecture.",
-    "marks": 6,
-    "mark_scheme": [
-      "Von Neumann: single memory for data and instructions",
-      "Harvard: separate memory for data and instructions",
-      "Harvard allows simultaneous access",
-      "Von Neumann has bottleneck on single bus",
-      "Harvard used in embedded systems",
-      "Von Neumann used in general-purpose processors"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Stored program concept",
-    "question_type": "longform"
-  },
-  {
-    "question": "Explain how Direct Memory Access (DMA) improves system performance.",
-    "marks": 4,
-    "mark_scheme": [
-      "Allows devices to transfer data directly to memory",
-      "Bypasses CPU during transfer",
-      "Frees CPU for other tasks",
-      "Improves overall throughput"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "External hardware devices",
-    "question_type": "longform"
-  },
-  {
-    "question": "Describe one role of the status register during instruction execution.",
-    "marks": 2,
-    "mark_scheme": [
-      "Holds flags about results of operations",
-      "E.g. zero flag, carry flag, overflow flag"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Registers",
-    "question_type": "longform"
-  },
-  {
-    "question": "Evaluate the effect of multi-core processors on software design.",
-    "marks": 8,
-    "mark_scheme": [
-      "Multi-core allows concurrent execution of tasks",
-      "Software must be written to take advantage of multiple cores",
-      "Parallel programming introduces complexity",
-      "Thread synchronisation and communication required",
-      "Not all problems parallelisable",
-      "Legacy software may not benefit",
-      "Well-written software can see performance gains",
-      "Design requires careful consideration of concurrency"
-    ],
-    "topic": "Fundamentals of computer organisation and architecture",
-    "subtopic": "Multi-core and parallel systems",
+    "topic": "Fundamentals of computer systems",
+    "subtopic": "Types of translators",
     "question_type": "longform"
   }
 ]
+

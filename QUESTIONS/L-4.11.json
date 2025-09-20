@@ -1,0 +1,182 @@
+[
+  {
+    "question": "Define the term Big Data and explain how it differs from traditional data sets.",
+    "marks": 2,
+    "mark_scheme": ["Big Data refers to extremely large data sets", "Too large or complex for traditional data processing methods", "Requires specialised techniques and tools"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain why traditional relational database systems are often unsuitable for handling Big Data.",
+    "marks": 3,
+    "mark_scheme": ["Relational databases struggle with unstructured data", "Do not scale efficiently across distributed systems", "Performance issues when handling petabytes of data"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss the significance of Big Data in decision-making for modern businesses.",
+    "marks": 5,
+    "mark_scheme": ["Big Data reveals patterns and trends", "Supports evidence-based decisions", "Used in predictive analytics", "Enables real-time analysis", "Competitive advantage through insight generation"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the ethical and privacy concerns associated with Big Data collection and analysis.",
+    "marks": 7,
+    "mark_scheme": ["Concerns about personal data misuse", "Risk of surveillance and loss of privacy", "Data breaches can expose sensitive information", "Bias in data collection leads to unfair decisions", "Lack of consent in data harvesting", "Balancing benefits of Big Data with rights of individuals", "Need for regulations such as GDPR"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "List and briefly describe the '3Vs' commonly used to characterise Big Data.",
+    "marks": 3,
+    "mark_scheme": ["Volume = size of data sets", "Velocity = speed of data generation and processing", "Variety = different forms and sources of data"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Characteristics of Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain with an example why Variety is a challenge in Big Data systems.",
+    "marks": 2,
+    "mark_scheme": ["Variety means data comes in different formats (structured, unstructured, semi-structured)", "Example: mixing sensor data, images, and text logs makes integration difficult"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Characteristics of Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss how Velocity in Big Data influences system design.",
+    "marks": 5,
+    "mark_scheme": ["High velocity means continuous inflow of data", "Requires real-time or near real-time processing", "Systems must handle streams not just batches", "Low-latency architecture is needed", "Examples: financial trading, social media feeds"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Characteristics of Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the impact of Big Data’s characteristics on storage and retrieval systems.",
+    "marks": 6,
+    "mark_scheme": ["Volume requires scalable storage", "Velocity demands fast input/output systems", "Variety requires flexible data models", "Traditional relational models not always suitable", "Solutions include NoSQL and distributed file systems", "Evaluation: trade-offs in consistency, performance, and cost"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Characteristics of Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain how distributed processing works in the context of Big Data.",
+    "marks": 3,
+    "mark_scheme": ["Large data set divided into smaller chunks", "Chunks processed in parallel across multiple nodes", "Results combined into a final output"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Distributed Processing",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Describe the role of fault tolerance in distributed Big Data systems.",
+    "marks": 4,
+    "mark_scheme": ["Fault tolerance ensures system continues despite node failures", "Data is replicated across nodes", "Failed tasks reassigned automatically", "Improves reliability and availability of processing"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Distributed Processing",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss the advantages and disadvantages of distributed processing for Big Data.",
+    "marks": 6,
+    "mark_scheme": ["Advantages: scalability, parallelism, fault tolerance, faster processing", "Disadvantages: network overhead, complexity of management, data consistency issues", "Evaluation: essential for Big Data but introduces new design challenges"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Distributed Processing",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the role of frameworks such as Hadoop and Spark in distributed Big Data processing.",
+    "marks": 8,
+    "mark_scheme": ["Hadoop provides distributed storage (HDFS) and processing (MapReduce)", "Spark offers in-memory processing, faster than Hadoop", "Both scale across clusters", "Hadoop more reliable for batch jobs", "Spark better for iterative and real-time tasks", "Both open source and widely adopted", "Evaluation: choice depends on use case", "Overall both key enablers of Big Data processing"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Distributed Processing",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Define functional programming and explain how it differs from imperative programming.",
+    "marks": 3,
+    "mark_scheme": ["Functional programming based on mathematical functions", "Avoids mutable state and side effects", "Imperative programming relies on sequences of commands that change program state"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Functional Programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain why immutability is an important concept in functional programming for Big Data.",
+    "marks": 2,
+    "mark_scheme": ["Immutable data cannot be changed once created", "Prevents conflicts when processing data in parallel across multiple nodes"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Functional Programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Write a simple example of a map operation in functional programming and describe its role in Big Data processing.",
+    "marks": 4,
+    "mark_scheme": ["Example: map(x → x*2) applied to [1,2,3] gives [2,4,6]", "Map applies a function to each element in a collection", "Operation can be parallelised across large datasets", "Common in frameworks like MapReduce and Spark"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Functional Programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss the use of higher-order functions in functional programming for Big Data.",
+    "marks": 5,
+    "mark_scheme": ["Higher-order functions take other functions as arguments or return them", "Examples: map, reduce, filter", "Allow concise and expressive data transformations", "Enable parallelisation of operations", "Widely used in distributed data frameworks"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Functional Programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the strengths and limitations of functional programming when applied to Big Data problems.",
+    "marks": 7,
+    "mark_scheme": ["Strengths: parallelism, immutability, concise code, easier debugging", "Well-suited for distributed processing", "Limitations: learning curve, less intuitive for some tasks", "Performance overhead in some contexts", "Not all problems map easily to functional paradigm", "Evaluation: powerful for Big Data but not universally optimal", "Often combined with other paradigms in practice"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Functional Programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the role of MapReduce in processing Big Data.",
+    "marks": 3,
+    "mark_scheme": ["Map function applies transformation to input data", "Reduce function aggregates results", "Together enable parallel processing across distributed systems"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Processing Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Describe how real-time Big Data processing differs from batch processing, giving one example of each.",
+    "marks": 4,
+    "mark_scheme": ["Batch = process large volumes at once (e.g. daily sales reports)", "Real-time = process data as it arrives (e.g. fraud detection)", "Real-time requires low-latency systems", "Batch simpler and often more resource efficient"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Processing Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the challenges and solutions in processing Big Data at scale.",
+    "marks": 8,
+    "mark_scheme": ["Challenges: data volume, velocity, and variety", "Scalability of storage and processing", "Ensuring fault tolerance", "Maintaining data consistency", "Solutions: distributed processing, NoSQL databases, cloud infrastructure", "Frameworks like Hadoop/Spark", "Trade-offs between speed, cost, and accuracy", "Evaluation: requires layered approach with multiple technologies"],
+    "topic": "4.11 Big Data",
+    "subtopic": "Processing Big Data",
+    "question_type": "longform",
+    "wrong_choices": null
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "question": "Define serial and parallel transmission. State one advantage of serial transmission over parallel.",
+    "marks": 1,
+    "mark_scheme": ["Serial = one bit at a time down a single channel", "Parallel = multiple bits sent simultaneously across multiple channels", "Serial better over long distances as no signal skew"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "Communication",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the difference between synchronous and asynchronous data transmission.",
+    "marks": 2,
+    "mark_scheme": ["Synchronous uses a shared clock signal to synchronise sender and receiver", "Asynchronous relies on start/stop bits to mark beginning/end of transmission"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "Communication",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Define baud rate, bit rate, bandwidth, latency, and protocol.",
+    "marks": 3,
+    "mark_scheme": ["Baud rate = signal changes per second", "Bit rate = bits per second transmitted", "Bandwidth = maximum data transfer capacity", "Latency = delay in transmission", "Protocol = set of rules governing communication"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "Communication",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the purpose of start and stop bits in asynchronous communication.",
+    "marks": 2,
+    "mark_scheme": ["Start bit tells receiver when data begins", "Stop bit signals end of data", "Helps synchronise without clock signal"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "Communication",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss how both bandwidth and latency affect the user experience when streaming live video.",
+    "marks": 6,
+    "mark_scheme": ["Bandwidth determines video resolution/quality possible", "High bandwidth allows HD or 4K", "Latency affects responsiveness and delay between live event and playback", "High latency causes lag/buffering", "Even high bandwidth cannot compensate for poor latency", "Optimal streaming needs high bandwidth + low latency"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "Communication",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Describe the difference between a physical star topology and a logical bus topology.",
+    "marks": 2,
+    "mark_scheme": ["Physical star = devices connect to central hub/switch", "Logical bus = devices share one communication channel", "A star network can act logically as a bus if bus protocol used"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "Networking",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the difference between peer-to-peer and client-server networking, giving one advantage of each.",
+    "marks": 3,
+    "mark_scheme": ["Peer-to-peer: devices share resources equally", "Client-server: central server provides services to clients", "Peer-to-peer advantage: simple, low-cost setup", "Client-server advantage: centralised management/security"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "Networking",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the role of a wireless access point (WAP) in WiFi networking.",
+    "marks": 2,
+    "mark_scheme": ["WAP connects wireless devices to wired LAN", "Acts as bridge between wireless clients and network infrastructure"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "Networking",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Describe two methods used to secure a wireless network.",
+    "marks": 2,
+    "mark_scheme": ["WPA2 encryption protects transmitted data", "Disabling SSID broadcast makes network less visible", "MAC address whitelisting restricts access to approved devices"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "Networking",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain how CSMA/CA with RTS/CTS helps to reduce collisions in wireless networks.",
+    "marks": 4,
+    "mark_scheme": ["Carrier Sense: device checks channel is clear before sending", "Collision Avoidance: waits random back-off time", "RTS: sender requests permission to transmit", "CTS: receiver confirms channel is clear", "This reduces hidden node collisions"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "Networking",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Define what is meant by a packet in Internet communication and list three fields typically found in its header.",
+    "marks": 3,
+    "mark_scheme": ["Packet = unit of data sent across a network", "Header fields: source IP, destination IP, sequence number, error-checking code (checksum)", "May also include protocol identifier"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "The Internet",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the purpose of DNS in Internet communication.",
+    "marks": 2,
+    "mark_scheme": ["DNS translates human-readable domain names into IP addresses", "Allows users to access websites without remembering numeric addresses"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "The Internet",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss one security threat faced by Internet users and explain how it can be mitigated.",
+    "marks": 3,
+    "mark_scheme": ["Threat example: phishing", "Mitigation: user education, spam filters", "Other answers: malware → antivirus, firewalls; DoS → filtering, load balancing"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "The Internet",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Analyse the importance of encryption in securing online banking transactions.",
+    "marks": 6,
+    "mark_scheme": ["Encryption protects confidentiality of data", "Prevents interception of sensitive information", "Ensures integrity and prevents tampering", "SSL/TLS protocols used", "Relies on public key cryptography and certificates", "Weakness if certificates compromised or outdated"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "The Internet",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the effectiveness of measures against Distributed Denial of Service (DDoS) attacks.",
+    "marks": 7,
+    "mark_scheme": ["Rate limiting restricts request floods", "Firewalls block malicious traffic", "Content delivery networks (CDNs) absorb excess load", "Blackholing drops all traffic to attacked server", "Intrusion detection systems monitor abnormal activity", "Each measure has limitations", "Layered defence is most effective"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "The Internet",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "List the four layers of the TCP/IP stack in order. Give one example protocol from each layer.",
+    "marks": 4,
+    "mark_scheme": ["Application: HTTP/SMTP/FTP", "Transport: TCP/UDP", "Internet: IP", "Link: Ethernet/WiFi"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "TCP/IP Protocol",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the main difference between IPv4 and IPv6 addressing and state one reason why IPv6 was introduced.",
+    "marks": 2,
+    "mark_scheme": ["IPv4 uses 32-bit addresses (~4.3 billion)", "IPv6 uses 128-bit addresses (virtually unlimited)", "IPv6 introduced due to IPv4 exhaustion"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "TCP/IP Protocol",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss the advantages and disadvantages of using Network Address Translation (NAT).",
+    "marks": 5,
+    "mark_scheme": ["Advantages: conserves IPv4 addresses, hides internal addresses (security), allows multiple devices behind one public IP", "Disadvantages: breaks true end-to-end connectivity, complicates peer-to-peer applications and VoIP"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "TCP/IP Protocol",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Compare thin-client and thick-client computing and suggest where each would be more appropriate.",
+    "marks": 6,
+    "mark_scheme": ["Thin client: processing done on server", "Thick client: processing done locally", "Thin = cheaper hardware, easy maintenance, requires strong network", "Thick = more expensive, more powerful, can work offline", "Thin good for large organisations", "Thick good for mobile/power users"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "TCP/IP Protocol",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the importance of REST and JSON compared to SOAP and XML in modern web applications.",
+    "marks": 8,
+    "mark_scheme": ["REST is lightweight, stateless, scalable", "JSON is easier and faster to parse than XML", "SOAP/XML is verbose and complex", "REST/JSON widely adopted for APIs", "Cross-platform compatibility", "Performance advantages", "SOAP/XML still used in enterprise for strict standards", "Evaluation: REST/JSON dominant but SOAP/XML remains relevant"],
+    "topic": "4.9 Fundamentals of communication and networking",
+    "subtopic": "TCP/IP Protocol",
+    "question_type": "longform",
+    "wrong_choices": null
+  }
+]

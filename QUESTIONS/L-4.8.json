@@ -1,0 +1,159 @@
+[
+  {
+    "question": "State one moral issue that can arise from the use of social media.",
+    "marks": 1,
+    "mark_scheme": [
+      "Cyberbullying",
+      "Online harassment"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Moral issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain one ethical concern with the development of artificial intelligence.",
+    "marks": 2,
+    "mark_scheme": [
+      "AI may replace human jobs",
+      "Raises responsibility issues if errors occur"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Ethical issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe one legal issue associated with file sharing on the internet.",
+    "marks": 2,
+    "mark_scheme": [
+      "Copyright infringement",
+      "Illegal distribution of protected material"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Legal issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain one cultural issue caused by the digital divide.",
+    "marks": 3,
+    "mark_scheme": [
+      "Unequal access to technology between groups",
+      "Leads to social inequality",
+      "Impacts education and employment opportunities"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Cultural issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss one environmental impact of electronic waste.",
+    "marks": 3,
+    "mark_scheme": [
+      "Toxic chemicals released into environment",
+      "Harmful to human health and wildlife",
+      "E-waste contributes to pollution"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Environmental issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain the role of data protection legislation in protecting privacy.",
+    "marks": 4,
+    "mark_scheme": [
+      "Requires organisations to store data securely",
+      "Limits collection and use of personal data",
+      "Gives individuals rights over their data",
+      "Reduces risk of misuse and breaches"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Privacy issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Evaluate the ethical implications of self-driving cars making life-or-death decisions.",
+    "marks": 6,
+    "mark_scheme": [
+      "Raises questions of responsibility for accidents",
+      "Moral dilemmas in unavoidable collisions",
+      "Algorithms may reflect human biases",
+      "Public trust depends on ethical handling",
+      "Could reduce accidents overall",
+      "But accountability is unclear"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Ethical issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Explain how widespread data collection by companies raises privacy concerns.",
+    "marks": 4,
+    "mark_scheme": [
+      "Personal data collected without clear consent",
+      "Can be used for targeted advertising",
+      "Risk of misuse or leaks",
+      "Reduces individual control over personal information"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Privacy issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Describe one environmental benefit and one drawback of cloud computing.",
+    "marks": 2,
+    "mark_scheme": [
+      "Benefit: reduces need for individual hardware resources",
+      "Drawback: data centres consume large amounts of energy"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Environmental issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Discuss the legal and ethical issues of government surveillance.",
+    "marks": 6,
+    "mark_scheme": [
+      "Government surveillance may improve security",
+      "Can prevent terrorism and crime",
+      "Raises privacy concerns",
+      "Potential misuse of power",
+      "Legal frameworks may lag behind technology",
+      "Public trust depends on transparency"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Legal issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Evaluate the cultural consequences of automation in the workplace.",
+    "marks": 8,
+    "mark_scheme": [
+      "Automation can increase efficiency",
+      "May reduce costs for businesses",
+      "Leads to job losses in some industries",
+      "Creates demand for new skills",
+      "Cultural shift in work patterns",
+      "May widen inequality",
+      "Requires retraining and reskilling",
+      "Changes how societies value human work"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Cultural issues",
+    "question_type": "longform"
+  },
+  {
+    "question": "Analyse the environmental, ethical, and legal issues raised by cryptocurrency mining.",
+    "marks": 7,
+    "mark_scheme": [
+      "Environmental: high energy consumption",
+      "Environmental: contributes to carbon emissions",
+      "Ethical: fairness of resource use",
+      "Ethical: potential exploitation in poorer regions",
+      "Legal: uncertain regulation in many countries",
+      "Legal: use in illegal activities",
+      "Debates about sustainability and regulation"
+    ],
+    "topic": "Consequences of uses of computing",
+    "subtopic": "Environmental issues",
+    "question_type": "longform"
+  }
+]

@@ -1,0 +1,173 @@
+[
+  {
+    "question": "Define functional programming and explain how it differs from imperative programming.",
+    "marks": 2,
+    "mark_scheme": ["Functional programming is a paradigm that treats computation as the evaluation of mathematical functions", "It avoids mutable state and side effects", "Imperative programming focuses on sequences of commands that modify program state step by step"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the concept of a pure function in functional programming and state two of its benefits.",
+    "marks": 3,
+    "mark_scheme": ["Pure function always returns the same output for the same input", "Has no side effects such as modifying global variables or I/O", "Benefits: easier to test, easier to reason about, allows parallelism since no shared state"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Describe the concept of immutability in functional programming and explain why it is important.",
+    "marks": 3,
+    "mark_scheme": ["Immutability means data cannot be changed after creation", "Instead, new values are created when transformations are applied", "Important because it prevents unintended side effects and makes concurrent programming safer"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain what is meant by higher-order functions in functional programming, giving one example.",
+    "marks": 4,
+    "mark_scheme": ["Higher-order functions take other functions as arguments or return them as results", "Enable functional composition and abstraction", "Example: map, reduce, or filter", "map(f, [1,2,3]) applies f to each element of the list"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss the concept of recursion in functional programming and explain how it replaces iteration.",
+    "marks": 5,
+    "mark_scheme": ["Recursion is a function calling itself with a modified argument", "Functional programming often avoids loops in favour of recursion", "Recursive definitions break problems into smaller subproblems", "Examples: factorial, Fibonacci sequence", "Tail recursion optimisation prevents stack overflow in some languages"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the concept of function composition in functional programming with an example.",
+    "marks": 3,
+    "mark_scheme": ["Function composition is combining two or more functions into a new function", "The output of one function becomes the input of the next", "Example: (f∘g)(x) = f(g(x))"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss how laziness (lazy evaluation) is used in functional programming. Give one benefit and one drawback.",
+    "marks": 4,
+    "mark_scheme": ["Lazy evaluation means delaying computation until its result is required", "Allows handling infinite data structures", "Benefit: saves resources by avoiding unnecessary computation", "Drawback: can increase memory usage due to deferred computations"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the advantages and disadvantages of functional programming compared to imperative programming.",
+    "marks": 7,
+    "mark_scheme": ["Advantages: immutability improves reliability, pure functions simplify testing, higher-order functions allow abstraction, suitable for parallel processing", "Disadvantages: steeper learning curve, performance overhead in some contexts, not intuitive for all problems", "Imperative programming better for stateful tasks", "Functional excels at tasks involving data transformation and parallelism", "Evaluation: choice depends on problem domain", "Functional best in big data and concurrency", "Imperative often better for system-level or sequential tasks"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Define the term first-class function and explain its importance in functional programming.",
+    "marks": 2,
+    "mark_scheme": ["First-class function = treated like any other data value", "Can be assigned to variables, passed as arguments, and returned from functions", "Essential for higher-order functions and functional abstraction"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the role of map in functional programming, using an example of doubling every number in a list.",
+    "marks": 3,
+    "mark_scheme": ["map applies a function to each element of a list or collection", "Example: map(x → 2x, [1,2,3]) returns [2,4,6]", "Encourages declarative style instead of manual iteration"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Describe the use of reduce (also called fold) in functional programming and give an example.",
+    "marks": 3,
+    "mark_scheme": ["Reduce combines elements of a collection into a single result using a function", "Example: reduce((x,y) → x+y, [1,2,3,4]) = 10", "Useful for aggregations such as sums, products, and maximums"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss the use of filter in functional programming, with an example.",
+    "marks": 3,
+    "mark_scheme": ["Filter applies a predicate function to a collection", "Returns only elements where predicate is true", "Example: filter(x → x>5, [2,6,8,3]) returns [6,8]"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain the concept of currying and give one example of its use.",
+    "marks": 4,
+    "mark_scheme": ["Currying transforms a function with multiple arguments into a sequence of functions each taking one argument", "Example: f(x,y) → x+y becomes f(x)(y)", "Allows partial application of functions", "Useful in functional composition and modular design"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain what is meant by referential transparency in functional programming.",
+    "marks": 2,
+    "mark_scheme": ["Referential transparency = expression can be replaced with its value without changing program behaviour", "Guarantees predictable behaviour of functions", "Linked to purity and immutability"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss how functional programming can improve concurrency in modern applications.",
+    "marks": 5,
+    "mark_scheme": ["Immutability means no race conditions", "Pure functions can run independently in parallel", "Declarative style supports distribution of tasks", "Makes concurrency easier to reason about", "Examples: parallel map or distributed functional frameworks like Spark"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Evaluate the impact of functional programming concepts on modern programming languages.",
+    "marks": 6,
+    "mark_scheme": ["Languages like Python, JavaScript, and Java incorporate functional concepts", "Higher-order functions and lambdas widely used", "Parallelism and concurrency influenced by functional ideas", "Encourages cleaner code and modular design", "But adds complexity to imperative languages", "Evaluation: functional features are mainstream and shape modern development"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Write a recursive functional definition for the factorial function and explain how recursion is central to functional programming.",
+    "marks": 4,
+    "mark_scheme": ["Example: factorial(0) = 1; factorial(n) = n * factorial(n-1)", "Recursion replaces loops in functional style", "Demonstrates declarative problem solving", "Illustrates divide and conquer approach"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Discuss the limitations of functional programming in system-level programming compared to high-level data transformation tasks.",
+    "marks": 7,
+    "mark_scheme": ["Functional programming less efficient for low-level hardware control", "Difficult when tasks rely on mutable state (e.g., operating system processes)", "Performance overhead due to recursion and immutability", "Garbage collection overhead", "Better suited for high-level data analysis, parallel processing, web APIs", "Evaluation: functional programming excellent for abstraction but unsuitable for all domains", "Hybrid approaches often used"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  },
+  {
+    "question": "Explain how functional programming techniques are applied in Big Data frameworks such as MapReduce.",
+    "marks": 5,
+    "mark_scheme": ["Map applies function independently to data subsets", "Reduce aggregates results into a single outcome", "Both are higher-order functions", "Enable distributed processing of massive datasets", "Illustrates scalability of functional programming concepts"],
+    "topic": "4.12 Fundamentals of functional programming",
+    "subtopic": "Functional programming",
+    "question_type": "longform",
+    "wrong_choices": null
+  }
+]
